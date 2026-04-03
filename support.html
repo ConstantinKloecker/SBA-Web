@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Support — Storybook Adventures</title>
+  <meta name="description" content="Get help with Storybook Adventures.">
+  <meta name="theme-color" content="#1a2744">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="assets/logo-emblem.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-bg" role="presentation"></div>
+
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+    <button class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+  </div>
+
+  <div class="legal-page">
+    <header class="legal-header">
+      <a href="index.html" class="legal-back" lang="en">&#8592; Home</a>
+      <a href="index.html" class="legal-back" lang="de">&#8592; Startseite</a>
+    </header>
+
+    <div class="legal-content-wrapper">
+      <div class="legal-content">
+        <div class="legal-text" lang="en">
+          <h1>Support</h1>
+          <p>Need help with Storybook Adventures? We're here.</p>
+          <p>Email us at <a href="mailto:contact@storybookadventures.io"><strong>contact@storybookadventures.io</strong></a></p>
+          <p>We typically respond within 1–2 business days.</p>
+        </div>
+        <div class="legal-text" lang="de">
+          <h1>Support</h1>
+          <p>Brauchst du Hilfe mit Storybook Adventures? Wir sind für dich da.</p>
+          <p>Schreib uns an <a href="mailto:contact@storybookadventures.io"><strong>contact@storybookadventures.io</strong></a></p>
+          <p>Wir antworten in der Regel innerhalb von 1–2 Werktagen.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="legal-footer">
+      <nav class="footer-links">
+        <a href="privacy.html" class="footer-link" lang="en">Privacy Policy</a>
+        <a href="privacy.html" class="footer-link" lang="de">Datenschutz</a>
+        <span class="footer-sep">·</span>
+        <a href="terms.html" class="footer-link" lang="en">Terms of Service</a>
+        <a href="terms.html" class="footer-link" lang="de">Nutzungsbedingungen</a>
+        <span class="footer-sep">·</span>
+        <a href="impressum.html" class="footer-link">Impressum</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Storybook Adventures. <span lang="en">All rights reserved.</span><span lang="de">Alle Rechte vorbehalten.</span></p>
+    </footer>
+  </div>
+
+  <script>
+    (function() {
+      const LANG_KEY = 'sba-lang';
+      const saved = localStorage.getItem(LANG_KEY);
+      const browserLang = navigator.language?.startsWith('de') ? 'de' : 'en';
+      let currentLang = saved || browserLang;
+      function setLang(lang) {
+        currentLang = lang;
+        localStorage.setItem(LANG_KEY, lang);
+        document.body.classList.toggle('lang-de', lang === 'de');
+        document.documentElement.lang = lang;
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          const isActive = btn.dataset.lang === lang;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-pressed', isActive);
+        });
+      }
+      setLang(currentLang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => setLang(btn.dataset.lang));
+      });
+    })();
+  </script>
+</body>
+</html>
