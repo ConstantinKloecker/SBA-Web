@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Storybook Adventures — Turn your drawings into animated stories</title>
-  <meta name="description" content="Storybook Adventures turns your child's hand-drawn pictures into AI-animated stories. Draw on paper, snap a photo, and watch it come to life. Made for kids ages 6–12. No accounts, no ads, no tracking.">
+  <meta name="description" content="Storybook Adventures turns your child's hand-drawn pictures into AI-animated stories. Draw on paper, snap a photo, and watch it come to life. Made for kids ages 6-12. No accounts, no ads, no tracking.">
   <meta name="keywords" content="kids drawing,animation,storybook,creative kids,art app,ai animation,draw to life,children app">
   <meta name="theme-color" content="#1a2744">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Storybook Adventures — Turn your drawings into animated stories">
-  <meta property="og:description" content="Draw on paper, snap a photo, and watch AI turn your artwork into an animated movie. Made for kids ages 6–12.">
+  <meta property="og:description" content="Draw on paper, snap a photo, and watch AI turn your artwork into an animated movie. Made for kids ages 6-12.">
   <meta property="og:image" content="assets/logo.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.storybookadventures.io">
@@ -18,7 +18,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="icon" type="image/webp" href="assets/logo-emblem.webp">
@@ -26,131 +26,268 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Background -->
+
+  <!-- Starry Background -->
   <div class="page-bg" role="presentation"></div>
 
-  <!-- Language Switch -->
+  <!-- Floating particles -->
+  <div class="particles" role="presentation">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Language Toggle -->
   <div class="lang-switch" role="group" aria-label="Language">
     <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
     <button class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
   </div>
 
-  <!-- Main Content -->
-  <main class="main">
+  <main class="landing">
 
-    <!-- Main Card -->
-    <section class="info-card">
-      <div class="info-card-inner">
-        <!-- Logo + Tagline -->
-        <img src="assets/logo.webp" alt="Storybook Adventures" class="hero-logo" width="420" height="220">
-        <p class="hero-tagline" lang="en">Turn your drawings into magical animated stories.</p>
-        <p class="hero-tagline" lang="de">Verwandle deine Zeichnungen in magische animierte Geschichten.</p>
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <div class="hero__logo-wrap">
+        <img src="assets/logo.webp" alt="Storybook Adventures" class="hero__logo" width="420" height="220">
+      </div>
 
-        <!-- Description -->
-        <div class="info-card-text" lang="en">
-          <p>Draw on paper, snap a photo, and watch AI turn your artwork into an animated movie with sound.</p>
-        </div>
-        <div class="info-card-text" lang="de">
-          <p>Zeichne auf Papier, mach ein Foto und schau zu, wie KI dein Kunstwerk in einen animierten Film mit Ton verwandelt.</p>
-        </div>
+      <h1 class="hero__title" lang="en">Your drawings come alive.</h1>
+      <h1 class="hero__title" lang="de">Deine Zeichnungen<br>Erwecken Zum Leben.</h1>
 
-        <!-- Characters -->
-        <div class="characters">
-          <img src="assets/characters/c-mrcookie-greeting@3x.webp" alt="Mr. Cookie waving hello" class="character character-mrcookie" width="160" height="160">
-          <img src="assets/characters/c-ghost@3x.webp" alt="Friendly ghost" class="character character-ghost" width="80" height="80">
-        </div>
+      <p class="hero__subtitle" lang="en">Draw on paper. Snap a photo. Watch AI turn your artwork into an animated movie with sound.</p>
+      <p class="hero__subtitle" lang="de">Zeichne auf Papier. Mach ein Foto. Schau zu, wie KI dein Kunstwerk in einen animierten Film mit Ton verwandelt.</p>
 
-        <!-- App Store -->
-        <div class="store-section">
-          <div class="store-badge">
-            <span class="apple-icon">&#63743;</span>
-            <span lang="en">Coming Soon on the App Store</span>
-            <span lang="de">Bald im App Store</span>
+      <div class="hero__cta">
+        <a href="https://apps.apple.com/app/id6761114804" target="_blank" rel="noopener" class="btn-download">
+          <svg class="btn-download__apple" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <div class="btn-download__text">
+            <span class="btn-download__small" lang="en">Download on the</span>
+            <span class="btn-download__small" lang="de">Verfügbar im</span>
+            <span class="btn-download__big">App Store</span>
           </div>
-          <p class="store-note" lang="en">Available for iPhone &amp; iPad · iOS 17+</p>
-          <p class="store-note" lang="de">Für iPhone &amp; iPad · iOS 17+</p>
+        </a>
+        <span class="hero__note" lang="en">iPhone &amp; iPad &middot; Ages 6&ndash;12+</span>
+        <span class="hero__note" lang="de">iPhone &amp; iPad &middot; Ab 6 Jahren</span>
+      </div>
+
+    </section>
+
+    <!-- ========== SCREENSHOT SHOWCASE ========== -->
+    <section class="showcase" aria-label="App Screenshots">
+      <h2 class="showcase__heading" lang="en">See It in Action</h2>
+      <h2 class="showcase__heading" lang="de">Ein Blick in die App</h2>
+
+      <div class="showcase__viewport">
+        <div class="showcase__track">
+          <div class="phone-frame">
+            <div class="phone-frame__screen">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="assets/screenshots/S0_ENG.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-frame__screen">
+              <img src="assets/screenshots/S1_ENG.webp" alt="Choose your story world" loading="lazy">
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-frame__screen">
+              <img src="assets/screenshots/S2_ENG.webp" alt="Draw the scene on paper" loading="lazy">
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-frame__screen">
+              <img src="assets/screenshots/S3_ENG.webp" alt="Take a photo in the app" loading="lazy">
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-frame__screen">
+              <img src="assets/screenshots/S4_ENG.webp" alt="Watch your drawing animate" loading="lazy">
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-frame__screen">
+              <img src="assets/screenshots/S5_ENG.webp" alt="Your animated storybook movie" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <!-- Scroll fade hints -->
+        <div class="showcase__fade showcase__fade--left"></div>
+        <div class="showcase__fade showcase__fade--right"></div>
+      </div>
+
+      <div class="showcase__indicator" aria-hidden="true">
+        <span lang="en">Scroll to explore</span>
+        <span lang="de">Wischen zum Entdecken</span>
+        <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M2 2L10 9L18 2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="how-it-works">
+      <h2 class="section-heading" lang="en">How It Works</h2>
+      <h2 class="section-heading" lang="de">So funktioniert's</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <div class="step__content">
+            <h3 lang="en">Pick a Story World</h3>
+            <h3 lang="de">Wähle eine Geschichte</h3>
+            <p lang="en">Choose from 20 adventure worlds — pirates, dragons, space, jungle, fairy tales and many more. Each story has three scenes to bring to life.</p>
+            <p lang="de">Wähle aus 20 Abenteuerwelten — Piraten, Drachen, Weltraum, Dschungel, Märchen und viele mehr. Jede Geschichte hat drei Szenen zum Leben erwecken.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <div class="step__content">
+            <h3 lang="en">Draw on Paper</h3>
+            <h3 lang="de">Zeichne auf Papier</h3>
+            <p lang="en">Grab crayons, markers, or pencils and draw the scene on real paper. This is where the magic starts — no screen time, just creativity.</p>
+            <p lang="de">Schnapp dir Stifte oder Buntstifte und zeichne die Szene auf echtem Papier. Hier beginnt die Magie — keine Bildschirmzeit, nur Kreativität.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <div class="step__content">
+            <h3 lang="en">Snap a Photo</h3>
+            <h3 lang="de">Mach ein Foto</h3>
+            <p lang="en">Open the app and photograph your drawing — it takes just a few seconds. The app guides your child through each step.</p>
+            <p lang="de">Öffne die App und fotografiere deine Zeichnung — das dauert nur wenige Sekunden. Die App führt dein Kind durch jeden Schritt.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__number">4</div>
+          <div class="step__content">
+            <h3 lang="en">Watch It Animate</h3>
+            <h3 lang="de">Schau zu, wie es lebt</h3>
+            <p lang="en">AI brings your drawing to life as an animated movie — complete with sound effects and music. Every animation is unique, because every drawing is different.</p>
+            <p lang="de">KI erweckt deine Zeichnung als animierten Film zum Leben — komplett mit Soundeffekten und Musik. Jede Animation ist einzigartig, weil jede Zeichnung anders ist.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__number">5</div>
+          <div class="step__content">
+            <h3 lang="en">Complete Your Movie</h3>
+            <h3 lang="de">Stelle deinen Film fertig</h3>
+            <p lang="en">Draw all three scenes to unlock your full animated storybook movie. Share it with family and friends, or keep it as a personal treasure.</p>
+            <p lang="de">Zeichne alle drei Szenen, um deinen kompletten animierten Storybook-Film freizuschalten. Teile ihn mit Familie und Freunden oder behalte ihn als persönlichen Schatz.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Feature Highlights -->
-    <section class="features">
-      <div class="features-grid">
-
-        <div class="feature-card">
-          <div class="feature-icon">🎨</div>
-          <h3 lang="en">How It Works</h3>
-          <h3 lang="de">So funktioniert's</h3>
-          <ol class="steps-list" lang="en">
-            <li>Pick a story world</li>
-            <li>Draw the scene on paper</li>
-            <li>Take a photo in the app</li>
-            <li>Watch your drawing animate</li>
-            <li>Complete all scenes for your movie</li>
-          </ol>
-          <ol class="steps-list" lang="de">
-            <li>Wähle eine Geschichte</li>
-            <li>Zeichne die Szene auf Papier</li>
-            <li>Mach ein Foto in der App</li>
-            <li>Schau zu, wie deine Zeichnung lebendig wird</li>
-            <li>Schließe alle Szenen für deinen Film ab</li>
-          </ol>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">📴</div>
+    <!-- ========== FEATURES ========== -->
+    <section class="features-section">
+      <div class="features-row">
+        <div class="feature-block">
+          <div class="feature-block__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2"/><path d="M2 12h28M10 6v20" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="20" cy="18" r="3" fill="currentColor" opacity=".6"/></svg>
+          </div>
           <h3 lang="en">Draw More. Screen Less.</h3>
           <h3 lang="de">Mehr Zeichnen. Weniger Bildschirm.</h3>
-          <p lang="en">Kids spend most of their time drawing on paper — the phone is only used to capture and watch. More imagination, less screen time.</p>
-          <p lang="de">Kinder verbringen die meiste Zeit mit Zeichnen auf Papier — das Handy wird nur zum Fotografieren und Anschauen benutzt. Mehr Fantasie, weniger Bildschirmzeit.</p>
+          <p lang="en">Kids spend most of their creative time drawing on real paper with real tools. The phone is just the camera and the cinema.</p>
+          <p lang="de">Kinder verbringen die meiste kreative Zeit mit echtem Zeichnen auf echtem Papier. Das Handy ist nur Kamera und Kino.</p>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">🌍</div>
+        <div class="feature-block">
+          <div class="feature-block__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="2"/><path d="M16 3c3 4 5 8 5 13s-2 9-5 13M16 3c-3 4-5 8-5 13s2 9 5 13M3 16h26" stroke="currentColor" stroke-width="2" opacity=".5"/></svg>
+          </div>
           <h3 lang="en">20 Story Worlds</h3>
-          <h3 lang="de">20 Geschichtenwelten</h3>
-          <p lang="en">From pirate adventures and jungle expeditions to space journeys and dragon mountains — each story includes three scenes to draw and animate.</p>
-          <p lang="de">Von Piratenabenteuern und Dschungelexpeditionen bis zu Weltraumreisen und Drachenbergen — jede Geschichte enthält drei Szenen zum Zeichnen und Animieren.</p>
+          <h3 lang="de">20 Abenteuerwelten</h3>
+          <p lang="en">Pirate Treasure, Jungle Adventure, Space Journey, Dragon Mountain — each with three scenes to draw and animate.</p>
+          <p lang="de">Piratenschatz, Dschungelabenteuer, Weltraumreise, Drachenberg — je drei Szenen zum Zeichnen und Animieren.</p>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">🛡️</div>
-          <h3 lang="en">Safe by Design</h3>
-          <h3 lang="de">Sicher von Grund auf</h3>
-          <ul class="safe-list" lang="en">
-            <li>No account, email, or personal data required</li>
-            <li>AI safety checks review every drawing</li>
-            <li>Parental controls for purchases</li>
-            <li>No ads or tracking</li>
-          </ul>
-          <ul class="safe-list" lang="de">
-            <li>Kein Konto, keine E-Mail, keine persönlichen Daten</li>
-            <li>KI-Sicherheitsprüfung für jede Zeichnung</li>
-            <li>Kindersicherung für Käufe</li>
-            <li>Keine Werbung, kein Tracking</li>
-          </ul>
+        <div class="feature-block">
+          <div class="feature-block__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4l3.5 7 7.5 1.1-5.4 5.3 1.3 7.6L16 21.5l-6.9 3.5 1.3-7.6L5 12.1l7.5-1.1L16 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 lang="en">Every Drawing Is Unique</h3>
+          <h3 lang="de">Jede Zeichnung ist einzigartig</h3>
+          <p lang="en">Because every child draws differently, every animation is one of a kind. Their art, their movie.</p>
+          <p lang="de">Weil jedes Kind anders zeichnet, ist jede Animation ein Unikat. Ihr Kunstwerk, ihr Film.</p>
         </div>
-
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ========== SAFETY ========== -->
+    <section class="safety">
+      <div class="safety__card">
+        <div class="safety__header">
+          <div class="safety__shield">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2L4 7v6c0 7 4.5 11.5 10 14 5.5-2.5 10-7 10-14V7L14 2z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity=".1"/><path d="M10 14l3 3 5-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h2 lang="en">Safe by Design</h2>
+            <h2 lang="de">Sicher von Grund auf</h2>
+            <p class="safety__sub" lang="en">Built for kids. Trusted by parents.</p>
+            <p class="safety__sub" lang="de">Gemacht für Kinder. Vertraut von Eltern.</p>
+          </div>
+        </div>
+        <div class="safety__grid">
+          <div class="safety__item">
+            <span class="safety__check">&#10003;</span>
+            <span lang="en">No account, email, or personal data required</span>
+            <span lang="de">Kein Konto, keine E-Mail, keine persönlichen Daten</span>
+          </div>
+          <div class="safety__item">
+            <span class="safety__check">&#10003;</span>
+            <span lang="en">AI safety checks review every drawing</span>
+            <span lang="de">KI-Sicherheitsprüfung für jede Zeichnung</span>
+          </div>
+          <div class="safety__item">
+            <span class="safety__check">&#10003;</span>
+            <span lang="en">Parental controls for purchases</span>
+            <span lang="de">Kindersicherung für Käufe</span>
+          </div>
+          <div class="safety__item">
+            <span class="safety__check">&#10003;</span>
+            <span lang="en">No ads, no tracking, no social features</span>
+            <span lang="de">Keine Werbung, kein Tracking, keine sozialen Funktionen</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FINAL CTA ========== -->
+    <section class="final-cta">
+      <h2 lang="en">Ready to explore?</h2>
+      <h2 lang="de">Bereit zum Entdecken?</h2>
+      <a href="https://apps.apple.com/app/id6761114804" target="_blank" rel="noopener" class="btn-download btn-download--large">
+        <svg class="btn-download__apple" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <div class="btn-download__text">
+          <span class="btn-download__small" lang="en">Download on the</span>
+          <span class="btn-download__small" lang="de">Verfügbar im</span>
+          <span class="btn-download__big">App Store</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
-    <nav class="footer-links">
-      <a href="privacy.html" class="footer-link" lang="en">Privacy Policy</a>
-      <a href="privacy.html" class="footer-link" lang="de">Datenschutz</a>
-      <span class="footer-sep">·</span>
-      <a href="terms.html" class="footer-link" lang="en">Terms of Service</a>
-      <a href="terms.html" class="footer-link" lang="de">Nutzungsbedingungen</a>
-      <span class="footer-sep">·</span>
-      <a href="impressum.html" class="footer-link">Impressum</a>
-    </nav>
-    <p class="footer-copy">&copy; 2026 Storybook Adventures. <span lang="en">All rights reserved.</span><span lang="de">Alle Rechte vorbehalten.</span></p>
+      <nav class="footer-links">
+        <a href="privacy.html" class="footer-link" lang="en">Privacy Policy</a>
+        <a href="privacy.html" class="footer-link" lang="de">Datenschutz</a>
+        <span class="footer-sep">&middot;</span>
+        <a href="terms.html" class="footer-link" lang="en">Terms of Service</a>
+        <a href="terms.html" class="footer-link" lang="de">Nutzungsbedingungen</a>
+        <span class="footer-sep">&middot;</span>
+        <a href="impressum.html" class="footer-link">Impressum</a>
+        <span class="footer-sep">&middot;</span>
+        <a href="support.html" class="footer-link" lang="en">Support</a>
+        <a href="support.html" class="footer-link" lang="de">Hilfe</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Storybook Adventures. <span lang="en">All rights reserved.</span><span lang="de">Alle Rechte vorbehalten.</span></p>
     </footer>
 
   </main>
 
-  <!-- Language Toggle Script -->
   <script>
     (function() {
       const LANG_KEY = 'sba-lang';
@@ -170,13 +307,42 @@
         });
       }
 
-      // Init
       setLang(currentLang);
 
-      // Click handlers
       document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => setLang(btn.dataset.lang));
       });
+
+      /* Scroll-triggered fade-in */
+      const revealTargets = document.querySelectorAll('.how-it-works, .features-section, .safety, .final-cta');
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+
+        revealTargets.forEach(el => observer.observe(el));
+      } else {
+        revealTargets.forEach(el => el.classList.add('is-visible'));
+      }
+
+      /* Showcase scroll fade hints */
+      const viewport = document.querySelector('.showcase__viewport');
+      if (viewport) {
+        const updateFades = () => {
+          const { scrollLeft, scrollWidth, clientWidth } = viewport;
+          viewport.classList.toggle('at-start', scrollLeft < 10);
+          viewport.classList.toggle('at-end', scrollLeft + clientWidth >= scrollWidth - 10);
+        };
+        viewport.addEventListener('scroll', updateFades, { passive: true });
+        updateFades();
+      }
+
     })();
   </script>
 </body>
