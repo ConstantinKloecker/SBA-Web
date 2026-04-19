@@ -438,24 +438,56 @@
       modalClose.addEventListener('click', closeModal);
       modalBackdrop.addEventListener('click', closeModal);
 
-      /* Form submissions (frontend only — backend TBD) */
+      /* Newsletter API */
+      const SUPABASE_URL = 'https://ijurbxopaepeoposgkum.supabase.co';
+      const SUBSCRIBE_URL = `${SUPABASE_URL}/functions/v1/subscribe-newsletter`;
+
+      async function submitSubscription(form, source) {
+        const input = form.querySelector('input');
+        const btn = form.querySelector('button');
+        const email = input.value.trim();
+        if (!email) return;
+
+        btn.disabled = true;
+        btn.style.opacity = '0.6';
+
+        try {
+          const res = await fetch(SUBSCRIBE_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, source, lang: currentLang }),
+          });
+          const data = await res.json();
+
+          if (data.ok) {
+            form.innerHTML = currentLang === 'de'
+              ? '<p class="form-success">Danke! Bitte bestätige deine E-Mail.</p>'
+              : '<p class="form-success">Thanks! Please check your inbox to confirm.</p>';
+            if (source === 'android_waitlist') setTimeout(closeModal, 2500);
+          } else if (data.error === 'invalid_email') {
+            input.style.borderColor = '#c0392b';
+            btn.disabled = false;
+            btn.style.opacity = '';
+          } else {
+            form.innerHTML = currentLang === 'de'
+              ? '<p class="form-success" style="color:#c0392b">Etwas ist schiefgelaufen. Bitte versuche es erneut.</p>'
+              : '<p class="form-success" style="color:#c0392b">Something went wrong. Please try again.</p>';
+          }
+        } catch {
+          form.innerHTML = currentLang === 'de'
+            ? '<p class="form-success" style="color:#c0392b">Verbindungsfehler. Bitte versuche es erneut.</p>'
+            : '<p class="form-success" style="color:#c0392b">Connection error. Please try again.</p>';
+        }
+      }
+
       document.getElementById('form-android').addEventListener('submit', function(e) {
         e.preventDefault();
-        const email = this.querySelector('input').value;
-        console.log('Android waitlist:', email, 'lang:', currentLang);
-        this.innerHTML = currentLang === 'de'
-          ? '<p class="form-success">Danke! Wir benachrichtigen dich.</p>'
-          : '<p class="form-success">Thanks! We\'ll let you know.</p>';
-        setTimeout(closeModal, 2000);
+        submitSubscription(this, 'android_waitlist');
       });
 
       document.getElementById('form-newsletter').addEventListener('submit', function(e) {
         e.preventDefault();
-        const email = this.querySelector('input').value;
-        console.log('Newsletter:', email, 'lang:', currentLang);
-        this.innerHTML = currentLang === 'de'
-          ? '<p class="form-success">Danke! Bestätigungs-E-Mail kommt gleich.</p>'
-          : '<p class="form-success">Thanks! Check your inbox for confirmation.</p>';
+        submitSubscription(this, 'general_newsletter');
       });
 
     })();
