@@ -35,6 +35,15 @@
   box-sizing: border-box;
 }
 
+/* Balanced wrapping for headings + short sub-paragraphs */
+h1, h2, h3,
+.hero__subtitle,
+.safety__sub,
+.modal__content > p,
+.newsletter__card > p {
+  text-wrap: balance;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -610,6 +619,7 @@ img, video {
   color: var(--gold-text);
   margin-bottom: 8px;
   line-height: 1.3;
+  text-wrap: balance;
 }
 
 @media (min-width: 640px) {
@@ -1492,3 +1502,7 @@ body.lang-de span[lang="de"] { display: inline !important; }
   opacity: 0;
   pointer-events: none;
 }
+
+/* Responsive line break helpers */
+.hide-mobile { display: none; }
+@media (min-width: 640px) { .hide-mobile { display: inline; } }
