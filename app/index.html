@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening Storybook Adventures...</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1a2744">
+
+  <!-- Fallback: if JS fails, meta refresh to homepage after 3s -->
+  <meta http-equiv="refresh" content="3;url=/index.html">
+
+  <link rel="icon" type="image/webp" href="/assets/logo-emblem.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      background: #1a2744;
+      font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .page-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: url('/assets/bg-mobile.webp') center top / cover no-repeat;
+    }
+
+    @media (min-width: 768px) {
+      .page-bg {
+        background-image: url('/assets/bg-desktop-2.webp');
+        background-position: center center;
+      }
+    }
+
+    .wrap {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 32px 24px;
+      gap: 24px;
+    }
+
+    .logo {
+      width: min(80vw, 360px);
+      filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.97); opacity: 0.85; }
+    }
+
+    h1 {
+      font-family: 'Lilita One', cursive;
+      font-size: clamp(20px, 5vw, 26px);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.95);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 4px 16px rgba(0, 0, 0, 0.4);
+      line-height: 1.3;
+    }
+
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      border-top-color: #ffd23c;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .fallback {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 12px;
+      opacity: 0;
+      animation: fadeIn 0.3s ease 1.5s forwards;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .fallback:hover {
+      transform: translateY(-2px);
+    }
+
+    .hide-de [lang="de"] { display: none; }
+    .hide-en [lang="en"] { display: none; }
+  </style>
+</head>
+<body class="hide-de">
+  <div class="page-bg" role="presentation"></div>
+
+  <div class="wrap">
+    <img src="/assets/logo.webp" alt="Storybook Adventures" class="logo">
+    <div class="spinner" role="presentation"></div>
+    <h1>
+      <span lang="en">Opening Storybook Adventures...</span>
+      <span lang="de">Storybook Adventures wird geöffnet...</span>
+    </h1>
+    <a href="https://apps.apple.com/app/id6761114804" class="fallback" id="fallback">
+      <span lang="en">Tap here if nothing happens</span>
+      <span lang="de">Tippe hier, falls nichts passiert</span>
+    </a>
+  </div>
+
+  <script>
+    (function() {
+      const APP_STORE = 'https://apps.apple.com/app/id6761114804';
+      const HOME = '/index.html';
+      const HOME_ANDROID = '/index.html?android=1';
+
+      // Language
+      const lang = (navigator.language || 'en').toLowerCase().startsWith('de') ? 'de' : 'en';
+      document.documentElement.lang = lang;
+      document.body.className = lang === 'de' ? 'hide-en' : 'hide-de';
+
+      // Platform detection
+      const ua = navigator.userAgent || '';
+      const platform = navigator.platform || '';
+      const maxTouch = navigator.maxTouchPoints || 0;
+
+      // iOS / iPadOS (iPad on iPadOS 13+ reports as Mac — detect via touch)
+      const isIOS =
+        /iPhone|iPad|iPod/.test(ua) ||
+        (platform === 'MacIntel' && maxTouch > 1);
+
+      const isMac = /Mac/.test(platform) && maxTouch <= 1;
+      const isAndroid = /Android/i.test(ua);
+
+      // Update fallback link for Android users
+      if (isAndroid) {
+        document.getElementById('fallback').href = HOME_ANDROID;
+      }
+
+      let target;
+      if (isIOS || isMac) {
+        target = APP_STORE;
+      } else if (isAndroid) {
+        target = HOME_ANDROID;
+      } else {
+        target = HOME;
+      }
+
+      // Instant redirect after brief pause so logo flash is intentional-feeling
+      setTimeout(() => { window.location.replace(target); }, 400);
+    })();
+  </script>
+</body>
+</html>
