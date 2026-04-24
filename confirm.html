@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Confirmed — Storybook Adventures</title>
+  <meta name="description" content="Email subscription confirmed.">
+  <meta name="theme-color" content="#1a2744">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="assets/logo-emblem.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-bg" role="presentation"></div>
+
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+    <button class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+  </div>
+
+  <div class="legal-page">
+    <header class="legal-header">
+      <a href="index.html" class="legal-back" lang="en">&#8592; Home</a>
+      <a href="index.html" class="legal-back" lang="de">&#8592; Startseite</a>
+    </header>
+
+    <div class="legal-content-wrapper">
+      <div class="legal-content">
+        <!-- Status: ok -->
+        <div class="legal-text confirm-msg" id="msg-ok" style="display:none">
+          <div lang="en">
+            <h1>You're in!</h1>
+            <p>Your email has been confirmed. We'll keep you posted on new story worlds, features, and updates.</p>
+            <p><a href="index.html">Back to homepage</a></p>
+          </div>
+          <div lang="de">
+            <h1>Du bist dabei!</h1>
+            <p>Deine E-Mail wurde bestätigt. Wir halten dich über neue Geschichtenwelten, Features und Updates auf dem Laufenden.</p>
+            <p><a href="index.html">Zurück zur Startseite</a></p>
+          </div>
+        </div>
+
+        <!-- Status: already confirmed -->
+        <div class="legal-text confirm-msg" id="msg-already" style="display:none">
+          <div lang="en">
+            <h1>Already confirmed</h1>
+            <p>Your email is already confirmed — you're all set!</p>
+            <p><a href="index.html">Back to homepage</a></p>
+          </div>
+          <div lang="de">
+            <h1>Bereits bestätigt</h1>
+            <p>Deine E-Mail ist bereits bestätigt — alles bereit!</p>
+            <p><a href="index.html">Zurück zur Startseite</a></p>
+          </div>
+        </div>
+
+        <!-- Status: invalid token -->
+        <div class="legal-text confirm-msg" id="msg-invalid" style="display:none">
+          <div lang="en">
+            <h1>Invalid link</h1>
+            <p>This confirmation link is invalid or has expired. Please try signing up again.</p>
+            <p><a href="index.html">Back to homepage</a></p>
+          </div>
+          <div lang="de">
+            <h1>Ungültiger Link</h1>
+            <p>Dieser Bestätigungslink ist ungültig oder abgelaufen. Bitte melde dich erneut an.</p>
+            <p><a href="index.html">Zurück zur Startseite</a></p>
+          </div>
+        </div>
+
+        <!-- Status: error -->
+        <div class="legal-text confirm-msg" id="msg-error" style="display:none">
+          <div lang="en">
+            <h1>Something went wrong</h1>
+            <p>We couldn't confirm your email. Please try again later or contact us at <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a>.</p>
+            <p><a href="index.html">Back to homepage</a></p>
+          </div>
+          <div lang="de">
+            <h1>Etwas ist schiefgelaufen</h1>
+            <p>Wir konnten deine E-Mail nicht bestätigen. Bitte versuche es später erneut oder kontaktiere uns unter <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a>.</p>
+            <p><a href="index.html">Zurück zur Startseite</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="legal-footer">
+      <nav class="footer-links">
+        <a href="privacy.html" class="footer-link" lang="en">Privacy Policy</a>
+        <a href="privacy.html" class="footer-link" lang="de">Datenschutz</a>
+        <span class="footer-sep">&middot;</span>
+        <a href="terms.html" class="footer-link" lang="en">Terms of Service</a>
+        <a href="terms.html" class="footer-link" lang="de">Nutzungsbedingungen</a>
+        <span class="footer-sep">&middot;</span>
+        <a href="impressum.html" class="footer-link">Impressum</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Storybook Adventures. <span lang="en">All rights reserved.</span><span lang="de">Alle Rechte vorbehalten.</span></p>
+    </footer>
+  </div>
+
+  <script>
+    (function() {
+      const LANG_KEY = 'sba-lang';
+      const saved = localStorage.getItem(LANG_KEY);
+      const browserLang = navigator.language?.startsWith('de') ? 'de' : 'en';
+      let currentLang = saved || browserLang;
+      function setLang(lang) {
+        currentLang = lang;
+        localStorage.setItem(LANG_KEY, lang);
+        document.body.classList.toggle('lang-de', lang === 'de');
+        document.documentElement.lang = lang;
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          const isActive = btn.dataset.lang === lang;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-pressed', isActive);
+        });
+      }
+      setLang(currentLang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => setLang(btn.dataset.lang));
+      });
+
+      // Show the right message based on ?status= param
+      const status = new URLSearchParams(window.location.search).get('status') || 'ok';
+      const validStatuses = ['ok', 'already', 'invalid', 'error'];
+      const msgId = validStatuses.includes(status) ? status : 'invalid';
+      const el = document.getElementById('msg-' + msgId);
+      if (el) el.style.display = 'block';
+    })();
+  </script>
+</body>
+</html>

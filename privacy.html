@@ -66,7 +66,7 @@
 
             <h3>2.2 What We Do NOT Collect</h3>
             <ul>
-              <li>Names, email addresses, phone numbers, or any personally identifiable information</li>
+              <li>Names, email addresses, phone numbers, or any personally identifiable information — within the App. If you subscribe to our newsletter on the website, see §13.</li>
               <li>Location data or GPS coordinates</li>
               <li>Random photos from the device's camera roll — when uploading a drawing, users either take a new photo or pick one from their library; only that chosen image is uploaded, and all location metadata is removed on-device before it leaves the phone</li>
               <li>Browsing history, app usage patterns, or behavioral analytics</li>
@@ -112,6 +112,7 @@
                   <tr><td><strong>OpenAI</strong></td><td>Checks drawings for child safety before animation</td><td>Drawing image (via a short-lived secure link)</td><td>United States</td><td>Retained for up to 30 days per OpenAI's API data retention policy, then deleted</td></tr>
                   <tr><td><strong>Replicate</strong></td><td>Generates the animated video from drawing + text prompt</td><td>Drawing image + scene prompt</td><td>United States</td><td>Auto-deleted within ~1 hour</td></tr>
                   <tr><td><strong>Fly.io</strong></td><td>Runs the animation pipeline — downloads the drawing, coordinates video and audio generation via Replicate, and assembles the final video</td><td>Drawing image, scene prompt, generated video, generated audio</td><td>EU (Frankfurt, Germany)</td><td>Processed during pipeline — not stored after completion</td></tr>
+                  <tr><td><strong>Resend</strong></td><td>Sends newsletter emails to website subscribers who have opted in</td><td>Email address</td><td>United States</td><td>Until you unsubscribe or withdraw consent, deleted within 30 days thereafter</td></tr>
                   <tr><td><strong>Apple (In-App Purchase)</strong></td><td>Processes token purchases</td><td>Purchase receipt (Apple handles this — we never see payment details)</td><td>United States</td><td>Per Apple's Privacy Policy</td></tr>
                 </tbody>
               </table>
@@ -227,14 +228,25 @@
             <p>We keep a transaction record (anonymous profile ID, token amount, timestamp, receipt validation result) for up to 10 years as required by German tax law. These records contain no personal information. For details on how Apple handles payment data, see <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
             <p><strong>Voucher codes</strong> may be distributed through marketing partners or campaigns. When you redeem one, the code is linked to your anonymous profile to prevent duplicate use. We record the anonymous profile ID, the campaign code, and a timestamp. No personal information is collected. We use this data to prevent abuse, measure campaign performance, and calculate partner compensation.</p>
 
-            <h2>13. Local Storage</h2>
+            <h2>13. Website Newsletter</h2>
+            <p>On our website (<a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a>), you may optionally subscribe to our newsletter to receive product updates such as new feature announcements and platform availability.</p>
+            <ul>
+              <li><strong>What we collect:</strong> Your email address only</li>
+              <li><strong>Lawful basis:</strong> Your explicit consent (Art. 6(1)(a) GDPR), given at the point of sign-up</li>
+              <li><strong>Who processes it:</strong> Resend (US-based email delivery provider). Your email address is transferred to the United States under EU Standard Contractual Clauses (GDPR Art. 46)</li>
+              <li><strong>How long we keep it:</strong> Until you unsubscribe or withdraw consent. Your email address is deleted within 30 days of unsubscribing.</li>
+              <li><strong>How to unsubscribe:</strong> Use the one-click unsubscribe link in any newsletter email, or contact us at contact@storybookadventures.io</li>
+            </ul>
+            <p>Newsletter subscription is entirely independent of App usage. Subscribing does not create an App account, and using the App does not subscribe you to the newsletter. App users who never visit the website are never asked for their email address.</p>
+
+            <h2>14. Local Storage</h2>
             <p>The App stores some data directly on your device: animations, scene progress, parental settings, and onboarding state. This data is removed if you delete the App. However, because we also store drawings, animations, prompts, and progress on our servers, reinstalling the App on the same device (with the same Keychain) will restore your content.</p>
             <p>We recommend saving completed animations to your photo gallery as an additional backup.</p>
 
-            <h2>14. Changes to This Policy</h2>
+            <h2>15. Changes to This Policy</h2>
             <p>We may update this policy from time to time. If we make material changes to how we handle children's data, we will notify you prominently within the App and, where required by law, seek renewed parental consent. The version number and "Last updated" date at the top of this document always reflect the current version.</p>
 
-            <h2>15. Contact</h2>
+            <h2>16. Contact</h2>
             <p>Questions about this policy, your data, or your child's privacy? We're happy to help.</p>
             <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Germany</p>
             <p>Email: contact@storybookadventures.io</p>
@@ -278,7 +290,7 @@
 
             <h3>2.2 Was wir NICHT erheben</h3>
             <ul>
-              <li>Namen, E-Mail-Adressen, Telefonnummern oder sonstige personenbezogene Daten</li>
+              <li>Namen, E-Mail-Adressen, Telefonnummern oder sonstige personenbezogene Daten — innerhalb der App. Wenn Sie unseren Newsletter auf der Website abonnieren, siehe §13.</li>
               <li>Standortdaten oder GPS-Koordinaten</li>
               <li>Beliebige Fotos aus der Kamerarolle — beim Hochladen einer Zeichnung k&ouml;nnen Nutzer entweder ein neues Foto aufnehmen oder ein vorhandenes Foto aus ihrer Bibliothek ausw&auml;hlen; nur dieses eine ausgew&auml;hlte Bild wird hochgeladen, und alle Standortmetadaten werden auf dem Ger&auml;t entfernt, bevor es das Ger&auml;t verl&auml;sst</li>
               <li>Browserverlauf, App-Nutzungsmuster oder Verhaltensanalysen</li>
@@ -324,6 +336,7 @@
                   <tr><td><strong>OpenAI</strong></td><td>Pr&uuml;ft Zeichnungen auf Kindersicherheit vor der Animation</td><td>Zeichnungsbild (&uuml;ber einen kurzlebigen sicheren Link)</td><td>Vereinigte Staaten</td><td>Gem&auml;&szlig; OpenAIs API-Datenaufbewahrungsrichtlinie bis zu 30 Tage gespeichert, danach gel&ouml;scht</td></tr>
                   <tr><td><strong>Replicate</strong></td><td>Generiert das animierte Video aus Zeichnung + Textbeschreibung</td><td>Zeichnungsbild + Szenenbeschreibung</td><td>Vereinigte Staaten</td><td>Automatisch innerhalb von ca. 1 Stunde gel&ouml;scht</td></tr>
                   <tr><td><strong>Fly.io</strong></td><td>F&uuml;hrt die Animations-Pipeline aus — l&auml;dt die Zeichnung herunter, koordiniert Video- und Audiogenerierung &uuml;ber Replicate und assembliert das fertige Video</td><td>Zeichnungsbild, Szenenbeschreibung, generiertes Video, generierter Ton</td><td>EU (Frankfurt am Main)</td><td>W&auml;hrend der Pipeline verarbeitet — nach Abschluss nicht gespeichert</td></tr>
+                  <tr><td><strong>Resend</strong></td><td>Versendet Newsletter-E-Mails an Website-Besucher, die sich angemeldet haben</td><td>E-Mail-Adresse</td><td>Vereinigte Staaten</td><td>Bis zur Abmeldung oder zum Widerruf der Einwilligung, danach innerhalb von 30 Tagen gel&ouml;scht</td></tr>
                   <tr><td><strong>Apple (In-App-Kauf)</strong></td><td>Verarbeitet Token-K&auml;ufe</td><td>Kaufbeleg (von Apple abgewickelt — wir sehen keine Zahlungsdetails)</td><td>Vereinigte Staaten</td><td>Gem&auml;&szlig; Apples Datenschutzrichtlinie</td></tr>
                 </tbody>
               </table>
@@ -439,14 +452,25 @@
             <p>Wir f&uuml;hren einen Transaktionsdatensatz (anonyme Profil-ID, Token-Menge, Zeitstempel, Belegvalidierungsergebnis) f&uuml;r bis zu 10 Jahre gem&auml;&szlig; deutschem Steuerrecht. Diese Datens&auml;tze enthalten keine personenbezogenen Daten. Informationen zum Umgang von Apple mit Zahlungsdaten finden Sie in <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apples Datenschutzrichtlinie</a>.</p>
             <p><strong>Gutscheincodes</strong> k&ouml;nnen &uuml;ber Marketingpartner oder Kampagnen verteilt werden. Bei der Einl&ouml;sung wird der Code mit Ihrem anonymen Profil verkn&uuml;pft, um Doppelnutzung zu verhindern. Wir erfassen die anonyme Profil-ID, den Kampagnencode und einen Zeitstempel. Es werden keine personenbezogenen Daten erhoben. Wir verwenden diese Daten zur Missbrauchspr&auml;vention, Messung der Kampagnenleistung und Berechnung von Partnerprovisionen.</p>
 
-            <h2>13. Lokale Speicherung</h2>
+            <h2>13. Website-Newsletter</h2>
+            <p>Auf unserer Website (<a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a>) k&ouml;nnen Sie optional unseren Newsletter abonnieren, um Produktneuigkeiten wie neue Funktionen und Plattformverf&uuml;gbarkeit zu erhalten.</p>
+            <ul>
+              <li><strong>Was wir erheben:</strong> Ausschlie&szlig;lich Ihre E-Mail-Adresse</li>
+              <li><strong>Rechtsgrundlage:</strong> Ihre ausdr&uuml;ckliche Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die zum Zeitpunkt der Anmeldung erteilt wird</li>
+              <li><strong>Wer verarbeitet die Daten:</strong> Resend (US-amerikanischer E-Mail-Dienstleister). Ihre E-Mail-Adresse wird auf Basis von EU-Standardvertragsklauseln (Art. 46 DSGVO) in die Vereinigten Staaten &uuml;bermittelt</li>
+              <li><strong>Wie lange wir die Daten aufbewahren:</strong> Bis zur Abmeldung oder zum Widerruf der Einwilligung. Ihre E-Mail-Adresse wird innerhalb von 30 Tagen nach der Abmeldung gel&ouml;scht.</li>
+              <li><strong>So melden Sie sich ab:</strong> Nutzen Sie den Ein-Klick-Abmeldelink in jeder Newsletter-E-Mail oder kontaktieren Sie uns unter contact@storybookadventures.io</li>
+            </ul>
+            <p>Das Newsletter-Abonnement ist vollst&auml;ndig unabh&auml;ngig von der App-Nutzung. Ein Abonnement erstellt kein App-Konto, und die App-Nutzung f&uuml;hrt nicht zu einem Newsletter-Abonnement. App-Nutzer, die die Website nie besuchen, werden niemals nach ihrer E-Mail-Adresse gefragt.</p>
+
+            <h2>14. Lokale Speicherung</h2>
             <p>Die App speichert einige Daten direkt auf Ihrem Ger&auml;t: Animationen, Szenenfortschritt, elterliche Einstellungen und Onboarding-Status. Diese Daten werden entfernt, wenn Sie die App l&ouml;schen. Da wir Zeichnungen, Animationen, Beschreibungen und Fortschritt jedoch auch auf unseren Servern speichern, werden Ihre Inhalte bei Neuinstallation der App auf demselben Ger&auml;t (mit demselben Keychain) wiederhergestellt.</p>
             <p>Wir empfehlen, fertige Animationen als zus&auml;tzliche Sicherung in Ihrer Fotogalerie zu speichern.</p>
 
-            <h2>14. &Auml;nderungen dieser Erkl&auml;rung</h2>
+            <h2>15. &Auml;nderungen dieser Erkl&auml;rung</h2>
             <p>Wir k&ouml;nnen diese Datenschutzerkl&auml;rung von Zeit zu Zeit aktualisieren. Bei wesentlichen &Auml;nderungen im Umgang mit Kinderdaten werden wir Sie in der App deutlich benachrichtigen und, wo gesetzlich vorgeschrieben, eine erneute elterliche Einwilligung einholen. Versionsnummer und Datum „Zuletzt aktualisiert" oben in diesem Dokument entsprechen stets der aktuellen Version.</p>
 
-            <h2>15. Kontakt</h2>
+            <h2>16. Kontakt</h2>
             <p>Fragen zu dieser Datenschutzerkl&auml;rung, Ihren Daten oder dem Datenschutz Ihres Kindes? Wir helfen gerne.</p>
             <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Deutschland</p>
             <p>E-Mail: contact@storybookadventures.io</p>
