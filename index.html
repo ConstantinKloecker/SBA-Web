@@ -42,6 +42,79 @@
   <link rel="apple-touch-icon" href="/assets/logo-emblem.webp">
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- ============================================
+       Structured Data (JSON-LD)
+       ============================================ -->
+
+  <!-- Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Storybook Adventures",
+    "url": "https://www.storybookadventures.io",
+    "logo": "https://www.storybookadventures.io/assets/logo.webp",
+    "email": "contact@storybookadventures.io",
+    "founder": {
+      "@type": "Person",
+      "name": "Constantin Klöcker"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Friedrichstr. 155",
+      "postalCode": "10117",
+      "addressLocality": "Berlin",
+      "addressCountry": "DE"
+    }
+  }
+  </script>
+
+  <!-- WebSite (enables sitelinks search box and brand recognition) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Storybook Adventures",
+    "url": "https://www.storybookadventures.io",
+    "inLanguage": ["en", "de"]
+  }
+  </script>
+
+  <!-- MobileApplication / SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Storybook Adventures",
+    "operatingSystem": "iOS 17.0+",
+    "applicationCategory": "EducationApplication",
+    "applicationSubCategory": "Children's Creativity",
+    "audience": {
+      "@type": "PeopleAudience",
+      "suggestedMinAge": 6,
+      "suggestedMaxAge": 12
+    },
+    "description": "A children's app that turns hand-drawn pictures into magical animated stories with sound. Kids draw scenes on paper, photograph them, and watch their artwork come to life.",
+    "image": "https://www.storybookadventures.io/assets/logo.webp",
+    "url": "https://www.storybookadventures.io",
+    "downloadUrl": "https://apps.apple.com/app/id6761114804",
+    "installUrl": "https://apps.apple.com/app/id6761114804",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Storybook Adventures",
+      "url": "https://www.storybookadventures.io"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free to download. Token-based in-app purchases for animations."
+    },
+    "inLanguage": ["en", "de"],
+    "contentRating": "4+"
+  }
+  </script>
 </head>
 <body>
 
