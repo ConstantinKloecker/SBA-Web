@@ -1,28 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
   <url>
     <loc>https://www.storybookadventures.io/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/"/>
   </url>
+  <url>
+    <loc>https://www.storybookadventures.io/de/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/"/>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://www.storybookadventures.io/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/about.html"/>
+  </url>
+  <url>
+    <loc>https://www.storybookadventures.io/de/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/about.html"/>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.storybookadventures.io/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/blog/"/>
+  </url>
+  <url>
+    <loc>https://www.storybookadventures.io/de/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/blog/"/>
+  </url>
+
+  <!-- Blog: AI for Kids 6-12 (EN + DE) -->
+  <url>
+    <loc>https://www.storybookadventures.io/blog/ai-for-kids-6-12-parents-guide.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/blog/ai-for-kids-6-12-parents-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/blog/ki-fuer-kinder-6-12-eltern-leitfaden.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/blog/ai-for-kids-6-12-parents-guide.html"/>
+  </url>
+  <url>
+    <loc>https://www.storybookadventures.io/de/blog/ki-fuer-kinder-6-12-eltern-leitfaden.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/blog/ai-for-kids-6-12-parents-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/blog/ki-fuer-kinder-6-12-eltern-leitfaden.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/blog/ai-for-kids-6-12-parents-guide.html"/>
+  </url>
+
+  <!-- Privacy -->
   <url>
     <loc>https://www.storybookadventures.io/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/privacy.html"/>
   </url>
+  <url>
+    <loc>https://www.storybookadventures.io/de/privacy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/privacy.html"/>
+  </url>
+
+  <!-- Terms -->
   <url>
     <loc>https://www.storybookadventures.io/terms.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/terms.html"/>
   </url>
+  <url>
+    <loc>https://www.storybookadventures.io/de/terms.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/terms.html"/>
+  </url>
+
+  <!-- Impressum -->
   <url>
     <loc>https://www.storybookadventures.io/impressum.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/impressum.html"/>
   </url>
+  <url>
+    <loc>https://www.storybookadventures.io/de/impressum.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/impressum.html"/>
+  </url>
+
+  <!-- Support -->
   <url>
     <loc>https://www.storybookadventures.io/support.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/support.html"/>
   </url>
+  <url>
+    <loc>https://www.storybookadventures.io/de/support.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/support.html"/>
+  </url>
+
 </urlset>

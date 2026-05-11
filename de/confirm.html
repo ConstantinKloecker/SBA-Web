@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Unsubscribed — Storybook Adventures</title>
-  <meta name="description" content="Email subscription removed.">
+  <title>Bestätigt — Storybook Adventures</title>
+  <meta name="description" content="E-Mail-Anmeldung bestätigt.">
   <meta name="theme-color" content="#1a2744">
-  <link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/unsubscribe.html">
-  <link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/unsubscribe.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/unsubscribe.html">
+  <link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/confirm.html">
+  <link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/confirm.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/confirm.html">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/webp" href="/assets/logo-emblem.webp">
   <link rel="apple-touch-icon" href="/assets/logo-emblem.webp">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <div class="page-bg" role="presentation"></div>
 
   <div class="lang-switch" role="group" aria-label="Language">
-    <a href="" class="lang-btn active" data-lang="en" aria-current="page">EN</a>
-    <a href="" class="lang-btn" data-lang="de">DE</a>
+    <a href="" class="lang-btn" data-lang="en">EN</a>
+    <a href="" class="lang-btn active" data-lang="de" aria-current="page">DE</a>
   </div>
 
   <div class="legal-page">
     <header class="legal-header">
-      <a href="index.html" class="legal-back">&#8592; Home</a>
+      <a href="/de/index.html" class="legal-back">&#8592; Startseite</a>
     </header>
 
     <div class="legal-content-wrapper">
@@ -35,33 +35,45 @@
         <!-- Status: ok -->
         <div class="legal-text confirm-msg" id="msg-ok" style="display:none">
           <div>
-            <h1>Unsubscribed</h1>
-            <p>You've been removed from our mailing list. You won't receive any more emails from us.</p>
-            <p>Changed your mind? You can always sign up again on our <a href="index.html">homepage</a>.</p>
+            <h1>Du bist dabei!</h1>
+            <p>Deine E-Mail wurde bestätigt. Wir halten dich über neue Geschichtenwelten, Features und Updates auf dem Laufenden.</p>
+            <p><a href="/de/index.html">Zurück zur Startseite</a></p>
           </div>
         </div>
 
-        <!-- Status: invalid -->
+        <!-- Status: already confirmed -->
+        <div class="legal-text confirm-msg" id="msg-already" style="display:none">
+          <div>
+            <h1>Bereits bestätigt</h1>
+            <p>Deine E-Mail ist bereits bestätigt — alles bereit!</p>
+            <p><a href="/de/index.html">Zurück zur Startseite</a></p>
+          </div>
+        </div>
+
+        <!-- Status: invalid token -->
         <div class="legal-text confirm-msg" id="msg-invalid" style="display:none">
           <div>
-            <h1>Invalid link</h1>
-            <p>This unsubscribe link is invalid or has already been used. If you're still receiving emails, contact us at <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a>.</p>
+            <h1>Ungültiger Link</h1>
+            <p>Dieser Bestätigungslink ist ungültig oder abgelaufen. Bitte melde dich erneut an.</p>
+            <p><a href="/de/index.html">Zurück zur Startseite</a></p>
           </div>
         </div>
 
         <!-- Status: rate limited -->
         <div class="legal-text confirm-msg" id="msg-rate_limited" style="display:none">
           <div>
-            <h1>Too many attempts</h1>
-            <p>Please wait a moment and try again.</p>
+            <h1>Zu viele Versuche</h1>
+            <p>Bitte warte einen Moment und versuche es erneut.</p>
+            <p><a href="/de/index.html">Zurück zur Startseite</a></p>
           </div>
         </div>
 
         <!-- Status: error -->
         <div class="legal-text confirm-msg" id="msg-error" style="display:none">
           <div>
-            <h1>Something went wrong</h1>
-            <p>We couldn't process your request. Please try again later or contact us at <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a>.</p>
+            <h1>Etwas ist schiefgelaufen</h1>
+            <p>Wir konnten deine E-Mail nicht bestätigen. Bitte versuche es später erneut oder kontaktiere uns unter <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a>.</p>
+            <p><a href="/de/index.html">Zurück zur Startseite</a></p>
           </div>
         </div>
       </div>
@@ -70,19 +82,19 @@
 
   <footer class="legal-footer">
       <nav class="footer-links">
-        <a href="about.html" class="footer-link">About</a>
+        <a href="/de/about.html" class="footer-link">Über uns</a>
         <span class="footer-sep">·</span>
-        <a href="blog/index.html" class="footer-link">Blog</a>
+        <a href="/de/blog/" class="footer-link">Blog</a>
         <span class="footer-sep">·</span>
-        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="/de/privacy.html" class="footer-link">Datenschutz</a>
         <span class="footer-sep">&middot;</span>
-        <a href="terms.html" class="footer-link">Terms of Service</a>
+        <a href="/de/terms.html" class="footer-link">Nutzungsbedingungen</a>
         <span class="footer-sep">&middot;</span>
-        <a href="impressum.html" class="footer-link">Impressum</a>
+        <a href="/de/impressum.html" class="footer-link">Impressum</a>
         <span class="footer-sep">&middot;</span>
-        <a href="support.html" class="footer-link">Support</a>
+        <a href="/de/support.html" class="footer-link">Hilfe</a>
       </nav>
-      <p class="footer-copy">&copy; 2026 Storybook Adventures. <span>All rights reserved.</span></p>
+      <p class="footer-copy">&copy; 2026 Storybook Adventures.<span>Alle Rechte vorbehalten.</span></p>
   </footer>
 
     <script>
