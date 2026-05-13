@@ -4,88 +4,203 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Datenschutzerklärung — Storybook Adventures</title>
-  <meta name="description" content="Datenschutzerklärung für Storybook Adventures. Wie wir mit deinen Daten umgehen — keine Konten, kein Tracking, keine persönlichen Daten von Kindern.">
+  <meta name="description" content="Datenschutzerklärung für Storybook Adventures.">
   <meta name="theme-color" content="#1a2744">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.storybookadventures.io/de/privacy.html">
   <link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/privacy.html">
   <link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/privacy.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/privacy.html">
 
-  <!-- Open Graph -->
   <meta property="og:site_name" content="Storybook Adventures">
   <meta property="og:title" content="Datenschutzerklärung — Storybook Adventures">
-  <meta property="og:description" content="Wie wir mit deinen Daten umgehen — keine Konten, kein Tracking, keine persönlichen Daten von Kindern.">
+  <meta property="og:description" content="Datenschutzerklärung für Storybook Adventures.">
   <meta property="og:image" content="https://www.storybookadventures.io/assets/logo.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.storybookadventures.io/de/privacy.html">
 
-  <!-- Twitter / X Cards -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Datenschutzerklärung — Storybook Adventures">
-  <meta name="twitter:description" content="Keine Konten, kein Tracking, keine persönlichen Daten von Kindern.">
-  <meta name="twitter:image" content="https://www.storybookadventures.io/assets/logo.webp">
-
+  <link rel="icon" type="image/webp" href="../assets/logo-emblem.webp">
+  <link rel="apple-touch-icon" href="../assets/logo-emblem.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/webp" href="/assets/logo-emblem.webp">
-  <link rel="apple-touch-icon" href="/assets/logo-emblem.webp">
-  <link rel="stylesheet" href="/style.css">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Privacy Policy — Storybook Adventures",
-    "url": "https://www.storybookadventures.io/privacy.html",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Storybook Adventures",
-      "url": "https://www.storybookadventures.io"
-    },
-    "about": {
-      "@type": "Organization",
-      "name": "Storybook Adventures",
-      "url": "https://www.storybookadventures.io"
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/subpage.css">
+<style>
+  /* ============ TOC + Doc layout ============ */
+  .doc-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    align-items: flex-start;
   }
-  </script>
+  .doc-layout > article.sheet {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    min-width: 0;
+  }
+  .doc-layout > article.sheet a { word-wrap: break-word; overflow-wrap: break-word; }
+  aside.toc {
+    position: sticky;
+    top: 96px;
+    align-self: flex-start;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding: 18px 16px;
+    background: rgba(15, 26, 46, 0.55);
+    border: 1px solid var(--white-10);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+  }
+  aside.toc h4 {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    margin-bottom: 12px;
+    padding-left: 6px;
+  }
+  aside.toc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: toc-counter;
+  }
+  aside.toc li {
+    counter-increment: toc-counter;
+    margin: 0;
+  }
+  aside.toc a {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 8px 8px;
+    border-radius: 8px;
+    color: var(--white-70);
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  aside.toc a::before {
+    content: counter(toc-counter, decimal-leading-zero);
+    flex: 0 0 auto;
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    opacity: 0.7;
+  }
+  aside.toc a:hover {
+    background: var(--white-10);
+    color: #fff;
+  }
+  aside.toc a.active {
+    background: var(--white-10);
+    color: #fff;
+  }
+  aside.toc a.active::before { opacity: 1; }
+  /* Smooth scroll with offset so anchors land below sticky nav */
+  html { scroll-padding-top: 80px; }
+  /* Hide TOC on mobile/tablet */
+  @media (max-width: 1024px) {
+    .doc-layout {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+    aside.toc { display: none; }
+  }
+</style>
 </head>
 <body>
-  <div class="page-bg" role="presentation"></div>
 
-  <div class="lang-switch" role="group" aria-label="Language">
-    <a href="" class="lang-btn" data-lang="en">EN</a>
-    <a href="" class="lang-btn active" data-lang="de" aria-current="page">DE</a>
+<div class="page-bg"></div>
+<div class="particles">
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="../assets/logo.webp" alt="Storybook Adventures" class="brand-logo" width="867" height="438" fetchpriority="high" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#how" class="nav-link">So funktioniert's</a>
+      <a href="index.html#safe" class="nav-link">Für Eltern</a>
+      <a href="index.html#gallery" class="nav-link">Filme</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="about.html" class="nav-link">Über uns</a>
+      <a href="blog/index.html" class="nav-link">Blog</a>
+      <div class="lang-toggle" role="group" aria-label="Sprache">
+        <a href="../privacy.html">EN</a>
+        <a href="privacy.html" class="active" aria-current="page">DE</a>
+      </div>
+      <a href="https://apps.apple.com/app/id6761114804" class="btn btn-small">App holen</a>
+    </nav>
   </div>
+</header>
 
-  <div class="legal-page">
-    <header class="legal-header">
-      <a href="/de/index.html" class="legal-back">&#8592; Startseite</a>
-    </header>
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <span class="scribble-star s-left">✦</span>
+    <span class="scribble-star s-right">✦</span>
+    <h1>
+      <span>Datenschutzerklärung</span>
+    </h1>
+    <p class="lede">Kein Name, keine E-Mail, keine persönlichen Daten. Wir haben Storybook Adventures von Grund auf mit Datenschutz als Fundament gebaut — nicht als nachträgliche Idee.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Version 1.0</span>
+      <span class="meta-pill">Aktualisiert · 13. Apr 2026</span>
+      <span class="meta-pill">Gültig ab · 13. Apr 2026</span>
+    </div>
+  </div>
+</section>
 
-    <div class="legal-content-wrapper">
-      <div class="legal-content">
-        <div class="legal-text">
+<div class="doc-layout">
+  <aside class="toc">
+  <h4>Inhalt</h4>
+  <ol>
+    <li><a href="#s1">Einleitung</a></li>
+    <li><a href="#s2">Erhobene Informationen</a></li>
+    <li><a href="#s3">Rechtsgrundlage f&uuml;r die Datenverarbeitung</a></li>
+    <li><a href="#s4">Verwendung Ihrer Daten</a></li>
+    <li><a href="#s5">Drittanbieter-Dienste</a></li>
+    <li><a href="#s6">Datenschutz f&uuml;r Kinder</a></li>
+    <li><a href="#s7">Datensicherheit</a></li>
+    <li><a href="#s8">Datenaufbewahrung</a></li>
+    <li><a href="#s9">Internationale Daten&uuml;bertragungen</a></li>
+    <li><a href="#s10">Ihre Rechte nach der DSGVO</a></li>
+    <li><a href="#s11">Ihre Rechte nach COPPA (USA)</a></li>
+    <li><a href="#s12">K&auml;ufe und Aktionen</a></li>
+    <li><a href="#s13">Website-Newsletter</a></li>
+    <li><a href="#s14">Lokale Speicherung</a></li>
+    <li><a href="#s15">&Auml;nderungen dieser Erkl&auml;rung</a></li>
+    <li><a href="#s16">Kontakt</a></li>
+  </ol>
+</aside>
+  <article class="sheet">
 
-          <!-- ===== ENGLISH ===== -->
-
-          <!-- ===== DEUTSCH ===== -->
-          <div>
-            <h1>Datenschutzerkl&auml;rung</h1>
-            <p class="version-info">Version 1.0 · Zuletzt aktualisiert: 13. April 2026 · G&uuml;ltig ab: 13. April 2026</p>
-
-            <h2>1. Einleitung</h2>
+<h2 id="s1">1. Einleitung</h2>
             <p>Storybook Adventures („die App", „wir", „uns" oder „unser") wird betrieben von:</p>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Deutschland</p>
-            <p>E-Mail: contact@storybookadventures.io</p>
+            <div class="addr-card">
+              <p><strong>Constantin Kl&ouml;cker</strong></p>
+              <p>Friedrichstr. 155</p>
+              <p>10117 Berlin, Deutschland</p>
+              <p>E-Mail: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+            </div>
             <p>Storybook Adventures ist eine kreative App f&uuml;r Kinder (vorwiegend im Alter von 6–12 Jahren), die handgezeichnete Bilder in KI-gest&uuml;tzte Animationen verwandelt. Kinder zeichnen Szenen auf Papier, fotografieren diese mit der App und sehen ihre Kunstwerke als kurze animierte Videos zum Leben erwachen. Jede Animation verbraucht einen Token, den Eltern &uuml;ber Apple In-App-Kauf erwerben oder &uuml;ber einen Aktionsgutscheincode einl&ouml;sen k&ouml;nnen.</p>
             <p>Diese Datenschutzerkl&auml;rung erl&auml;utert, welche Informationen wir erheben, warum wir sie erheben und wie wir sie sch&uuml;tzen. Wir haben Storybook Adventures mit Datenschutz als Grundlage entwickelt: Es werden keine Namen, E-Mail-Adressen oder personenbezogenen Daten ben&ouml;tigt. Wir verwenden keine Werbung, kein Verhaltens-Tracking und verkaufen keine Daten — niemals. Nutzer werden ausschlie&szlig;lich durch eine zuf&auml;llige, anonyme Ger&auml;tekennung identifiziert, die nicht mit einer realen Person verkn&uuml;pft werden kann.</p>
             <p>Wir halten die EU-Datenschutz-Grundverordnung (DSGVO), den US-amerikanischen Children's Online Privacy Protection Act (COPPA), den UK Age Appropriate Design Code (UK AADC) und die Richtlinien des Apple App Store ein.</p>
 
-            <h2>2. Erhobene Informationen</h2>
+            <h2 id="s2">2. Erhobene Informationen</h2>
             <h3>2.1 Daten, die wir erheben und speichern</h3>
             <div class="table-wrapper">
               <table>
@@ -121,7 +236,7 @@
             <p>Bei der ersten Nutzung der App generieren wir eine zuf&auml;llige Kennung (UUID) und speichern sie im sicheren Keychain des Ger&auml;ts. Das ist Ihr Konto — keine Registrierung, kein Passwort, keine E-Mail erforderlich. Es verkn&uuml;pft Ihr Token-Guthaben, Zeichnungen und Fortschritt &uuml;ber Sitzungen und Neuinstallationen hinweg, kann jedoch nicht auf eine reale Person zur&uuml;ckgef&uuml;hrt werden.</p>
             <p>Wenn Sie uns bez&uuml;glich Ihrer Daten kontaktieren m&uuml;ssen, steht Ihnen unter Einstellungen → Meine Daten → Datenanfrage ein Support-Referenzcode zur Verf&uuml;gung, der von dieser Kennung abgeleitet ist. Damit k&ouml;nnen wir Ihr Konto identifizieren, ohne dass Sie die Kennung selbst mitteilen m&uuml;ssen.</p>
 
-            <h2>3. Rechtsgrundlage f&uuml;r die Datenverarbeitung</h2>
+            <h2 id="s3">3. Rechtsgrundlage f&uuml;r die Datenverarbeitung</h2>
             <p>F&uuml;r Nutzer in der EU, dem Vereinigten K&ouml;nigreich und anderen L&auml;ndern mit vergleichbaren Gesetzen verarbeiten wir Daten auf folgenden Rechtsgrundlagen:</p>
             <ul>
               <li><strong>Einwilligung (Art. 6 Abs. 1 lit. a DSGVO / Art. 8 DSGVO):</strong> Bei minderj&auml;hrigen Nutzern erteilt ein Elternteil oder Erziehungsberechtigter vor der Verarbeitung von Zeichnungen eine ausdr&uuml;ckliche Einwilligung. Erwachsene willigen &uuml;ber den App-internen Einwilligungsprozess ein.</li>
@@ -130,7 +245,7 @@
               <li><strong>Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO):</strong> Moderations-Flag-Datens&auml;tze und Gutschein-Einl&ouml;sedaten werden zur Missbrauchspr&auml;vention aufbewahrt. Diese Interessen sind verh&auml;ltnism&auml;&szlig;ig — wir speichern nur einen Fingerabdruck und eine Beschreibung, niemals das Bild oder personenbezogene Daten.</li>
             </ul>
 
-            <h2>4. Verwendung Ihrer Daten</h2>
+            <h2 id="s4">4. Verwendung Ihrer Daten</h2>
             <p>Wir verwenden Daten ausschlie&szlig;lich zum Betrieb und zur Verbesserung der App:</p>
             <ul>
               <li><strong>Animationen bereitstellen:</strong> Zeichnungen durch KI-Moderation und -Animation verarbeiten, um das animierte Video zu erzeugen</li>
@@ -144,7 +259,7 @@
             </ul>
             <p>Wir verwenden Daten nicht f&uuml;r Werbung, Profiling oder andere Zwecke als die hier aufgef&uuml;hrten.</p>
 
-            <h2>5. Drittanbieter-Dienste</h2>
+            <h2 id="s5">5. Drittanbieter-Dienste</h2>
             <p>Wir geben Daten an folgende Anbieter weiter, um die App zu betreiben. Keiner von ihnen erh&auml;lt personenbezogene Daten.</p>
             <div class="table-wrapper">
               <table>
@@ -161,7 +276,7 @@
             </div>
             <p>Wir verkaufen, vermieten oder teilen Nutzerdaten niemals mit Dritten f&uuml;r deren eigene Zwecke.</p>
 
-            <h2>6. Datenschutz f&uuml;r Kinder</h2>
+            <h2 id="s6">6. Datenschutz f&uuml;r Kinder</h2>
             <h3>6.1 Altersschwellen</h3>
             <p>Beim ersten Start fragt die App das Alter des Nutzers ab. Wir wenden die entsprechende gesetzliche Schwelle basierend auf der Region des Ger&auml;ts an:</p>
             <div class="table-wrapper">
@@ -195,7 +310,7 @@
             <h3>6.4 Inhaltsmoderation</h3>
             <p>Jede hochgeladene Zeichnung wird vor dem Animationsbeginn automatisch durch das Inhaltsmoderierungssystem von OpenAI gepr&uuml;ft. Zeichnungen mit unangemessenen Inhalten werden abgelehnt, das Bild wird von unseren Servern gel&ouml;scht und der Token wird automatisch erstattet. Wir versuchen au&szlig;erdem, Zeichnungen zu erkennen, die sichtbare personenbezogene Daten (wie Namen oder Adressen) enthalten, und markieren diese zur Ablehnung.</p>
 
-            <h2>7. Datensicherheit</h2>
+            <h2 id="s7">7. Datensicherheit</h2>
             <ul>
               <li><strong>Ger&auml;teverschl&uuml;sselung:</strong> Die anonyme Kennung wird im iOS-Keychain gespeichert, der vom Betriebssystem verschl&uuml;sselt wird</li>
               <li><strong>Verschl&uuml;sselte Verbindungen:</strong> Alle Daten&uuml;bertragungen verwenden HTTPS/TLS</li>
@@ -206,7 +321,7 @@
               <li><strong>Minimale Exposition gegen&uuml;ber KI-Anbietern:</strong> KI-Dienste erhalten Bilder &uuml;ber tempor&auml;re Links und l&ouml;schen diese nach der Verarbeitung</li>
             </ul>
 
-            <h2>8. Datenaufbewahrung</h2>
+            <h2 id="s8">8. Datenaufbewahrung</h2>
             <div class="table-wrapper">
               <table>
                 <thead><tr><th>Daten</th><th>Aufbewahrungsdauer</th></tr></thead>
@@ -236,12 +351,12 @@
               <li>🖼 <strong>In Ihrer Fotogalerie:</strong> Bereits gespeicherte Animationen sind nicht betroffen.</li>
             </ul>
 
-            <h2>9. Internationale Daten&uuml;bertragungen</h2>
+            <h2 id="s9">9. Internationale Daten&uuml;bertragungen</h2>
             <p>Der Gro&szlig;teil der Datenverarbeitung findet innerhalb der EU statt. Unsere Server (Supabase), die Animations-Pipeline (Fly.io) und der prim&auml;re Speicher befinden sich in Frankfurt am Main.</p>
             <p>Zwei Anbieter haben ihren Sitz in den Vereinigten Staaten: OpenAI (Inhaltsmoderation) und Replicate (Video- und Audiogenerierung). Wenn eine Zeichnung eingereicht wird, werden das Bild und der Szenenbeschreibungstext &uuml;ber Fly.io zur Verarbeitung unter kurzlebigen sicheren Links an diese Anbieter gesendet. Diese &Uuml;bertragungen erfolgen gem&auml;&szlig; Art. 46 DSGVO auf Basis von EU-Standardvertragsklauseln (SCC).</p>
             <p>Entscheidend ist, dass diese &Uuml;bertragungen keine personenbezogenen Daten enthalten: Zeichnungen enthalten keine identifizierenden Informationen (Metadaten werden vor dem Upload entfernt), und Szenenbeschreibungen sind kreative Texte ohne pers&ouml;nliche Inhalte. Weder die Zeichnung noch die Beschreibung kann einer Person zugeordnet werden.</p>
 
-            <h2>10. Ihre Rechte nach der DSGVO</h2>
+            <h2 id="s10">10. Ihre Rechte nach der DSGVO</h2>
             <p>Wenn Sie sich in der EU, dem EWR, dem Vereinigten K&ouml;nigreich oder der Schweiz befinden, haben Sie folgende Rechte bez&uuml;glich der mit Ihrem anonymen Profil verkn&uuml;pften Daten:</p>
             <ul>
               <li><strong>Auskunft (Art. 15):</strong> Kopie Ihrer Daten anfordern</li>
@@ -256,7 +371,7 @@
             <p><strong>Hinweis zur anonymen Verarbeitung:</strong> Da unser Dienst vollst&auml;ndig auf anonymen Kennungen basiert (DSGVO Art. 11), sind wir nicht verpflichtet, zus&auml;tzliche personenbezogene Daten zu erheben, nur um Betroffenenrechte zu bearbeiten. Wenn Sie uns ohne Ihren Support-Referenzcode kontaktieren, k&ouml;nnen wir Ihr Konto nicht finden — wir werden Sie dann dar&uuml;ber informieren, wo Sie ihn finden.</p>
             <p><strong>Zust&auml;ndige Datenschutzbeh&ouml;rde:</strong><br>Der Bundesbeauftragte f&uuml;r den Datenschutz und die Informationsfreiheit (BfDI)<br>Graurheindorfer Str. 153, 53117 Bonn<br><a href="https://www.bfdi.bund.de" target="_blank" rel="noopener">https://www.bfdi.bund.de</a></p>
 
-            <h2>11. Ihre Rechte nach COPPA (USA)</h2>
+            <h2 id="s11">11. Ihre Rechte nach COPPA (USA)</h2>
             <p>Wenn Sie Elternteil oder Erziehungsberechtigter eines Kindes unter 13 Jahren in den USA sind:</p>
             <ul>
               <li><strong>Einsehen</strong> der von der App Ihres Kindes erhobenen Daten (Einstellungen → Meine Daten)</li>
@@ -265,12 +380,12 @@
             </ul>
             <p>Kontaktieren Sie uns unter contact@storybookadventures.io mit Ihrem Support-Referenzcode (Einstellungen → Meine Daten → Datenanfrage).</p>
 
-            <h2>12. K&auml;ufe und Aktionen</h2>
+            <h2 id="s12">12. K&auml;ufe und Aktionen</h2>
             <p><strong>Token-K&auml;ufe</strong> werden vollst&auml;ndig &uuml;ber Apple In-App-Kauf abgewickelt. Wir sehen oder speichern keine Zahlungsdetails (Kartennummern, Rechnungsadressen, Apple-ID-Zugangsdaten). Nach dem Kauf sendet Apple uns einen Beleg, den wir serverseitig validieren, um Token dem anonymen Profil gutzuschreiben.</p>
             <p>Wir f&uuml;hren einen Transaktionsdatensatz (anonyme Profil-ID, Token-Menge, Zeitstempel, Belegvalidierungsergebnis) f&uuml;r bis zu 10 Jahre gem&auml;&szlig; deutschem Steuerrecht. Diese Datens&auml;tze enthalten keine personenbezogenen Daten. Informationen zum Umgang von Apple mit Zahlungsdaten finden Sie in <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apples Datenschutzrichtlinie</a>.</p>
             <p><strong>Gutscheincodes</strong> k&ouml;nnen &uuml;ber Marketingpartner oder Kampagnen verteilt werden. Bei der Einl&ouml;sung wird der Code mit Ihrem anonymen Profil verkn&uuml;pft, um Doppelnutzung zu verhindern. Wir erfassen die anonyme Profil-ID, den Kampagnencode und einen Zeitstempel. Es werden keine personenbezogenen Daten erhoben. Wir verwenden diese Daten zur Missbrauchspr&auml;vention, Messung der Kampagnenleistung und Berechnung von Partnerprovisionen.</p>
 
-            <h2>13. Website-Newsletter</h2>
+            <h2 id="s13">13. Website-Newsletter</h2>
             <p>Auf unserer Website (<a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a>) k&ouml;nnen Sie optional unseren Newsletter abonnieren, um Produktneuigkeiten wie neue Funktionen und Plattformverf&uuml;gbarkeit zu erhalten.</p>
             <ul>
               <li><strong>Was wir erheben:</strong> Ausschlie&szlig;lich Ihre E-Mail-Adresse</li>
@@ -281,86 +396,103 @@
             </ul>
             <p>Das Newsletter-Abonnement ist vollst&auml;ndig unabh&auml;ngig von der App-Nutzung. Ein Abonnement erstellt kein App-Konto, und die App-Nutzung f&uuml;hrt nicht zu einem Newsletter-Abonnement. App-Nutzer, die die Website nie besuchen, werden niemals nach ihrer E-Mail-Adresse gefragt.</p>
 
-            <h2>14. Lokale Speicherung</h2>
+            <h2 id="s14">14. Lokale Speicherung</h2>
             <p>Die App speichert einige Daten direkt auf Ihrem Ger&auml;t: Animationen, Szenenfortschritt, elterliche Einstellungen und Onboarding-Status. Diese Daten werden entfernt, wenn Sie die App l&ouml;schen. Da wir Zeichnungen, Animationen, Beschreibungen und Fortschritt jedoch auch auf unseren Servern speichern, werden Ihre Inhalte bei Neuinstallation der App auf demselben Ger&auml;t (mit demselben Keychain) wiederhergestellt.</p>
             <p>Wir empfehlen, fertige Animationen als zus&auml;tzliche Sicherung in Ihrer Fotogalerie zu speichern.</p>
 
-            <h2>15. &Auml;nderungen dieser Erkl&auml;rung</h2>
+            <h2 id="s15">15. &Auml;nderungen dieser Erkl&auml;rung</h2>
             <p>Wir k&ouml;nnen diese Datenschutzerkl&auml;rung von Zeit zu Zeit aktualisieren. Bei wesentlichen &Auml;nderungen im Umgang mit Kinderdaten werden wir Sie in der App deutlich benachrichtigen und, wo gesetzlich vorgeschrieben, eine erneute elterliche Einwilligung einholen. Versionsnummer und Datum „Zuletzt aktualisiert" oben in diesem Dokument entsprechen stets der aktuellen Version.</p>
 
-            <h2>16. Kontakt</h2>
+            <h2 id="s16">16. Kontakt</h2>
             <p>Fragen zu dieser Datenschutzerkl&auml;rung, Ihren Daten oder dem Datenschutz Ihres Kindes? Wir helfen gerne.</p>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Deutschland</p>
-            <p>E-Mail: contact@storybookadventures.io</p>
+            <div class="addr-card">
+              <p><strong>Constantin Kl&ouml;cker</strong></p>
+              <p>Friedrichstr. 155</p>
+              <p>10117 Berlin, Deutschland</p>
+              <p>E-Mail: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+            </div>
             <p>Wenn Sie uns zu einem bestimmten Konto kontaktieren, geben Sie bitte Ihren Support-Referenzcode an (Einstellungen → Meine Daten → Datenanfrage), damit wir Ihre Daten finden k&ouml;nnen.</p>
-            <p><em>Diese Datenschutzerkl&auml;rung ist auf Englisch und Deutsch in der App sowie unter https://www.storybookadventures.io verf&uuml;gbar.</em></p>
-          </div>
+            <p><em>Diese Datenschutzerkl&auml;rung ist auf Englisch und Deutsch in der App sowie unter <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a> verf&uuml;gbar.</em></p>
 
-        </div>
-      </div>
+  <div class="contact-box">
+    <div class="cb-text">
+      <h3>Kontakt aufnehmen</h3>
+      <p>Fragen, Feedback, Presse — oder einfach Hallo sagen?</p>
     </div>
+    <a href="mailto:contact@storybookadventures.io" class="btn">contact@storybookadventures.io</a>
   </div>
+</article>
+</div>
+</main>
 
-  <footer class="legal-footer">
-      <nav class="footer-links">
-        <a href="/de/about.html" class="footer-link">Über uns</a>
-        <span class="footer-sep">·</span>
-        <a href="/de/blog/" class="footer-link">Blog</a>
-        <span class="footer-sep">·</span>
-        <a href="/de/privacy.html" class="footer-link">Datenschutz</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="/de/terms.html" class="footer-link">Nutzungsbedingungen</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="/de/impressum.html" class="footer-link">Impressum</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="/de/support.html" class="footer-link">Hilfe</a>
-      </nav>
-      <p class="footer-copy">&copy; 2026 Storybook Adventures.<span>Alle Rechte vorbehalten.</span></p>
-    </footer>
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-name">Storybook Adventures</div>
+    </div>
+    <div class="foot-links">
+      <a href="privacy.html" class="active">Datenschutzerklärung</a>
+      <a href="terms.html">Nutzungsbedingungen</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="support.html">Hilfe</a>
+    </div>
+    <div class="foot-copy"><span>© 2026 Storybook Adventures.</span><span>Alle Rechte vorbehalten.</span></div>
+  </div>
+</footer>
 
-    <script>
-    (function() {
-      // Cross-page language switcher.
-      const path = window.location.pathname;
-      const isOnGerman = path.startsWith('/de/') || path === '/de';
 
-      const enHref = isOnGerman
-        ? (path.replace(/^\/de\/?/, '/') || '/')
-        : path;
-      const deHref = isOnGerman
-        ? path
-        : '/de' + (path.startsWith('/') ? path : '/' + path);
+<script>
+(function() {
+  const toc = document.querySelector('aside.toc');
+  if (!toc) return;
+  const headings = document.querySelectorAll('article.sheet h2[id]');
+  const links = toc.querySelectorAll('a');
+  if (!headings.length || !links.length) return;
 
-      const enLink = document.querySelector('.lang-btn[data-lang="en"]');
-      const deLink = document.querySelector('.lang-btn[data-lang="de"]');
-      if (enLink) enLink.href = enHref;
-      if (deLink) deLink.href = deHref;
+  const linkById = new Map();
+  links.forEach(a => {
+    const id = a.getAttribute('href').replace(/^#/, '');
+    linkById.set(id, a);
+  });
 
-      // First-visit banner.
-      const BANNER_DISMISSED = 'sba-lang-banner-dismissed';
-      const browserLang = (navigator.language || '').toLowerCase();
-      const wantsGerman = browserLang.startsWith('de');
-      const wantsEnglish = browserLang.startsWith('en');
-
-      let offerLang = null;
-      if (!localStorage.getItem(BANNER_DISMISSED)) {
-        if (!isOnGerman && wantsGerman) offerLang = 'de';
-        else if (isOnGerman && wantsEnglish) offerLang = 'en';
+  let activeId = null;
+  function setActive(id) {
+    if (id === activeId) return;
+    activeId = id;
+    links.forEach(a => a.classList.remove('active'));
+    const a = linkById.get(id);
+    if (a) {
+      a.classList.add('active');
+      // Keep active item visible inside the scrollable TOC
+      const r = a.getBoundingClientRect();
+      const tocR = toc.getBoundingClientRect();
+      if (r.top < tocR.top || r.bottom > tocR.bottom) {
+        a.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       }
+    }
+  }
 
-      if (offerLang) {
-        const banner = document.createElement('div');
-        banner.className = 'lang-banner';
-        banner.innerHTML = offerLang === 'de'
-          ? '<span>Diese Seite gibt es auch auf Deutsch.</span><a href="' + deHref + '" class="lang-banner__btn">Wechseln</a><button class="lang-banner__close" aria-label="Close">&times;</button>'
-          : '<span>This page is also available in English.</span><a href="' + enHref + '" class="lang-banner__btn">Switch</a><button class="lang-banner__close" aria-label="Close">&times;</button>';
-        document.body.appendChild(banner);
-        banner.querySelector('.lang-banner__close').addEventListener('click', function() {
-          localStorage.setItem(BANNER_DISMISSED, '1');
-          banner.remove();
-        });
-      }
-    })();
-  </script>
+  const observer = new IntersectionObserver(entries => {
+    // Pick the heading nearest the top of the active band
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length) {
+      // Sort by distance from top of viewport
+      visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      setActive(visible[0].target.id);
+    }
+  }, {
+    // Active band: ~from top 15% down to 65% of viewport
+    rootMargin: '-15% 0px -65% 0px',
+    threshold: 0,
+  });
+
+  headings.forEach(h => observer.observe(h));
+
+  // Default: first heading active
+  if (headings.length) setActive(headings[0].id);
+})();
+</script>
+
+<script src="../assets/nav-more.js" defer></script>
 </body>
 </html>

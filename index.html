@@ -38,13 +38,11 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="icon" type="image/webp" href="/assets/logo-emblem.webp">
   <link rel="apple-touch-icon" href="/assets/logo-emblem.webp">
-
-  <link rel="stylesheet" href="style.css">
 
   <!-- ============================================
        Structured Data (JSON-LD)
@@ -73,7 +71,7 @@
   }
   </script>
 
-  <!-- WebSite (enables sitelinks search box and brand recognition) -->
+  <!-- WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -84,7 +82,10 @@
   }
   </script>
 
-  <!-- MobileApplication / SoftwareApplication -->
+  <!-- MobileApplication -->
+  <!-- TODO[live-ratings]: aggregateRating below is hardcoded. Wire to iTunes Lookup API
+       (https://itunes.apple.com/lookup?id=6761114804) once we have 10+ ratings.
+       See docs/ACTIVE/Website-SEO-Plan.md → Phase I. Mirror change in de/index.html. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -116,800 +117,1889 @@
         "description": "Token-based in-app purchases. Each animation uses one token; tokens are sold in packs through Apple In-App Purchase."
       }
     },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "ratingCount": "2",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "inLanguage": ["en", "de"],
     "contentRating": "4+"
   }
   </script>
 
-  <!-- FAQPage (English — primary) -->
+  <!-- FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "inLanguage": "en",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is the app safe for my child?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Storybook Adventures is built privacy-first under GDPR and COPPA. Every drawing is screened by AI safety checks before animation, parental controls protect purchases, and there are no ads, no tracking, and no social features. Children never need to share their name, email, or any personal information."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What age is Storybook Adventures for?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The app is designed for children ages 6 to 12. Younger children can absolutely enjoy it with a parent — it's the kind of activity that brings families together around the kitchen table."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you collect personal data from children?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. We don't collect names, emails, location, or any identifying information from children. The app uses an anonymous device identifier so progress and tokens stay tied to the device — that's it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this just more screen time for my child?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most of the creative time is spent off-screen. Children draw their scenes on real paper using crayons, pencils, or markers — the app is only used for a few seconds to capture the drawing and a minute or two to watch the animated result. We call this healthy, focused screen time: more imagination, more focus, less mindless scrolling."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does the app actually work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Five simple steps: (1) pick a story world from 24 adventures, (2) draw the scene on paper, (3) take a photo through the app, (4) watch the drawing come to life as an animated movie with sound, (5) complete all three scenes to unlock the full storybook film."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does my child need to draw with?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Anything you have at home: pencils, crayons, markers, paint, or any combination. White paper works best so the camera captures details clearly, but plain notebook paper is fine. The app is designed to handle a wide range of drawing styles — from quick sketches to detailed scenes."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does it need internet to work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The animation is created on our servers using AI, so an internet connection is required while a drawing is being processed. Once an animation is finished, you can save it to the photo gallery and watch it offline anytime."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to create an animation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Usually around two to three minutes. The app shows a progress bar so children know what's happening — and the wait builds excitement. Some kids tell us it feels like opening a present."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is AI safe for kids?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends entirely on how AI is used. Most general AI tools (ChatGPT, image generators) aren't designed for children. Storybook Adventures uses AI in a controlled, narrow way: every drawing is screened for safety before animation, the AI never generates content from text alone (it always starts from your child's drawing), and there's no chat, no open-ended interaction, and no exposure to other users. Think of it as AI on training wheels — built specifically for kids ages 6–12."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does AI replace my child's creativity?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Just the opposite. The drawing is your child's. The story is your child's. The AI's only job is to bring the drawing to motion — it can't invent characters, scenes, or stories on its own. Every animation is a one-of-a-kind result of your child's imagination. We see kids drawing more, more carefully, and more often because they're curious to see how the AI will respond."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does Storybook Adventures introduce kids to AI?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Through play, not lectures. Children naturally learn the relationship between input (their drawing) and output (the animation) — that's the foundation of how AI works. They start to ask: What if I add more colour? What if I draw the dragon bigger? That curiosity is the beginning of AI literacy. We see this as a safer, more developmentally appropriate first AI experience than handing a child ChatGPT."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What happens if my child draws something inappropriate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Every uploaded drawing is reviewed by AI safety checks before animation begins. If a drawing is flagged for inappropriate content (violence, names, addresses, etc.), the animation is rejected, the image is deleted, and the token is automatically refunded. Repeat violations may trigger service restrictions. Drawings with obvious mistakes — but nothing inappropriate — animate normally."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The app is free to download. Each animation uses one token, and tokens are sold in packs through Apple In-App Purchase. Parental controls are built in — every purchase requires the parent to authenticate first. There are no subscriptions and no recurring charges."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does it work on iPad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Storybook Adventures runs on iPhone and iPad, with a layout adapted for the larger screen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When will it be available on Android?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An Android version is in active development. Sign up for the Android waitlist on the homepage and we'll send you a one-time email the moment it launches — no other emails, no spam."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I get a refund?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "All refunds are handled by Apple through your App Store account. Visit reportaproblem.apple.com to request one. EU consumers have additional withdrawal rights as detailed in our Terms of Service."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where can I get help if something doesn't work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Email us at contact@storybookadventures.io. We typically respond within 1–2 business days."
-        }
-      }
+      { "@type": "Question", "name": "Is the app safe for my child?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and we built it that way from day one. There's no account, no email, no name, and no personal data of any kind collected from your child. No ads, no trackers, no social features, no chat. Every uploaded drawing is automatically screened by an AI safety check before it animates. Anything inappropriate is rejected, the token is refunded, and the image is deleted. Purchases always require an adult. We comply with GDPR and COPPA by design." } },
+      { "@type": "Question", "name": "What age is it for, and how does it work?", "acceptedAnswer": { "@type": "Answer", "text": "Designed for children ages 6 to 12, with support for younger kids alongside a parent. The flow is simple: (1) pick a story world from 24 adventures, (2) draw the scene on real paper with whatever you have: pencils, crayons, markers, paint, (3) photograph the drawing through the app, (4) watch the AI bring it to life as a short animated movie, (5) finish all three scenes to unlock the full storybook film. Most kids get hooked on the drawing part. The screen is just the camera and the cinema." } },
+      { "@type": "Question", "name": "How does AI fit in, and is it good for kids?", "acceptedAnswer": { "@type": "Answer", "text": "The AI's only job is to bring your child's drawing to motion. It doesn't invent characters, write stories, or hold conversations. It responds to what they put on paper. That's deliberate: pediatric researchers and child-safety organizations consistently flag AI companions and open-ended chatbots as the patterns that aren't safe for under-13s. Bounded creative outputs like ours are recommended instead. As a side effect, kids naturally learn how AI works: their input shapes the output. That's the foundation of AI literacy, and a safer first AI experience than handing a child ChatGPT." } },
+      { "@type": "Question", "name": "What about screen time?", "acceptedAnswer": { "@type": "Answer", "text": "Most of the creative time happens off-screen, on real paper. The phone is only used for a few seconds to photograph the drawing and a minute or two to watch the result. We call it focused screen time: more imagination, more drawing, less mindless scrolling. Many parents tell us their kids draw more after using the app, because they're curious to see how the AI will respond to their next picture." } },
+      { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "The app is free to download. Each animation uses one token, and tokens are sold in packs through Apple In-App Purchase. No subscriptions. Every purchase goes through two gates: our in-app parental gate (PIN or math challenge) plus Apple's standard sign-in (Face ID, Touch ID, or Apple ID password). Parents can also lock the shop entirely. All refunds are handled by Apple via reportaproblem.apple.com. EU consumers have additional withdrawal rights detailed in our Terms of Service." } },
+      { "@type": "Question", "name": "Do I need internet? How fast is it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Animating a scene runs on our servers, so an internet connection is required during processing. Drawing on paper, of course, does not. Each animation takes roughly two to three minutes from photo to finished video. A progress bar keeps kids in the loop. Once an animation is finished, it can be saved to the photo gallery and watched offline anytime." } },
+      { "@type": "Question", "name": "Does it work on iPad? When is Android coming?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Storybook Adventures runs on both iPhone and iPad, with a layout adapted for the larger screen. An Android version is in active development. Sign up for the waitlist on the homepage and we'll send you a one-time email the moment it launches. No other emails, no spam." } },
+      { "@type": "Question", "name": "Can I save and share the films? Where can I get help?", "acceptedAnswer": { "@type": "Answer", "text": "Completed animations can be saved to your device's photo gallery and shared from there, or kept entirely private. Your call. For anything else, email contact@storybookadventures.io and we'll get back to you within 1–2 business days." } }
     ]
   }
   </script>
+
+<style>
+  :root {
+    /* Brand palette */
+    --gold:        #ffd23c;
+    --gold-deep:   #e8a817;
+    --gold-border: #c88d0a;
+    --gold-text:   #4a2a08;
+    --gold-muted:  #7a5a2a;
+    --gold-bg:     rgba(255, 210, 60, 0.94);
+
+    --night:       #1a2744;
+    --night-deep:  #0f1a2e;
+    --night-card:  rgba(15, 26, 46, 0.55);
+    --night-card-strong: rgba(15, 26, 46, 0.75);
+
+    --white-90: rgba(255, 255, 255, 0.92);
+    --white-70: rgba(255, 255, 255, 0.72);
+    --white-50: rgba(255, 255, 255, 0.5);
+    --white-20: rgba(255, 255, 255, 0.2);
+    --white-10: rgba(255, 255, 255, 0.1);
+
+    --accent-red:   #e85d4c;
+    --accent-leaf:  #6ec56a;
+    --accent-sky:   #5fb3d4;
+
+    --font-display: 'Lilita One', 'Baloo 2', cursive;
+    --font-body:    'Nunito', system-ui, -apple-system, sans-serif;
+
+    --r-sm: 10px;
+    --r-md: 16px;
+    --r-lg: 24px;
+    --r-xl: 36px;
+
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.28), 0 2px 8px rgba(0, 0, 0, 0.12);
+    --shadow-gold-glow: 0 0 40px rgba(255, 210, 60, 0.18);
+    --maxw: 1200px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overscroll-behavior-y: none; }
+  body {
+    font-family: var(--font-body);
+    color: var(--white-90);
+    background-color: var(--night-deep);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .hero-sub, .section-sub { text-wrap: balance; }
+  a { color: inherit; text-decoration: none; }
+  img, video { max-width: 100%; height: auto; display: block; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 40px; }
+
+  /* --- Page Background (starry night) --- */
+  .page-bg {
+    position: fixed; inset: 0; z-index: -2;
+    background: url('assets/bg-mobile.webp') center top / cover no-repeat;
+  }
+  @media (min-width: 768px) {
+    .page-bg { background-image: url('assets/bg-desktop-2.webp'); background-position: center center; }
+  }
+  /* Soft top fade so the nav reads cleanly */
+  .page-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(15,26,46,0.55) 0%, rgba(15,26,46,0) 22%, rgba(15,26,46,0) 78%, rgba(15,26,46,0.7) 100%);
+    pointer-events: none;
+  }
+
+  /* --- Floating sparkle particles --- */
+  .particles { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+  .particle {
+    position: absolute; width: 4px; height: 4px;
+    background: rgba(255, 215, 100, 0.65);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 215, 100, 0.45);
+    animation: drift linear infinite;
+  }
+  .particle:nth-child(1) { left: 12%; top: 20%; width: 3px; height: 3px; animation-duration: 18s; animation-delay: 0s; }
+  .particle:nth-child(2) { left: 68%; top: 35%; width: 5px; height: 5px; animation-duration: 22s; animation-delay: -4s; }
+  .particle:nth-child(3) { left: 35%; top: 60%; width: 3px; height: 3px; animation-duration: 20s; animation-delay: -8s; }
+  .particle:nth-child(4) { left: 82%; top: 15%; width: 4px; height: 4px; animation-duration: 25s; animation-delay: -2s; }
+  .particle:nth-child(5) { left: 50%; top: 75%; width: 3px; height: 3px; animation-duration: 19s; animation-delay: -6s; }
+  .particle:nth-child(6) { left: 22%; top: 45%; width: 5px; height: 5px; animation-duration: 23s; animation-delay: -10s; }
+  @keyframes drift {
+    0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+    10%  { opacity: 0.8; }
+    50%  { transform: translateY(-120px) translateX(30px) scale(1.2); opacity: 0.6; }
+    90%  { opacity: 0.3; }
+    100% { transform: translateY(-240px) translateX(-20px) scale(0.8); opacity: 0; }
+  }
+
+  /* ============== NAV ============== */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(15, 26, 46, 0.55);
+    border-bottom: 1px solid var(--white-10);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 40px;
+    gap: 16px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+  .brand-logo {
+    height: 40px; width: auto;
+    display: block;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+  }
+  @media (min-width: 768px) {
+    .brand-logo { height: 44px; }
+  }
+  .nav-links { display: flex; align-items: center; gap: 24px; }
+  .nav-link {
+    color: var(--white-70);
+    font-weight: 700; font-size: 14px;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: #fff; }
+  .nav-sep {
+    width: 1px; height: 18px;
+    background: var(--white-20);
+    margin: 0 2px;
+  }
+  .lang-toggle {
+    display: inline-flex;
+    background: var(--white-10);
+    border-radius: 999px;
+    padding: 4px;
+    border: 1px solid var(--white-20);
+  }
+  .lang-toggle button,
+  .lang-toggle a {
+    border: 0; background: transparent; padding: 5px 12px; border-radius: 999px;
+    color: var(--white-70); cursor: pointer; font-weight: 800; font-family: inherit;
+    font-size: 12px; letter-spacing: 0.5px;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex; align-items: center;
+  }
+  .lang-toggle button.active,
+  .lang-toggle a.active { background: var(--gold); color: var(--gold-text); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    color: var(--gold-text);
+    padding: 10px 18px; border-radius: 999px;
+    font-family: var(--font-body); font-weight: 800; font-size: 14px;
+    white-space: nowrap;
+    border: 2px solid var(--gold-border); cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: transform 0.15s, box-shadow 0.2s;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,0,0,0.35), var(--shadow-gold-glow); }
+  .btn-small { padding: 8px 14px; font-size: 13px; }
+
+  .nav-cta-mobile { display: none; }
+  .nav-more { position: relative; display: none; }
+  .nav-more-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--white-10);
+    border: 1px solid var(--white-20);
+    border-radius: 999px;
+    padding: 7px 12px;
+    color: var(--white-90);
+    font-family: inherit; font-weight: 700; font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .nav-more-btn:hover { background: var(--white-20); border-color: var(--white-40); }
+  .nav-more-btn svg { transition: transform 0.2s; }
+  .nav-more.open .nav-more-btn svg { transform: rotate(180deg); }
+  .nav-more-panel {
+    position: absolute; top: calc(100% + 8px); right: 0;
+    min-width: 200px;
+    background: rgba(15, 26, 46, 0.95);
+    border: 1px solid var(--white-20);
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+    backdrop-filter: blur(14px);
+    display: none;
+    z-index: 60;
+  }
+  .nav-more.open .nav-more-panel { display: block; }
+  .nav-more-item {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 8px;
+    color: var(--white-70);
+    font-weight: 700; font-size: 14px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-more-item:hover { background: var(--white-10); color: #fff; }
+  @media (max-width: 980px) {
+    .nav-links .nav-link:nth-last-of-type(1),
+    .nav-links .nav-link:nth-last-of-type(2),
+    .nav-links .nav-sep { display: none; }
+    .nav-more { display: inline-block; }
+  }
+  @media (max-width: 880px) {
+    .nav-links .nav-link { display: none; }
+    .nav-links { gap: 14px; }
+  }
+  @media (max-width: 540px) {
+    .nav-links { gap: 10px; }
+    .nav-links .btn-small { padding: 7px 12px; font-size: 12px; }
+    .lang-toggle button, .lang-toggle a { padding: 4px 9px; font-size: 11px; }
+  }
+
+  /* ============== HERO ============== */
+  .hero {
+    padding: 56px 0 24px;
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 560px) minmax(0, 480px);
+    justify-content: center;
+    gap: 56px;
+    align-items: start;
+    container-type: inline-size;
+    --hero-scale: clamp(0.7, 100cqi / 1096px, 1);
+    --hero-logo-scale: clamp(0.88, 100cqi / 1096px, 1);
+    --hero-title-scale: clamp(0.82, 100cqi / 1096px, 1);
+    --hero-text-scale: clamp(0.9, 100cqi / 1096px, 1);
+  }
+  @media (max-width: 1180px) {
+    .hero-grid {
+      grid-template-columns: 1.05fr 1fr;
+      justify-content: stretch;
+    }
+  }
+  .hero-copy {
+    --copy-scale: var(--hero-scale);
+    --title-scale: var(--hero-title-scale);
+    --text-scale: var(--hero-text-scale);
+    padding-top: 40px;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: calc(10px * var(--copy-scale));
+    font-family: var(--font-body);
+    font-size: calc(13px * var(--text-scale));
+    color: var(--gold);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin-bottom: calc(18px * var(--copy-scale));
+    padding: calc(6px * var(--copy-scale)) calc(14px * var(--copy-scale));
+    background: rgba(255, 210, 60, 0.12);
+    border: 1px solid rgba(255, 210, 60, 0.3);
+    border-radius: 999px;
+  }
+  .eyebrow::before {
+    content: "✦"; color: var(--gold);
+  }
+  .hero-logo {
+    display: block;
+    width: calc(440px * var(--hero-logo-scale));
+    max-width: 100%;
+    height: auto;
+    margin: calc(-28px * var(--copy-scale)) 0 calc(14px * var(--copy-scale)) calc(-16px * var(--copy-scale));
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.45)) drop-shadow(0 18px 28px rgba(0, 0, 0, 0.5));
+  }
+  h1.hero-title {
+    font-family: var(--font-display);
+    font-size: calc(68px * var(--title-scale));
+    line-height: 1.05;
+    letter-spacing: 0.2px;
+    margin-bottom: calc(22px * var(--copy-scale));
+    color: #fff;
+    text-shadow: 0 6px 28px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+  h1.hero-title .accent {
+    color: var(--gold);
+    position: relative; display: inline-block;
+  }
+  h1.hero-title .accent::after {
+    content: ""; position: absolute; left: -2%; right: -2%; bottom: 6%;
+    height: 14px;
+    background: rgba(255, 210, 60, 0.35);
+    z-index: -1;
+    transform: skewX(-4deg);
+    border-radius: 4px;
+    filter: blur(2px);
+  }
+  .hero-sub {
+    font-size: calc(18px * var(--text-scale));
+    color: #fff;
+    font-weight: 800;
+    max-width: 540px;
+    margin-bottom: calc(22px * var(--copy-scale));
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55), 0 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+  }
+  .cta-row { display: flex; align-items: center; gap: calc(14px * var(--copy-scale)); flex-wrap: wrap; }
+  .app-store-btn {
+    display: inline-flex; align-items: center; gap: calc(12px * var(--copy-scale, 1));
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: calc(12px * var(--copy-scale, 1)) calc(22px * var(--copy-scale, 1)) calc(12px * var(--copy-scale, 1)) calc(18px * var(--copy-scale, 1));
+    border-radius: 16px;
+    border: 1px solid var(--white-20);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45), var(--shadow-gold-glow);
+    transition: transform 0.15s, box-shadow 0.2s;
+  }
+  .app-store-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 50px rgba(255, 210, 60, 0.25);
+  }
+  .app-store-btn svg { width: calc(28px * var(--copy-scale, 1)); height: calc(28px * var(--copy-scale, 1)); }
+  .app-store-btn .as-l {
+    font-size: calc(11px * var(--text-scale, 1)); opacity: 0.85; line-height: 1;
+    text-transform: uppercase; letter-spacing: 0.6px;
+  }
+  .app-store-btn .as-b {
+    font-size: calc(19px * var(--text-scale, 1)); font-weight: 800; line-height: 1.1;
+    letter-spacing: 0.2px;
+  }
+  .waitlist-pill {
+    display: inline-flex; align-items: center; gap: calc(8px * var(--copy-scale));
+    padding: calc(12px * var(--copy-scale)) calc(20px * var(--copy-scale));
+    border-radius: 16px;
+    background: var(--white-10);
+    border: 1.5px dashed var(--white-50);
+    color: var(--white-90); font-weight: 700; font-size: calc(14px * var(--text-scale));
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .waitlist-pill:hover { background: var(--white-20); border-color: #fff; }
+  .waitlist-pill .dot {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--accent-leaf);
+    box-shadow: 0 0 0 4px rgba(110, 197, 106, 0.25);
+  }
+
+  .age-row {
+    margin: 0 0 calc(22px * var(--copy-scale));
+    display: flex; align-items: center; gap: calc(14px * var(--copy-scale));
+    color: var(--white-70); font-size: calc(13px * var(--text-scale)); font-weight: 700;
+    flex-wrap: wrap;
+  }
+  .age-row .pill {
+    background: var(--white-10);
+    border: 1px solid var(--white-20);
+    padding: calc(6px * var(--copy-scale)) calc(12px * var(--copy-scale)); border-radius: 999px;
+    font-size: calc(12px * var(--text-scale)); font-weight: 800; letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+  .age-row .pill--rating {
+    background: rgba(255, 210, 60, 0.18);
+    border-color: rgba(255, 210, 60, 0.45);
+    color: var(--gold);
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .age-row .pill--rating .stars { letter-spacing: 0; font-size: calc(13px * var(--text-scale)); }
+
+  /* Hero visual: drawing card + phone */
+  .hero-visual {
+    position: relative;
+    width: calc(460px * var(--hero-scale));
+    max-width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 460 / 720;
+  }
+  .hero-visual-stage {
+    position: absolute;
+    top: 0; left: 0;
+    width: 460px;
+    height: 720px;
+    transform-origin: top left;
+    transform: scale(var(--hero-scale));
+  }
+  .scribble-star {
+    position: absolute;
+    font-family: var(--font-display);
+    color: var(--gold);
+    font-size: 56px;
+    line-height: 1;
+    pointer-events: none;
+    text-shadow: 0 0 20px rgba(255, 210, 60, 0.5);
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  .scribble-star.s1 { top: -10px; right: 40px; transform: rotate(15deg); }
+  .scribble-star.s2 { bottom: 30px; left: 30px; font-size: 40px; color: var(--accent-sky); animation-delay: -1.5s; }
+  .scribble-star.s3 { top: 200px; right: -10px; font-size: 32px; color: var(--accent-red); animation-delay: -2.5s; }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.6; transform: rotate(15deg) scale(1); }
+    50% { opacity: 1; transform: rotate(15deg) scale(1.1); }
+  }
+  .scribble-star.s2 { animation-name: twinkle2; }
+  .scribble-star.s3 { animation-name: twinkle3; }
+  @keyframes twinkle2 {
+    0%, 100% { opacity: 0.5; transform: rotate(-20deg) scale(1); }
+    50% { opacity: 1; transform: rotate(-20deg) scale(1.15); }
+  }
+  @keyframes twinkle3 {
+    0%, 100% { opacity: 0.4; transform: rotate(8deg) scale(1); }
+    50% { opacity: 0.9; transform: rotate(8deg) scale(1.1); }
+  }
+
+  .paper-card {
+    position: absolute;
+    background: #fffaf0;
+    border-radius: 6px;
+    box-shadow:
+      0 2px 4px rgba(0,0,0,0.15),
+      0 18px 50px -10px rgba(0,0,0,0.5);
+    padding: 14px 14px 48px;
+  }
+  .paper-card.drawing {
+    top: 30px; right: 220px;
+    width: 215px;
+    transform: rotate(-6deg);
+    z-index: 1;
+  }
+  .paper-card.drawing-2 {
+    top: 210px; right: 190px;
+    width: 205px;
+    transform: rotate(4deg);
+    z-index: 2;
+    padding: 10px 10px 40px;
+  }
+  .paper-card.drawing-2 .drawing-canvas { background-image: none; background: #fff; min-height: 200px; }
+  .paper-card.drawing-2 .label {
+    position: absolute; bottom: 10px; left: 0; right: 0; text-align: center;
+    font-family: var(--font-display); font-size: 17px; color: #4a2a08;
+    transform: rotate(1deg);
+  }
+  .paper-card.drawing-3 {
+    top: 390px; right: 220px;
+    width: 210px;
+    transform: rotate(-3deg);
+    z-index: 1;
+    padding: 10px 10px 40px;
+  }
+  .paper-card.drawing-3 .drawing-canvas { background-image: none; background: #fff; min-height: 180px; }
+  .paper-card.drawing-3 .label {
+    position: absolute; bottom: 10px; left: 0; right: 0; text-align: center;
+    font-family: var(--font-display); font-size: 17px; color: #4a2a08;
+    transform: rotate(-1deg);
+  }
+  .paper-card.drawing::before {
+    content: ""; position: absolute; top: -14px; left: 50%;
+    transform: translateX(-50%) rotate(2deg);
+    width: 90px; height: 22px;
+    background: rgba(244, 190, 60, 0.55);
+    border: 1px dashed rgba(180, 130, 30, 0.7);
+  }
+  .paper-card.drawing .label {
+    position: absolute; bottom: 12px; left: 0; right: 0; text-align: center;
+    font-family: var(--font-display); font-size: 18px; color: #4a2a08;
+    transform: rotate(-1deg);
+    letter-spacing: 0.3px;
+  }
+  .drawing-canvas {
+    aspect-ratio: 4/3;
+    background: white;
+    border-radius: 3px;
+    background-image: linear-gradient(rgba(95,179,212,0.18) 1px, transparent 1px);
+    background-size: 100% 24px;
+    background-position: 0 4px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .kid-svg { width: 88%; height: 88%; }
+
+  .phone {
+    position: absolute;
+    top: 40px; right: 0;
+    width: 280px;
+    aspect-ratio: 9/19.5;
+    background: #111;
+    border-radius: 36px;
+    padding: 9px;
+    transform: rotate(5deg);
+    z-index: 3;
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.3),
+      0 30px 70px -15px rgba(0, 0, 0, 0.65),
+      0 0 60px rgba(255, 210, 60, 0.15);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .phone-screen {
+    width: 100%; height: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(160deg, #2a3a64, #1a2744);
+  }
+  .phone-screen img, .phone-screen video {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .phone-notch {
+    position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+    width: 78px; height: 22px; background: #000; border-radius: 12px;
+    z-index: 2;
+  }
+  .magic-arrow {
+    position: absolute;
+    top: 180px; left: 250px;
+    z-index: 2;
+    font-family: var(--font-display); font-size: 16px;
+    color: var(--gold);
+    transform: rotate(-8deg);
+    width: 140px; text-align: center;
+    text-shadow: 0 0 12px rgba(255, 210, 60, 0.5);
+  }
+  .magic-arrow svg { display: block; margin: 6px auto 0; color: var(--gold); }
+
+  /* ============== SECTION FRAMEWORK ============== */
+  section { padding: 80px 0; position: relative; }
+  section#gallery { padding-bottom: 56px; }
+  section#faq { padding-top: 56px; }
+  .section-eyebrow {
+    font-family: var(--font-body);
+    font-size: 28px;
+    color: var(--gold);
+    font-weight: 900;
+    -webkit-text-stroke: 0.6px var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4.6vw, 56px);
+    line-height: 1.06;
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+    color: #fff;
+    text-shadow: 0 6px 28px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    font-weight: 400;
+  }
+  .section-sub {
+    font-size: 18px; color: var(--white-90);
+    font-weight: 600;
+    max-width: 640px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55), 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  .section-head { margin-bottom: 52px; }
+  .section-head.center { text-align: center; }
+  .section-head.center h2 { margin-left: auto; margin-right: auto; }
+  .section-head.center .section-sub { margin-left: auto; margin-right: auto; }
+
+  /* ============== DEMO (video) ============== */
+  .demo {
+    padding: 32px 0 50px;
+    max-width: var(--maxw); width: calc(100% - 80px);
+    margin: 0 auto;
+    border-radius: 36px;
+    background: linear-gradient(160deg, rgba(15, 26, 46, 0.85) 0%, rgba(26, 39, 68, 0.92) 100%);
+    border: 1px solid var(--white-10);
+    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    position: relative;
+  }
+  .demo::before {
+    content: ""; position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,210,60,0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .demo .wrap { position: relative; }
+  .demo-frame {
+    margin-top: 44px;
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 16/10;
+    box-shadow: 0 40px 80px -30px rgba(0,0,0,0.7);
+    border: 1px solid var(--white-10);
+  }
+  .demo-frame video, .demo-frame .placeholder-vid {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  /* App-store carousel */
+  .demo h2.demo-title {
+    margin: 0;
+    text-align: left;
+  }
+  .appstore-carousel {
+    margin-top: 20px;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+  }
+  .appstore-track {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 14px 28px 28px;
+    scrollbar-width: none;
+  }
+  .appstore-track::-webkit-scrollbar { display: none; }
+  .appstore-slide {
+    flex: 0 0 auto;
+    width: 260px;
+    aspect-ratio: 9/19.5;
+    border-radius: 38px;
+    overflow: hidden;
+    background: #0e1a32;
+    border: 6px solid #0c1530;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.04) inset;
+    scroll-snap-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .appstore-slide:hover { transform: translateY(-4px); }
+  .appstore-slide img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .appstore-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 48px; height: 48px; border-radius: 50%;
+    background: rgba(255,255,255,0.95); color: #0e1a32;
+    border: none; cursor: pointer; font-size: 22px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    z-index: 3;
+    transition: transform 0.15s;
+  }
+  .appstore-nav:hover { transform: translateY(-50%) scale(1.08); }
+  .appstore-nav.prev { left: 6px; }
+  .appstore-nav.next { right: 6px; }
+  @media (max-width: 720px) {
+    .appstore-slide { width: 220px; }
+    .appstore-nav { display: none; }
+  }
+  .placeholder-vid {
+    background: repeating-linear-gradient(45deg, #1f2a4a 0 12px, #243057 12px 24px);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white-50);
+    font-family: var(--font-display); font-size: 26px;
+  }
+
+  /* ============== HOW IT WORKS (5 steps) ============== */
+  .steps {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+    margin-top: 40px;
+  }
+  .step {
+    background: var(--gold-bg);
+    border-radius: var(--r-lg);
+    border: 2px solid rgba(200, 141, 10, 0.45);
+    padding: 22px 20px 24px;
+    position: relative;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .step:nth-child(odd)  { transform: rotate(-1deg); }
+  .step:nth-child(even) { transform: rotate(0.8deg); }
+  .step:hover { transform: rotate(0) translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.35), var(--shadow-gold-glow); }
+  .step-num {
+    position: absolute;
+    top: -14px; left: -14px;
+    width: 48px; height: 48px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: var(--font-display); font-size: 22px;
+    background: var(--night);
+    color: var(--gold);
+    z-index: 2;
+    box-shadow: 2px 2px 0 rgba(200, 141, 10, 0.6), 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .step:nth-child(2) .step-num { background: var(--accent-red); color: #fff; }
+  .step:nth-child(3) .step-num { background: var(--gold-deep); color: #fff; }
+  .step:nth-child(4) .step-num { background: var(--accent-sky); color: #fff; }
+  .step:nth-child(5) .step-num { background: var(--accent-leaf); color: #fff; }
+  .step h3 {
+    font-family: var(--font-display); font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2; margin-bottom: 8px;
+    color: var(--gold-text);
+  }
+  .step p {
+    font-size: 13.5px;
+    color: var(--gold-muted);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .step-illu {
+    width: 100%; aspect-ratio: 1.1;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.08);
+    display: grid; place-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(200, 141, 10, 0.2);
+  }
+  .step-illu img, .step-illu video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* ============== TRIPTYCH ============== */
+  .tri {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    margin-top: 40px;
+  }
+  .tri.tri-stack {
+    grid-template-columns: 1fr; gap: 18px; margin-top: 0;
+  }
+  .tri.tri-stack .tri-card { padding: 22px 22px; }
+  .tri.tri-stack .tri-card .icon-paper { width: 52px; height: 52px; margin-bottom: 12px; }
+  .tri.tri-stack .tri-card .icon-paper svg { width: 28px; height: 28px; }
+  .tri.tri-stack .tri-card h3 { font-size: 20px; margin-bottom: 6px; }
+  .tri.tri-stack .tri-card p { font-size: 14px; line-height: 1.45; }
+  .tri-card {
+    background: var(--gold-bg);
+    border-radius: var(--r-lg);
+    border: 2px solid rgba(200, 141, 10, 0.45);
+    padding: 32px 26px;
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .tri-card:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(0,0,0,0.35), var(--shadow-gold-glow); }
+  .tri-card .icon-paper {
+    width: 76px; height: 76px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    display: grid; place-items: center;
+    transform: rotate(-4deg);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  }
+  .tri-card:nth-child(1) .icon-paper { background: var(--accent-red); color: #fff; }
+  .tri-card:nth-child(2) .icon-paper { background: var(--night); color: var(--gold); }
+  .tri-card:nth-child(3) .icon-paper { background: var(--accent-sky); color: #fff; }
+  .tri-card .icon-paper svg { width: 40px; height: 40px; }
+  .tri-card h3 {
+    font-family: var(--font-display); font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--gold-text);
+    line-height: 1.15;
+  }
+  .tri-card p {
+    color: var(--gold-muted);
+    font-weight: 700;
+    font-size: 14.5px;
+  }
+
+  /* ============== SAFE BY DESIGN ============== */
+  .safe {
+    padding: 28px 0 56px;
+    max-width: var(--maxw); width: calc(100% - 80px);
+    margin: 0 auto;
+    border-radius: 36px;
+    background: linear-gradient(160deg, rgba(15, 26, 46, 0.78) 0%, rgba(26, 39, 68, 0.85) 100%);
+    border: 1px solid var(--white-10);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.5);
+  }
+  .safe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 28px;
+    row-gap: 24px;
+    align-items: stretch;
+  }
+  .safe-col { display: contents; }
+  .safe-col__head {
+    grid-row: 1;
+    min-width: 0;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    position: relative;
+  }
+  .safe-col__head h2 { max-width: 100%; }
+  .safe-list { min-width: 0; }
+  .safe-col--left .safe-col__head { grid-column: 1; }
+  .safe-col--right .safe-col__head { grid-column: 2; align-items: center; overflow: visible; }
+  .safe-col__head .section-eyebrow { margin-bottom: 10px; }
+  .safe-col__head h2 { margin-bottom: 0; }
+  .safe-col--right .safe-col__head { min-width: 0; }
+  .safe-col__chars {
+    max-width: 95%;
+    max-height: 95%;
+    width: auto;
+    height: 95%;
+    object-fit: contain;
+    pointer-events: none;
+    filter: drop-shadow(0 6px 8px rgba(0,0,0,0.45)) drop-shadow(0 18px 28px rgba(0,0,0,0.5));
+  }
+  .safe-list {
+    grid-row: 2;
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 14px;
+  }
+  .safe-col--left .safe-list { grid-column: 1; }
+  .safe-col--right .safe-list { grid-column: 2; }
+  .safe-list--right .safe-item { align-items: stretch; }
+  .safe-mini-icon {
+    flex: 0 0 auto;
+    aspect-ratio: 1 / 1;
+    align-self: stretch;
+    width: auto;
+    max-width: 64px;
+    border-radius: 12px;
+    display: grid; place-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  }
+  .safe-mini-icon svg { width: 40%; height: 40%; }
+  .safe-mini-icon.mi-red { background: var(--accent-red); color: #fff; }
+  .safe-mini-icon.mi-night { background: var(--night); color: var(--gold); }
+  .safe-mini-icon.mi-sky { background: var(--accent-sky); color: #fff; }
+  .safe-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 16px 18px;
+    background: var(--gold-bg);
+    border-radius: 14px;
+    border: 2px solid rgba(200, 141, 10, 0.4);
+    box-shadow: var(--shadow-card);
+  }
+  .safe-check {
+    flex: 0 0 30px; width: 30px; height: 30px; border-radius: 50%;
+    background: linear-gradient(135deg, #3d8b3d, #2a6a2a);
+    color: white;
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 15px;
+    box-shadow: 0 0 0 4px rgba(110,197,106,0.18), 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .safe-item h4 {
+    font-family: var(--font-display); font-size: 19px; font-weight: 400;
+    color: var(--gold-text); margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .safe-item p { font-size: 13.5px; color: var(--gold-muted); font-weight: 700; line-height: 1.5; }
+
+  .badge-stack {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .badge {
+    background: var(--gold-bg);
+    border-radius: 20px;
+    padding: 22px 18px;
+    border: 2px solid rgba(200, 141, 10, 0.45);
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s;
+  }
+  .badge:nth-child(1) { transform: rotate(-2deg); }
+  .badge:nth-child(2) { transform: rotate(2deg); }
+  .badge:nth-child(3) { transform: rotate(1deg); }
+  .badge:nth-child(4) { transform: rotate(-1.5deg); }
+  .badge:hover { transform: rotate(0) translateY(-3px); }
+  .badge-big {
+    font-family: var(--font-display); font-size: 40px; line-height: 1;
+    color: var(--gold-text);
+  }
+  .badge:nth-child(1) .badge-big { color: var(--accent-red); }
+  .badge:nth-child(2) .badge-big { color: var(--gold-border); }
+  .badge:nth-child(3) .badge-big { color: #2a6a2a; }
+  .badge:nth-child(4) .badge-big { color: var(--night); }
+  .badge-label {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--gold-muted);
+    font-weight: 800;
+  }
+
+  /* ============== GALLERY ============== */
+  .gallery-strip {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .film-card {
+    background: var(--gold-bg);
+    border-radius: 16px;
+    padding: 10px 10px 14px;
+    box-shadow: var(--shadow-card);
+    border: 2px solid rgba(200, 141, 10, 0.4);
+    position: relative;
+    transition: transform 0.25s;
+  }
+  .film-card:nth-child(1) { transform: rotate(-2deg); }
+  .film-card:nth-child(2) { transform: rotate(1.5deg) translateY(10px); }
+  .film-card:nth-child(3) { transform: rotate(-1deg) translateY(-6px); }
+  .film-card:nth-child(4) { transform: rotate(2deg); }
+  .film-card:hover { transform: rotate(0) translateY(-4px); }
+  .film-thumb {
+    aspect-ratio: 3 / 2;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: var(--night);
+    cursor: pointer;
+  }
+  .film-video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    background: var(--night);
+  }
+  .film-thumb.playing .film-overlay { opacity: 0; pointer-events: none; }
+  .film-overlay {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.35) 100%);
+    transition: opacity 0.2s;
+  }
+  .film-play-btn {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: rgba(255,255,255,0.94);
+    color: var(--night);
+    border: none; cursor: pointer;
+    display: grid; place-items: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    transition: transform 0.15s;
+  }
+  .film-play-btn:hover { transform: scale(1.08); }
+  .film-play-btn svg { width: 22px; height: 22px; margin-left: 3px; }
+  .play-pill {
+    position: absolute; bottom: 10px; left: 10px;
+    background: rgba(255,255,255,0.94);
+    color: var(--night);
+    border-radius: 999px;
+    padding: 5px 12px 5px 10px;
+    font-size: 12px; font-weight: 800;
+    display: inline-flex; align-items: center; gap: 6px;
+    pointer-events: none;
+  }
+  .play-pill svg { width: 11px; height: 11px; }
+  .film-meta {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 12px 6px 0;
+  }
+  .film-title {
+    font-family: var(--font-display);
+    font-size: 17px; font-weight: 400;
+    color: var(--gold-text);
+    line-height: 1.15;
+  }
+  .film-age {
+    font-size: 13px;
+    color: var(--gold-muted);
+    font-weight: 800;
+  }
+
+  /* ============== BEHIND THE AI ============== */
+  .ai-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 18px;
+    margin-top: 48px;
+    align-items: center;
+  }
+  .ai-step {
+    background: var(--gold-bg);
+    border-radius: var(--r-lg);
+    padding: 28px 22px;
+    text-align: center;
+    border: 2px solid rgba(200, 141, 10, 0.45);
+    box-shadow: var(--shadow-card);
+  }
+  .ai-step .ai-glyph {
+    width: 64px; height: 64px; margin: 0 auto 14px;
+    border-radius: 14px;
+    display: grid; place-items: center;
+    font-family: var(--font-display); font-size: 28px;
+    background: var(--night); color: var(--gold);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  }
+  .ai-step:nth-child(3) .ai-glyph { background: var(--accent-red); color: #fff; }
+  .ai-step:nth-child(5) .ai-glyph { background: var(--accent-leaf); color: #fff; }
+  .ai-step h4 {
+    font-family: var(--font-display); font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    color: var(--gold-text);
+  }
+  .ai-step p {
+    font-size: 14px;
+    color: var(--gold-muted);
+    font-weight: 700;
+  }
+  .ai-arrow {
+    color: var(--gold);
+    font-size: 36px;
+    text-shadow: 0 0 16px rgba(255,210,60,0.5);
+    font-weight: 400;
+  }
+  .ai-note {
+    margin-top: 36px;
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--gold);
+    text-align: center;
+    text-shadow: 0 0 16px rgba(255, 210, 60, 0.4);
+  }
+
+  /* ============== FAQ ============== */
+  .faq-list {
+    max-width: 820px; margin: 50px auto 0;
+    display: grid; gap: 12px;
+  }
+  details.faq-item {
+    background: var(--gold-bg);
+    border-radius: var(--r-md);
+    border: 2px solid rgba(200, 141, 10, 0.4);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+  }
+  details.faq-item[open] { border-color: var(--gold-deep); }
+  details.faq-item summary {
+    list-style: none;
+    padding: 18px 22px;
+    cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 14px;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gold-text);
+    line-height: 1.3;
+  }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary::after {
+    content: "+";
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 26px;
+    color: var(--gold-border);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  details.faq-item[open] summary::after { transform: rotate(45deg); }
+  details.faq-item .faq-body {
+    padding: 0 22px 20px;
+    color: var(--gold-muted);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  /* ============== NEWSLETTER ============== */
+  .news {
+    max-width: 820px; width: calc(100% - 80px);
+    margin: 0 auto;
+    padding: 70px 0;
+    border-radius: 36px;
+    background: linear-gradient(160deg, rgba(15,26,46,0.88), rgba(26,39,68,0.95));
+    border: 1px solid var(--white-10);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.5);
+  }
+  .news::before, .news::after {
+    content: ""; position: absolute;
+    width: 240px; height: 240px; border-radius: 50%;
+    pointer-events: none;
+  }
+  .news::before {
+    top: -80px; left: -50px;
+    background: radial-gradient(circle, rgba(255, 210, 60, 0.22), transparent 70%);
+  }
+  .news::after {
+    bottom: -80px; right: -50px;
+    background: radial-gradient(circle, rgba(232, 93, 76, 0.18), transparent 70%);
+  }
+  .news .wrap { position: relative; }
+  .news h2 { margin: 0 auto 14px; color: #fff; }
+  .news .section-sub { color: var(--white-90); margin: 0 auto 26px; }
+  .news-form {
+    display: inline-flex; gap: 6px;
+    background: var(--white-10);
+    border: 1px solid var(--white-20);
+    padding: 6px; border-radius: 999px;
+    width: min(440px, 90%);
+  }
+  .news-form input {
+    flex: 1; background: transparent; border: 0; outline: 0;
+    color: #fff; padding: 10px 16px;
+    font-family: inherit; font-size: 14px; font-weight: 600;
+  }
+  .news-form input::placeholder { color: var(--white-50); }
+  .news-form button {
+    background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+    color: var(--gold-text);
+    border: 0; border-radius: 999px;
+    padding: 10px 22px;
+    font-family: inherit; font-weight: 800; font-size: 14px;
+    cursor: pointer;
+    border: 1px solid var(--gold-border);
+    transition: transform 0.15s;
+  }
+  .news-form button:hover { transform: translateY(-1px); }
+
+  /* ============== FINAL CTA ============== */
+  .final {
+    padding: 100px 0 70px;
+    text-align: center;
+  }
+  .final h2 { margin: 0 auto 18px; max-width: 760px; }
+  .final .cta-row { justify-content: center; margin-top: 30px; }
+
+  /* ============== FOOTER ============== */
+  footer {
+    padding: 40px 0 50px;
+    border-top: 1px solid var(--white-10);
+    margin-top: 40px;
+    background: rgba(15,26,46,0.6);
+  }
+  .foot-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 18px;
+  }
+  .foot-brand { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+  .foot-brand img { width: 32px; height: 32px; border-radius: 8px; }
+  .foot-brand-name { font-family: var(--font-display); font-size: 22px; color: var(--gold); letter-spacing: 0.4px; }
+  .foot-links {
+    display: flex; gap: 22px;
+    flex: 1; justify-content: center;
+  }
+  .foot-links a {
+    color: var(--white-70); font-size: 14px; font-weight: 700;
+    transition: color 0.2s;
+  }
+  .foot-links a:hover { color: var(--gold); }
+  .foot-copy {
+    font-size: 13px; color: var(--white-50); font-weight: 600;
+    text-align: right; line-height: 1.4;
+    flex: 0 0 auto;
+  }
+  .foot-copy span { display: block; }
+  @media (max-width: 980px) {
+    .foot-links {
+      display: grid !important;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 28px; row-gap: 10px;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 780px) {
+    .foot-inner { flex-direction: column; text-align: center; }
+    .foot-copy { text-align: center; }
+  }
+
+  /* ============== MODAL ============== */
+  .modal-veil {
+    position: fixed; inset: 0;
+    background: rgba(15, 26, 46, 0.7);
+    display: none; align-items: center; justify-content: center;
+    z-index: 100; padding: 20px;
+    backdrop-filter: blur(8px);
+  }
+  .modal-veil.open { display: flex; }
+  .modal {
+    background: var(--gold-bg);
+    border-radius: 24px;
+    padding: 38px 32px;
+    max-width: 440px; width: 100%;
+    text-align: center;
+    position: relative;
+    border: 2px solid var(--gold-border);
+    box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5);
+  }
+  .modal .close {
+    position: absolute; top: 12px; right: 12px;
+    width: 34px; height: 34px; border-radius: 50%; border: 0;
+    background: rgba(0,0,0,0.1); color: var(--gold-text);
+    font-size: 20px; font-weight: 800; cursor: pointer;
+  }
+  .modal h3 {
+    font-family: var(--font-display); font-size: 30px;
+    font-weight: 400; color: var(--gold-text); margin-bottom: 10px;
+  }
+  .modal p {
+    color: var(--gold-muted); font-weight: 700;
+    margin-bottom: 22px; font-size: 15px;
+  }
+  .modal-note {
+    margin-top: 14px; margin-bottom: 0;
+    font-size: 13px; color: var(--gold-muted);
+    opacity: 0.75; font-weight: 600;
+  }
+  .modal .news-form {
+    background: rgba(0,0,0,0.08);
+    border-color: rgba(200, 141, 10, 0.4);
+  }
+  .modal .news-form input { color: var(--gold-text); }
+  .modal .news-form input::placeholder { color: rgba(122, 90, 42, 0.5); }
+  .modal .news-form button {
+    background: var(--night); color: var(--gold); border-color: var(--night);
+  }
+
+  /* ============== RESPONSIVE ============== */
+  @media (max-width: 980px) {
+    .hero-grid {
+      grid-template-columns: 1fr; gap: 30px;
+      --hero-scale: clamp(0.7, 100cqi / 560px, 1);
+      --hero-logo-scale: clamp(0.88, 100cqi / 560px, 1);
+      --hero-title-scale: clamp(0.82, 100cqi / 560px, 1);
+      --hero-text-scale: clamp(0.9, 100cqi / 560px, 1);
+    }
+    .hero-copy { text-align: center; padding-top: 0; }
+    .hero-copy .hero-logo { margin-left: auto; margin-right: auto; }
+    .hero-copy .hero-sub { margin-left: auto; margin-right: auto; }
+    .hero-copy .cta-row, .hero-copy .age-row { justify-content: center; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .tri, .ai-flow { grid-template-columns: 1fr; }
+    .ai-arrow { display: none; }
+    .safe-grid { grid-template-columns: 1fr; grid-template-rows: none; gap: 40px; }
+    .safe-col__head, .safe-list { grid-column: 1 !important; grid-row: auto !important; }
+    .gallery-strip { grid-template-columns: repeat(2, 1fr); }
+    .demo, .safe, .news { width: calc(100% - 32px); border-radius: 28px; }
+    section { padding: 64px 0; }
+  }
+  @media (max-width: 540px) {
+    .steps, .gallery-strip { grid-template-columns: 1fr; }
+    .nav-inner { gap: 10px; padding: 12px 16px; }
+    .brand-name { font-size: 17px; }
+    .cta-row { width: 100%; gap: 12px; }
+    .app-store-btn, .waitlist-pill { width: 100%; justify-content: center; }
+    .news-form { width: 100%; flex-direction: column; padding: 8px; border-radius: 16px; }
+    .news-form input { text-align: center; }
+    .news-form button { width: 100%; }
+    .badge-stack { grid-template-columns: 1fr 1fr; }
+    .badge-big { font-size: 32px; }
+  }
+</style>
 </head>
-<body>
+<body data-screen-label="Landing Page">
 
-  <!-- Starry Background -->
-  <div class="page-bg" role="presentation"></div>
+<div class="page-bg"></div>
+<div class="particles">
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+</div>
 
-  <!-- Floating particles -->
-  <div class="particles" role="presentation">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
+<!-- ============== NAV ============== -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.webp" alt="Storybook Adventures" class="brand-logo" width="867" height="438" fetchpriority="high" />
+    </a>
+    <nav class="nav-links">
+      <a href="#how" class="nav-link">How it works</a>
+      <a href="#safe" class="nav-link">For parents</a>
+      <a href="#gallery" class="nav-link">Films</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="blog/index.html" class="nav-link">Blog</a>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <a href="index.html" class="active" aria-current="page">EN</a>
+        <a href="de/index.html">DE</a>
+      </div>
+      <a href="https://apps.apple.com/app/id6761114804" class="btn btn-small">Get the app</a>
+    </nav>
   </div>
+</header>
 
-  <!-- Language Toggle -->
-  <div class="lang-switch" role="group" aria-label="Language">
-    <a href="" class="lang-btn active" data-lang="en" aria-current="page">EN</a>
-    <a href="" class="lang-btn" data-lang="de">DE</a>
-  </div>
+<main>
 
-  <main class="landing">
+<!-- ============== HERO ============== -->
+<section class="hero" data-screen-label="Hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <img src="assets/logo.webp" alt="Storybook Adventures" class="hero-logo" width="867" height="438" fetchpriority="high" />
+      <h1 class="hero-title">
+        <span>Your drawings</span><br>
+        <span class="accent">come alive.</span>
+      </h1>
+      <p class="hero-sub">
+        Draw on paper. Snap a photo. Watch your hand-drawn art turn into an animated short film — and discover how AI brings creativity to life along the way.
+      </p>
+      <div class="age-row">
+        <!-- TODO[live-ratings]: rating + count hardcoded. See docs/ACTIVE/Website-SEO-Plan.md → Phase I -->
+        <span class="pill pill--rating" aria-label="App Store rating 5 out of 5, 2 ratings"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 · 2 ratings</span>
+        <span class="pill">A drawing app for ages 6–12</span>
+      </div>
+      <div class="cta-row">
+        <a href="https://apps.apple.com/app/id6761114804" class="app-store-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.5 2.04-3.7 2.13-3.76-1.16-1.7-2.97-1.93-3.62-1.96-1.54-.16-3 .9-3.78.9-.78 0-1.97-.88-3.24-.86-1.67.02-3.21.97-4.07 2.47-1.74 3.02-.44 7.5 1.25 9.95.83 1.2 1.81 2.54 3.1 2.49 1.24-.05 1.71-.8 3.21-.8 1.5 0 1.93.8 3.24.77 1.34-.02 2.18-1.22 3-2.42.95-1.39 1.34-2.74 1.36-2.8-.03-.02-2.6-1-2.62-3.98zm-2.49-7.3c.69-.83 1.15-1.99 1.02-3.14-.99.04-2.18.66-2.89 1.5-.64.74-1.2 1.92-1.05 3.06 1.1.08 2.23-.56 2.92-1.42z"/></svg>
+          <div>
+            <div class="as-l">Download on the</div>
+            <div class="as-b">App Store</div>
+          </div>
+        </a>
+        <button class="app-store-btn play-store-btn" id="waitlistOpen" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00d2ff"/><stop offset="1" stop-color="#0084ff"/></linearGradient><linearGradient id="pg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe000"/><stop offset="1" stop-color="#ffae00"/></linearGradient><linearGradient id="pg3" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff3a44"/><stop offset="1" stop-color="#c31162"/></linearGradient><linearGradient id="pg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00f076"/><stop offset="1" stop-color="#00a653"/></linearGradient></defs><path d="M3.6 2.3c-.3.3-.5.7-.5 1.3v17c0 .6.2 1 .5 1.3l9.6-9.5L3.6 2.3z" fill="url(#pg1)"/><path d="M16.8 8.7l-3.6 3.7 3.6 3.6 4.3-2.4c1.1-.6 1.1-1.9 0-2.5l-4.3-2.4z" fill="url(#pg2)"/><path d="M13.2 12.4L3.6 21.9c.4.4 1 .4 1.7 0l11.5-6.4-3.6-3.1z" fill="url(#pg3)"/><path d="M16.8 8.7L5.3 2.3c-.7-.4-1.3-.4-1.7 0l9.6 9.5 3.6-3.1z" fill="url(#pg4)"/></svg>
+          <div>
+            <div class="as-l">Coming soon to</div>
+            <div class="as-b">Google Play</div>
+          </div>
+        </button>
+      </div>
+    </div>
 
-    <!-- ========== HERO ========== -->
-    <section class="hero">
-      <div class="hero__logo-wrap">
-        <img src="assets/logo.webp" alt="Storybook Adventures — children's drawing app logo" class="hero__logo" width="420" height="220" fetchpriority="high">
+    <div class="hero-visual">
+      <div class="hero-visual-stage">
+      <span class="scribble-star s1">✦</span>
+      <span class="scribble-star s2">✦</span>
+      <span class="scribble-star s3">✦</span>
+
+      <!-- Paper drawing -->
+      <div class="paper-card drawing" style="font-size: 16px">
+        <div class="drawing-canvas">
+          <svg class="kid-svg" viewBox="0 0 200 150" fill="none">
+            <path d="M5 110 Q 25 100 45 110 T 85 110 T 125 110 T 165 110 T 195 110" stroke="#2a7aa8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M5 122 Q 25 112 45 122 T 85 122 T 125 122 T 165 122 T 195 122" stroke="#2a7aa8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <path d="M55 105 L 145 105 L 135 120 L 65 120 Z" stroke="#7a4a18" stroke-width="3" fill="#c08040" stroke-linejoin="round"/>
+            <line x1="100" y1="105" x2="100" y2="50" stroke="#7a4a18" stroke-width="3" stroke-linecap="round"/>
+            <path d="M100 55 L 130 75 L 100 90 Z" stroke="#c4513a" stroke-width="2.5" fill="#e85d4c" stroke-linejoin="round"/>
+            <path d="M100 55 L 75 70 L 100 88 Z" stroke="#c4513a" stroke-width="2.5" fill="#e85d4c" stroke-linejoin="round"/>
+            <circle cx="100" cy="72" r="4" fill="#fffaf0"/>
+            <circle cx="170" cy="30" r="12" stroke="#b8841a" stroke-width="2.5" fill="#f4be3c"/>
+            <line x1="170" y1="10" x2="170" y2="14" stroke="#b8841a" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="170" y1="46" x2="170" y2="50" stroke="#b8841a" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="150" y1="30" x2="154" y2="30" stroke="#b8841a" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="186" y1="30" x2="190" y2="30" stroke="#b8841a" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M30 40 Q 35 35 40 40 Q 45 35 50 40" stroke="#1a2744" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="55" cy="25" rx="14" ry="6" stroke="#5fb3d4" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <div class="label">my pirate ship</div>
       </div>
 
-      <h1 class="hero__title">Your drawings come alive.</h1>
+      <!-- Phone -->
+      <div class="phone">
+        <div class="phone-screen">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/screenshots/storybook-ai-animation.webp">
+            <source src="assets/screenshots/storybook-intro-trailer.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
 
-      <p class="hero__subtitle">Draw on paper. Snap a photo. Watch your hand-drawn art come to life — and learn how AI brings creativity to life along the way.</p>
+      <!-- Second sticker drawing -->
+      <div class="paper-card drawing drawing-2">
+        <div class="drawing-canvas">
+          <svg viewBox="0 0 200 150" style="width:90%;height:90%;" fill="none">
+            <!-- moon -->
+            <circle cx="150" cy="40" r="18" stroke="#b8841a" stroke-width="2.5" fill="#ffd23c"/>
+            <circle cx="144" cy="36" r="3" fill="#e8a817" opacity="0.6"/>
+            <circle cx="156" cy="44" r="2" fill="#e8a817" opacity="0.6"/>
+            <!-- rocket body -->
+            <path d="M70 110 L 70 60 Q 70 35 90 35 Q 110 35 110 60 L 110 110 Z" stroke="#1a2744" stroke-width="3" fill="#e85d4c" stroke-linejoin="round"/>
+            <!-- window -->
+            <circle cx="90" cy="60" r="8" stroke="#1a2744" stroke-width="2.5" fill="#5fb3d4"/>
+            <!-- fins -->
+            <path d="M70 90 L 55 115 L 70 110 Z" stroke="#1a2744" stroke-width="2.5" fill="#c4513a" stroke-linejoin="round"/>
+            <path d="M110 90 L 125 115 L 110 110 Z" stroke="#1a2744" stroke-width="2.5" fill="#c4513a" stroke-linejoin="round"/>
+            <!-- flame -->
+            <path d="M78 110 Q 82 130 90 120 Q 98 130 102 110 Z" stroke="#b8841a" stroke-width="2" fill="#f4be3c" stroke-linejoin="round"/>
+            <!-- stars -->
+            <path d="M30 30 L 32 35 L 37 36 L 33 39 L 34 44 L 30 41 L 26 44 L 27 39 L 23 36 L 28 35 Z" fill="#f4be3c" stroke="#b8841a" stroke-width="1"/>
+            <path d="M180 90 L 181 93 L 184 94 L 181 96 L 182 99 L 180 97 L 178 99 L 179 96 L 176 94 L 179 93 Z" fill="#f4be3c" stroke="#b8841a" stroke-width="1"/>
+            <path d="M40 80 L 42 85 L 47 86 L 43 89 L 44 94 L 40 91 L 36 94 L 37 89 L 33 86 L 38 85 Z" fill="#5fb3d4" stroke="#2f7a98" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="label">to the moon!</div>
+      </div>
 
-      <div class="hero__cta">
-        <div class="hero__buttons">
-          <div class="hero__btn-col">
-            <a href="https://apps.apple.com/app/id6761114804" target="_blank" rel="noopener" class="btn-download">
-              <svg class="btn-download__apple" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-              <div class="btn-download__text">
-                <span class="btn-download__small">Download on the</span>
-                <span class="btn-download__big">App Store</span>
-              </div>
-            </a>
+      <!-- Third sticker drawing -->
+      <div class="paper-card drawing drawing-3">
+        <div class="drawing-canvas">
+          <svg viewBox="0 0 200 150" style="width:90%;height:90%;" fill="none">
+            <!-- castle base -->
+            <rect x="40" y="75" width="120" height="55" stroke="#1a2744" stroke-width="3" fill="#c89a5a" stroke-linejoin="round"/>
+            <!-- battlements -->
+            <path d="M40 75 L 40 65 L 55 65 L 55 75 M 70 75 L 70 65 L 85 65 L 85 75 M 100 75 L 100 65 L 115 65 L 115 75 M 130 75 L 130 65 L 145 65 L 145 75 M 160 75 L 160 75" stroke="#1a2744" stroke-width="3" fill="#c89a5a" stroke-linejoin="round"/>
+            <rect x="40" y="65" width="15" height="10" stroke="#1a2744" stroke-width="3" fill="#c89a5a"/>
+            <rect x="70" y="65" width="15" height="10" stroke="#1a2744" stroke-width="3" fill="#c89a5a"/>
+            <rect x="100" y="65" width="15" height="10" stroke="#1a2744" stroke-width="3" fill="#c89a5a"/>
+            <rect x="130" y="65" width="15" height="10" stroke="#1a2744" stroke-width="3" fill="#c89a5a"/>
+            <!-- main tower -->
+            <rect x="80" y="40" width="40" height="55" stroke="#1a2744" stroke-width="3" fill="#a07a3f"/>
+            <path d="M75 40 L 100 18 L 125 40 Z" stroke="#1a2744" stroke-width="3" fill="#e85d4c" stroke-linejoin="round"/>
+            <!-- flag -->
+            <line x1="100" y1="18" x2="100" y2="5" stroke="#1a2744" stroke-width="2.5"/>
+            <path d="M100 5 L 115 9 L 100 14 Z" stroke="#1a2744" stroke-width="2" fill="#f4be3c" stroke-linejoin="round"/>
+            <!-- door -->
+            <path d="M90 130 L 90 105 Q 100 95 110 105 L 110 130 Z" stroke="#1a2744" stroke-width="2.5" fill="#5a3a1a" stroke-linejoin="round"/>
+            <!-- window -->
+            <rect x="94" y="55" width="12" height="18" stroke="#1a2744" stroke-width="2" fill="#5fb3d4"/>
+            <!-- clouds -->
+            <ellipse cx="28" cy="35" rx="14" ry="7" stroke="#b8841a" stroke-width="1.5" fill="#fff7da"/>
+            <ellipse cx="172" cy="30" rx="16" ry="7" stroke="#b8841a" stroke-width="1.5" fill="#fff7da"/>
+            <!-- grass tufts -->
+            <path d="M15 132 L 18 124 L 21 132 L 24 126 L 27 132" stroke="#4a8a3c" stroke-width="2" fill="none" stroke-linejoin="round"/>
+            <path d="M165 132 L 168 124 L 171 132 L 174 126 L 177 132 L 180 124 L 183 132" stroke="#4a8a3c" stroke-width="2" fill="none" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="label">the king's castle</div>
+      </div>
+
+      <div class="magic-arrow">
+        <span>…and then magic ✨</span>
+        <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
+          <path d="M5 10 Q 20 5 35 18 T 55 35" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M48 28 L 55 35 L 47 36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      </div><!-- /.hero-visual-stage -->
+    </div>
+  </div>
+</section>
+
+<!-- ============== SEE IT IN ACTION ============== -->
+<section class="demo" data-screen-label="Demo">
+  <div class="wrap">
+    <h2 class="demo-title">See how the app looks</h2>
+    <div class="appstore-carousel">
+      <button class="appstore-nav prev" type="button" aria-label="Previous" onclick="document.getElementById('appstoreTrack').scrollBy({left:-282,behavior:'smooth'})">‹</button>
+      <button class="appstore-nav next" type="button" aria-label="Next" onclick="document.getElementById('appstoreTrack').scrollBy({left:282,behavior:'smooth'})">›</button>
+      <div class="appstore-track" id="appstoreTrack">
+        <div class="appstore-slide"><img src="assets/screenshots/storybook-pick-story-world.webp" alt="Pick a story world" loading="lazy"/></div>
+        <div class="appstore-slide"><img src="assets/screenshots/storybook-draw-on-paper.webp" alt="Draw on real paper" loading="lazy"/></div>
+        <div class="appstore-slide"><img src="assets/screenshots/storybook-photograph-drawing.webp" alt="Snap a photo" loading="lazy"/></div>
+        <div class="appstore-slide"><img src="assets/screenshots/storybook-ai-animation.webp" alt="Watch it come to life" loading="lazy"/></div>
+        <div class="appstore-slide"><img src="assets/screenshots/storybook-finished-movie.webp" alt="Finish the movie" loading="lazy"/></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS ============== -->
+<section id="how" data-screen-label="How it works">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">How it works</span>
+      <h2>Five small steps. One big movie.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-illu"><img src="assets/steps/step-1-pick-story.webp" alt="" loading="lazy" width="700" height="637"/></div>
+        <div class="step-num">1</div>
+        <h3>Pick a Story World</h3>
+        <p>Choose from 24 adventure worlds — pirates, dragons, space, jungle, fairy tales and many more. Each story has three scenes to bring to life.</p>
+      </div>
+      <div class="step">
+        <div class="step-illu"><img src="assets/steps/step-2-draw-on-paper.webp" alt="" loading="lazy" width="700" height="637"/></div>
+        <div class="step-num">2</div>
+        <h3>Your Adventure Starts on Paper</h3>
+        <p>Grab a pencil, crayons or markers and draw your scene on real paper. This is where the magic starts — no screen time, just creativity.</p>
+      </div>
+      <div class="step">
+        <div class="step-illu"><img src="assets/steps/step-3-photograph.webp" alt="" loading="lazy" width="700" height="637"/></div>
+        <div class="step-num">3</div>
+        <h3>Photograph Your Drawing</h3>
+        <p>Open the app and photograph your drawing — it takes just a few seconds. The app guides you through each step.</p>
+      </div>
+      <div class="step">
+        <div class="step-illu"><video autoplay muted loop playsinline preload="metadata"><source src="assets/steps/step-4-ai-animation.mp4" type="video/mp4"></video></div>
+        <div class="step-num">4</div>
+        <h3>Watch Your Drawing Come to Life</h3>
+        <p>Your drawing comes to life as an animated movie with sound — kids see how their creative input shapes the result.</p>
+      </div>
+      <div class="step">
+        <div class="step-illu"><video autoplay muted loop playsinline preload="metadata"><source src="assets/steps/step-5-finished-movie.mp4" type="video/mp4"></video></div>
+        <div class="step-num">5</div>
+        <h3>Complete Your Movie</h3>
+        <p>All three scenes done? Then your story becomes a real short film. Share it with family and friends — or keep it just for yourself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SAFE BY DESIGN ============== -->
+<section id="safe" class="safe" data-screen-label="Safe by design">
+  <div class="wrap">
+    <div class="safe-grid">
+      <div class="safe-col safe-col--left">
+        <div class="safe-col__head">
+          <span class="section-eyebrow">Safe by design</span>
+          <h2>Built for kids.<br>Trusted by parents.</h2>
+        </div>
+        <div class="safe-list">
+          <div class="safe-item">
+            <div class="safe-check">✓</div>
+            <div>
+              <h4>No account, email, or personal data required</h4>
+              <p>Nothing to sign up for. Nothing collected. Period.</p>
+            </div>
           </div>
-          <div class="hero__btn-col">
-            <button class="btn-download btn-download--android" id="btn-android">
-              <svg class="btn-download__android" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.523 2.226a.4.4 0 0 0-.544.15l-1.108 1.879A6.694 6.694 0 0 0 12 3.2a6.694 6.694 0 0 0-3.871 1.055L7.021 2.376a.4.4 0 1 0-.694.4l1.07 1.812A6.667 6.667 0 0 0 5 9.6h14a6.667 6.667 0 0 0-2.397-5.012l1.07-1.812a.4.4 0 0 0-.15-.55zM9.2 7.6a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6zm5.6 0a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6zM5 10.4v7.2a1.6 1.6 0 0 0 1.6 1.6h.8v3.2a1.2 1.2 0 1 0 2.4 0v-3.2h2.4v3.2a1.2 1.2 0 1 0 2.4 0v-3.2h.8a1.6 1.6 0 0 0 1.6-1.6v-7.2H5zm-2.6 0a1.2 1.2 0 0 0-1.2 1.2v5.2a1.2 1.2 0 1 0 2.4 0v-5.2a1.2 1.2 0 0 0-1.2-1.2zm19.2 0a1.2 1.2 0 0 0-1.2 1.2v5.2a1.2 1.2 0 1 0 2.4 0v-5.2a1.2 1.2 0 0 0-1.2-1.2z"/></svg>
-              <div class="btn-download__text">
-                <span class="btn-download__small">Android</span>
-                <span class="btn-download__big">Coming Soon</span>
-              </div>
+          <div class="safe-item">
+            <div class="safe-check">✓</div>
+            <div>
+              <h4>AI safety checks review every drawing</h4>
+              <p>Before anything animates, we screen for content that doesn't belong in a kids' app.</p>
+            </div>
+          </div>
+          <div class="safe-item">
+            <div class="safe-check">✓</div>
+            <div>
+              <h4>Two-layer purchase protection</h4>
+              <p>Every purchase requires passing our parental gate (PIN or math challenge) plus Apple's standard sign-in. Parents can also lock the shop entirely.</p>
+            </div>
+          </div>
+          <div class="safe-item">
+            <div class="safe-check">✓</div>
+            <div>
+              <h4>No ads, no tracking, no social features</h4>
+              <p>No chat, no profiles, no comments. A walled garden, on purpose.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="safe-col safe-col--right">
+        <div class="safe-col__head">
+          <img class="safe-col__chars" src="assets/mrcookie-and-friends.webp" alt="" aria-hidden="true" width="1108" height="423">
+        </div>
+        <div class="safe-list safe-list--right">
+          <div class="safe-item">
+            <div class="safe-mini-icon mi-red">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 10 L 30 10 L 36 16 L 36 34 L 8 34 Z"/>
+                <path d="M30 10 L 30 16 L 36 16"/>
+                <path d="M14 20 L 22 20 M 14 25 L 28 25 M 14 30 L 24 30"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Draw More. Screen Less.</h4>
+              <p>Most of the creative time is spent drawing on real paper. The phone is just the camera and the cinema — healthy, focused screen time.</p>
+            </div>
+          </div>
+          <div class="safe-item">
+            <div class="safe-mini-icon mi-night">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="22" cy="22" r="14"/>
+                <path d="M22 8 L 22 36 M 8 22 L 36 22"/>
+                <path d="M12 13 Q 22 22 32 13 M 12 31 Q 22 22 32 31"/>
+              </svg>
+            </div>
+            <div>
+              <h4>24 Story Worlds</h4>
+              <p>Pirate Treasure, Jungle Adventure, Space Journey, Dragon Mountain — each with three scenes to discover and bring to life.</p>
+            </div>
+          </div>
+          <div class="safe-item">
+            <div class="safe-mini-icon mi-sky">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 6 L 26 18 L 38 22 L 26 26 L 22 38 L 18 26 L 6 22 L 18 18 Z"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Creativity Meets AI</h4>
+              <p>See how creativity shapes AI: every drawing leads to a unique animation. A playful first step into understanding what AI can do.</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.safe-col--right -->
+    </div>
+  </div>
+</section>
+
+<!-- ============== GALLERY ============== -->
+<section id="gallery" data-screen-label="Gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">From kids like yours</span>
+      <h2>A few finished films.</h2>
+    </div>
+    <div class="gallery-strip">
+      <div class="film-card">
+        <div class="film-thumb">
+          <video class="film-video" poster="assets/films/pirate-treasure.webp" preload="metadata" playsinline>
+            <source src="assets/films/pirate-treasure.mp4" type="video/mp4">
+          </video>
+          <div class="film-overlay">
+            <button class="film-play-btn" type="button" aria-label="Play Pirate Treasure">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3 L 21 12 L 5 21 Z"/></svg>
             </button>
           </div>
         </div>
-      </div>
-
-    </section>
-
-    <!-- ========== SCREENSHOT SHOWCASE ========== -->
-    <section class="showcase" aria-label="App Screenshots">
-      <h2 class="showcase__heading">See It in Action</h2>
-
-      <div class="showcase__viewport">
-        <div class="showcase__track">
-          <div class="phone-frame">
-            <div class="phone-frame__screen">
-              <video autoplay muted loop playsinline preload="metadata">
-                <source src="assets/screenshots/storybook-intro-trailer.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="phone-frame">
-            <div class="phone-frame__screen">
-              <img src="assets/screenshots/storybook-pick-story-world.webp" alt="Storybook Adventures app screen showing a grid of story worlds — jungle, ocean, space, castle and more — for kids to choose from." loading="lazy" width="1260" height="2736">
-            </div>
-          </div>
-          <div class="phone-frame">
-            <div class="phone-frame__screen">
-              <img src="assets/screenshots/storybook-draw-on-paper.webp" alt="Scene prompt screen showing what the child should draw next on paper before photographing the picture." loading="lazy" width="1260" height="2736">
-            </div>
-          </div>
-          <div class="phone-frame">
-            <div class="phone-frame__screen">
-              <img src="assets/screenshots/storybook-photograph-drawing.webp" alt="In-app camera capturing a child's hand-drawn picture on paper to bring into the story." loading="lazy" width="1260" height="2736">
-            </div>
-          </div>
-          <div class="phone-frame">
-            <div class="phone-frame__screen">
-              <img src="assets/screenshots/storybook-ai-animation.webp" alt="A child's hand-drawn scene animated into a short video by Storybook Adventures." loading="lazy" width="1260" height="2736">
-            </div>
-          </div>
-          <div class="phone-frame">
-            <div class="phone-frame__screen">
-              <img src="assets/screenshots/storybook-finished-movie.webp" alt="Finished animated storybook movie made from the child's drawings, ready to watch and share." loading="lazy" width="1260" height="2736">
-            </div>
-          </div>
-        </div>
-        <!-- Scroll fade hints -->
-        <div class="showcase__fade showcase__fade--left"></div>
-        <div class="showcase__fade showcase__fade--right"></div>
-      </div>
-
-      <div class="showcase__indicator" aria-hidden="true">
-        <span>Scroll to explore</span>
-        <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M2 2L10 9L18 2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-    </section>
-
-    <!-- ========== HOW IT WORKS ========== -->
-    <section class="how-it-works">
-      <h2 class="section-heading">How It Works</h2>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step__number">1</div>
-          <div class="step__content">
-            <h3>Pick a Story World</h3>
-            <p>Choose from 24 adventure worlds — pirates, dragons, space, jungle, fairy tales and many more. Each story has three scenes to bring to life.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step__number">2</div>
-          <div class="step__content">
-            <h3>Your Adventure Starts on Paper</h3>
-            <p>Grab a pencil, crayons or markers and draw your scene on real paper. This is where the magic starts — no screen time, just creativity.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step__number">3</div>
-          <div class="step__content">
-            <h3>Photograph Your Drawing</h3>
-            <p>Open the app and photograph your drawing — it takes just a few seconds. The app guides you through each step.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step__number">4</div>
-          <div class="step__content">
-            <h3>Watch Your Drawing Come to Life</h3>
-            <p>Your drawing comes to life as an animated movie with sound — kids see how their creative input shapes the result.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step__number">5</div>
-          <div class="step__content">
-            <h3>Complete Your Movie</h3>
-            <p>All three scenes done? Then your story becomes a real short film. Share it with family and friends — or keep it just for yourself.</p>
-          </div>
+        <div class="film-meta">
+          <div class="film-title">Pirate Treasure</div>
         </div>
       </div>
-    </section>
-
-    <!-- ========== FEATURES ========== -->
-    <section class="features-section">
-      <div class="features-row">
-        <div class="feature-block">
-          <div class="feature-block__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2"/><path d="M2 12h28M10 6v20" stroke="currentColor" stroke-width="2" opacity=".4"/><circle cx="20" cy="18" r="3" fill="currentColor" opacity=".6"/></svg>
+      <div class="film-card">
+        <div class="film-thumb">
+          <video class="film-video" poster="assets/films/safari-quest.webp" preload="metadata" playsinline>
+            <source src="assets/films/safari-quest.mp4" type="video/mp4">
+          </video>
+          <div class="film-overlay">
+            <button class="film-play-btn" type="button" aria-label="Play Safari Quest">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3 L 21 12 L 5 21 Z"/></svg>
+            </button>
           </div>
-          <h3>Draw More. Screen Less.</h3>
-          <p>Most of the creative time is spent drawing on real paper. The phone is just the camera and the cinema — healthy, focused screen time.</p>
         </div>
-
-        <div class="feature-block">
-          <div class="feature-block__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="2"/><path d="M16 3c3 4 5 8 5 13s-2 9-5 13M16 3c-3 4-5 8-5 13s2 9 5 13M3 16h26" stroke="currentColor" stroke-width="2" opacity=".5"/></svg>
-          </div>
-          <h3>24 Story Worlds</h3>
-          <p>Pirate Treasure, Jungle Adventure, Space Journey, Dragon Mountain — each with three scenes to discover and bring to life.</p>
-        </div>
-
-        <div class="feature-block">
-          <div class="feature-block__icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4l3.5 7 7.5 1.1-5.4 5.3 1.3 7.6L16 21.5l-6.9 3.5 1.3-7.6L5 12.1l7.5-1.1L16 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Creativity Meets AI</h3>
-          <p>See how creativity shapes AI: every drawing leads to a unique animation. A playful first step into understanding what AI can do.</p>
+        <div class="film-meta">
+          <div class="film-title">Safari Quest</div>
         </div>
       </div>
-    </section>
-
-    <!-- ========== SAFETY ========== -->
-    <section class="safety">
-      <div class="safety__card">
-        <div class="safety__header">
-          <div class="safety__shield">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2L4 7v6c0 7 4.5 11.5 10 14 5.5-2.5 10-7 10-14V7L14 2z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity=".1"/><path d="M10 14l3 3 5-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div>
-            <h2>Safe by Design</h2>
-            <p class="safety__sub">Built for kids. Trusted by parents.</p>
+      <div class="film-card">
+        <div class="film-thumb">
+          <video class="film-video" poster="assets/films/pony-ranch.webp" preload="metadata" playsinline>
+            <source src="assets/films/pony-ranch.mp4" type="video/mp4">
+          </video>
+          <div class="film-overlay">
+            <button class="film-play-btn" type="button" aria-label="Play Pony Ranch">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3 L 21 12 L 5 21 Z"/></svg>
+            </button>
           </div>
         </div>
-        <div class="safety__grid">
-          <div class="safety__item">
-            <span class="safety__check">&#10003;</span>
-            <span>No account, email, or personal data required</span>
-          </div>
-          <div class="safety__item">
-            <span class="safety__check">&#10003;</span>
-            <span>AI safety checks review every drawing</span>
-          </div>
-          <div class="safety__item">
-            <span class="safety__check">&#10003;</span>
-            <span>Parental controls for purchases</span>
-          </div>
-          <div class="safety__item">
-            <span class="safety__check">&#10003;</span>
-            <span>No ads, no tracking, no social features</span>
-          </div>
+        <div class="film-meta">
+          <div class="film-title">Pony Ranch</div>
         </div>
       </div>
-    </section>
-
-    <!-- ========== FAQ ========== -->
-    <section class="faq" aria-labelledby="faq-heading">
-      <h2 class="section-heading" id="faq-heading">Questions Parents Ask</h2>
-
-      <div class="faq__group">
-
-        <details class="faq__item">
-          <summary>
-            <span>Is the app safe for my child?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Yes. Storybook Adventures is built privacy-first under GDPR and COPPA. Every drawing is screened by AI safety checks before animation, parental controls protect purchases, and there are no ads, no tracking, and no social features. Children never need to share their name, email, or any personal information.</p>
+      <div class="film-card">
+        <div class="film-thumb">
+          <video class="film-video" poster="assets/films/fairy-forest.webp" preload="metadata" playsinline>
+            <source src="assets/films/fairy-forest.mp4" type="video/mp4">
+          </video>
+          <div class="film-overlay">
+            <button class="film-play-btn" type="button" aria-label="Play Fairy Forest">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3 L 21 12 L 5 21 Z"/></svg>
+            </button>
           </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>What age is Storybook Adventures for?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>The app is designed for children ages 6 to 12. Younger children can absolutely enjoy it with a parent — it's the kind of activity that brings families together around the kitchen table.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>Do you collect personal data from children?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>No. We don't collect names, emails, location, or any identifying information from children. The app uses an anonymous device identifier so progress and tokens stay tied to the device — that's it. Parents can review the full <a href="privacy.html">Privacy Policy</a>.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>Is this just more screen time for my child?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Most of the creative time is spent off-screen. Children draw their scenes on real paper using crayons, pencils, or markers — the app is only used for a few seconds to capture the drawing and a minute or two to watch the animated result. We call this <em>healthy, focused screen time</em>: more imagination, more focus, less mindless scrolling.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>How does the app actually work?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Five simple steps: (1) pick a story world from 24 adventures, (2) draw the scene on paper, (3) take a photo through the app, (4) watch the drawing come to life as an animated movie with sound, (5) complete all three scenes to unlock the full storybook film.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>What does my child need to draw with?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Anything you have at home: pencils, crayons, markers, paint, or any combination. White paper works best so the camera captures details clearly, but plain notebook paper is fine. The app is designed to handle a wide range of drawing styles — from quick sketches to detailed scenes.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>Does it need internet to work?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Yes. The animation is created on our servers using AI, so an internet connection is required while a drawing is being processed. Once an animation is finished, you can save it to the photo gallery and watch it offline anytime.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>How long does it take to create an animation?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Usually around two to three minutes. The app shows a progress bar so children know what's happening — and the wait builds excitement. Some kids tell us it feels like opening a present.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>Is AI safe for kids?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>It depends entirely on how AI is used. Most general AI tools (ChatGPT, image generators) aren't designed for children. Storybook Adventures uses AI in a controlled, narrow way: every drawing is screened for safety before animation, the AI never generates content from text alone (it always starts from your child's drawing), and there's no chat, no open-ended interaction, and no exposure to other users. Think of it as AI on training wheels — built specifically for kids ages 6–12.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>Does AI replace my child's creativity?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Just the opposite. The drawing is your child's. The story is your child's. The AI's only job is to bring the drawing to motion — it can't invent characters, scenes, or stories on its own. Every animation is a one-of-a-kind result of your child's imagination. We see kids drawing more, more carefully, and more often because they're curious to see how the AI will respond.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>How does Storybook Adventures introduce kids to AI?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Through play, not lectures. Children naturally learn the relationship between input (their drawing) and output (the animation) — that's the foundation of how AI works. They start to ask: <em>What if I add more colour? What if I draw the dragon bigger?</em> That curiosity is the beginning of AI literacy. We see this as a safer, more developmentally appropriate first AI experience than handing a child ChatGPT.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>What happens if my child draws something inappropriate?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Every uploaded drawing is reviewed by AI safety checks before animation begins. If a drawing is flagged for inappropriate content (violence, names, addresses, etc.), the animation is rejected, the image is deleted, and the token is automatically refunded. Repeat violations may trigger service restrictions. Drawings with obvious mistakes — but nothing inappropriate — animate normally.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>How much does it cost?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>The app is free to download. Each animation uses one token, and tokens are sold in packs through Apple In-App Purchase. Parental controls are built in — every purchase requires the parent to authenticate first. There are no subscriptions and no recurring charges.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>Does it work on iPad?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Yes. Storybook Adventures runs on iPhone and iPad, with a layout adapted for the larger screen.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>When will it be available on Android?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>An Android version is in active development. Sign up for the Android waitlist on this page and we'll send you a one-time email the moment it launches — no other emails, no spam.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>Can I get a refund?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>All refunds are handled by Apple through your App Store account. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> to request one. EU consumers have additional withdrawal rights as detailed in our <a href="terms.html">Terms of Service</a>.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span>Where can I get help if something doesn't work?</span>
-            <span class="faq__chevron" aria-hidden="true">&#9662;</span>
-          </summary>
-          <div class="faq__answer">
-            <p>Email us at <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a>. We typically respond within 1–2 business days.</p>
-          </div>
-        </details>
-
-      </div>
-    </section>
-
-    <!-- ========== NEWSLETTER ========== -->
-    <section class="newsletter">
-      <div class="newsletter__card">
-        <h2>Stay in the Loop</h2>
-        <p>Get updates about new story worlds, features, and more. No spam — just the good stuff.</p>
-        <form class="newsletter__form" id="form-newsletter">
-          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <input type="email" class="newsletter__input" placeholder="your@email.com" required aria-label="Email">
-          <button type="submit" class="newsletter__btn">
-            <span>Subscribe</span>
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- ========== FINAL CTA ========== -->
-    <section class="final-cta">
-      <h2>Ready to explore?</h2>
-      <div class="hero__buttons">
-        <div class="hero__btn-col">
-          <a href="https://apps.apple.com/app/id6761114804" target="_blank" rel="noopener" class="btn-download btn-download--large">
-            <svg class="btn-download__apple" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            <div class="btn-download__text">
-              <span class="btn-download__small">Download on the</span>
-              <span class="btn-download__big">App Store</span>
-            </div>
-          </a>
         </div>
-        <div class="hero__btn-col">
-          <button class="btn-download btn-download--large btn-download--android" id="btn-android-2">
-            <svg class="btn-download__android" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.523 2.226a.4.4 0 0 0-.544.15l-1.108 1.879A6.694 6.694 0 0 0 12 3.2a6.694 6.694 0 0 0-3.871 1.055L7.021 2.376a.4.4 0 1 0-.694.4l1.07 1.812A6.667 6.667 0 0 0 5 9.6h14a6.667 6.667 0 0 0-2.397-5.012l1.07-1.812a.4.4 0 0 0-.15-.55zM9.2 7.6a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6zm5.6 0a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6zM5 10.4v7.2a1.6 1.6 0 0 0 1.6 1.6h.8v3.2a1.2 1.2 0 1 0 2.4 0v-3.2h2.4v3.2a1.2 1.2 0 1 0 2.4 0v-3.2h.8a1.6 1.6 0 0 0 1.6-1.6v-7.2H5zm-2.6 0a1.2 1.2 0 0 0-1.2 1.2v5.2a1.2 1.2 0 1 0 2.4 0v-5.2a1.2 1.2 0 0 0-1.2-1.2zm19.2 0a1.2 1.2 0 0 0-1.2 1.2v5.2a1.2 1.2 0 1 0 2.4 0v-5.2a1.2 1.2 0 0 0-1.2-1.2z"/></svg>
-            <div class="btn-download__text">
-              <span class="btn-download__small">Android</span>
-              <span class="btn-download__big">Coming Soon</span>
-            </div>
-          </button>
+        <div class="film-meta">
+          <div class="film-title">Fairy Forest</div>
         </div>
       </div>
-    </section>
-
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <nav class="footer-links">
-      <a href="about.html" class="footer-link">About</a>
-        <span class="footer-sep">·</span>
-        <a href="blog/index.html" class="footer-link">Blog</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="privacy.html" class="footer-link">Privacy Policy</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="terms.html" class="footer-link">Terms of Service</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="impressum.html" class="footer-link">Impressum</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="support.html" class="footer-link">Support</a>
-    </nav>
-    <p class="footer-copy">&copy; 2026 Storybook Adventures. <span>All rights reserved.</span></p>
-  </footer>
-
-  <!-- Android Notify Modal -->
-  <div class="modal" id="modal-android" aria-hidden="true">
-    <div class="modal__backdrop"></div>
-    <div class="modal__content">
-      <button class="modal__close" aria-label="Close">&times;</button>
-      <div class="modal__header">
-        <svg class="modal__icon" viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M17.523 2.226a.4.4 0 0 0-.544.15l-1.108 1.879A6.694 6.694 0 0 0 12 3.2a6.694 6.694 0 0 0-3.871 1.055L7.021 2.376a.4.4 0 1 0-.694.4l1.07 1.812A6.667 6.667 0 0 0 5 9.6h14a6.667 6.667 0 0 0-2.397-5.012l1.07-1.812a.4.4 0 0 0-.15-.55zM9.2 7.6a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6zm5.6 0a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6zM5 10.4v7.2a1.6 1.6 0 0 0 1.6 1.6h.8v3.2a1.2 1.2 0 1 0 2.4 0v-3.2h2.4v3.2a1.2 1.2 0 1 0 2.4 0v-3.2h.8a1.6 1.6 0 0 0 1.6-1.6v-7.2H5zm-2.6 0a1.2 1.2 0 0 0-1.2 1.2v5.2a1.2 1.2 0 1 0 2.4 0v-5.2a1.2 1.2 0 0 0-1.2-1.2zm19.2 0a1.2 1.2 0 0 0-1.2 1.2v5.2a1.2 1.2 0 1 0 2.4 0v-5.2a1.2 1.2 0 0 0-1.2-1.2z"/></svg>
-        <h3>Android is coming!</h3>
-      </div>
-      <p>Be the first to know when Storybook Adventures launches on Android.</p>
-      <form class="modal__form" id="form-android">
-        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="email" class="modal__input" placeholder="your@email.com" required aria-label="Email">
-        <button type="submit" class="modal__btn">
-          <span>Notify me</span>
-        </button>
-      </form>
-      <p class="modal__note">You'll receive a confirmation email.</p>
     </div>
   </div>
+</section>
 
-    <script>
-    (function() {
-      // Cross-page language switcher.
-      const path = window.location.pathname;
-      const isOnGerman = path.startsWith('/de/') || path === '/de';
+<!-- ============== FAQ ============== -->
+<section id="faq" data-screen-label="FAQ">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="section-eyebrow">Common questions</span>
+      <h2>Things parents ask first.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Is the app safe for my child?</summary>
+        <div class="faq-body">Yes, and we built it that way from day one. There's no account, no email, no name, and no personal data of any kind collected from your child. No ads, no trackers, no social features, no chat. Every uploaded drawing is automatically screened by an AI safety check before it animates. Anything inappropriate is rejected, the token is refunded, and the image is deleted. Purchases always require an adult (see below). We comply with GDPR and COPPA by design.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What age is it for, and how does it work?</summary>
+        <div class="faq-body">Designed for children ages 6 to 12, with support for younger kids alongside a parent. The flow is simple: (1) pick a story world from 24 adventures, (2) draw the scene on real paper with whatever you have: pencils, crayons, markers, paint, (3) photograph the drawing through the app, (4) watch the AI bring it to life as a short animated movie, (5) finish all three scenes to unlock the full storybook film. Most kids get hooked on the drawing part. The screen is just the camera and the cinema.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How does AI fit in, and is it good for kids?</summary>
+        <div class="faq-body">The AI's only job is to bring your child's drawing to motion. It doesn't invent characters, write stories, or hold conversations. It responds to what they put on paper. That's deliberate: pediatric researchers and child-safety organizations consistently flag AI companions and open-ended chatbots as the patterns that aren't safe for under-13s. Bounded creative outputs like ours are recommended instead. As a side effect, kids naturally learn how AI works: their input shapes the output. That's the foundation of AI literacy, and a safer first AI experience than handing a child ChatGPT.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What about screen time?</summary>
+        <div class="faq-body">Most of the creative time happens off-screen, on real paper. The phone is only used for a few seconds to photograph the drawing and a minute or two to watch the result. We call it focused screen time: more imagination, more drawing, less mindless scrolling. Many parents tell us their kids draw <em>more</em> after using the app, because they're curious to see how the AI will respond to their next picture.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What does it cost?</summary>
+        <div class="faq-body">The app is free to download. Each animation uses one token, and tokens are sold in packs through Apple In-App Purchase. No subscriptions. Every purchase goes through two gates: our in-app parental gate (PIN or math challenge) plus Apple's standard sign-in (Face ID, Touch ID, or Apple ID password). Parents can also lock the shop entirely. All refunds are handled by Apple via <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. EU consumers have additional withdrawal rights detailed in our <a href="terms.html">Terms of Service</a>.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need internet? How fast is it?</summary>
+        <div class="faq-body">Yes. Animating a scene runs on our servers, so an internet connection is required during processing. Drawing on paper, of course, does not. Each animation takes roughly two to three minutes from photo to finished video. A progress bar keeps kids in the loop. Once an animation is finished, it can be saved to the photo gallery and watched offline anytime.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Does it work on iPad? When is Android coming?</summary>
+        <div class="faq-body">Yes. Storybook Adventures runs on both iPhone and iPad, with a layout adapted for the larger screen. An Android version is in active development. Sign up for the waitlist on the homepage and we'll send you a one-time email the moment it launches. No other emails, no spam.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I save and share the films? Where can I get help?</summary>
+        <div class="faq-body">Completed animations can be saved to your device's photo gallery and shared from there, or kept entirely private. Your call. For anything else, email <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a> and we'll get back to you within 1–2 business days.</div>
+      </details>
+    </div>
+  </div>
+</section>
 
-      const enHref = isOnGerman
-        ? (path.replace(/^\/de\/?/, '/') || '/')
-        : path;
-      const deHref = isOnGerman
-        ? path
-        : '/de' + (path.startsWith('/') ? path : '/' + path);
+<!-- ============== NEWSLETTER ============== -->
+<section class="news" data-screen-label="Newsletter">
+  <div class="wrap">
+    <span class="section-eyebrow">Newsletter</span>
+    <h2>Stay in the Loop</h2>
+    <p class="section-sub">Get updates about new story worlds, features, and more. No spam — just the good stuff.</p>
+    <form class="news-form" id="form-newsletter" novalidate>
+      <input type="email" placeholder="you@example.com" required autocomplete="email"/>
+      <input type="text" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"/>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
 
-      const enLink = document.querySelector('.lang-btn[data-lang="en"]');
-      const deLink = document.querySelector('.lang-btn[data-lang="de"]');
-      if (enLink) enLink.href = enHref;
-      if (deLink) deLink.href = deHref;
+<!-- ============== FINAL CTA ============== -->
+<section class="final" data-screen-label="Final CTA">
+  <div class="wrap">
+    <span class="section-eyebrow">Your adventure awaits</span>
+    <h2>Grab paper. Grab the app. Make your movie.</h2>
+    <div class="cta-row">
+      <a href="https://apps.apple.com/app/id6761114804" class="app-store-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.5 2.04-3.7 2.13-3.76-1.16-1.7-2.97-1.93-3.62-1.96-1.54-.16-3 .9-3.78.9-.78 0-1.97-.88-3.24-.86-1.67.02-3.21.97-4.07 2.47-1.74 3.02-.44 7.5 1.25 9.95.83 1.2 1.81 2.54 3.1 2.49 1.24-.05 1.71-.8 3.21-.8 1.5 0 1.93.8 3.24.77 1.34-.02 2.18-1.22 3-2.42.95-1.39 1.34-2.74 1.36-2.8-.03-.02-2.6-1-2.62-3.98zm-2.49-7.3c.69-.83 1.15-1.99 1.02-3.14-.99.04-2.18.66-2.89 1.5-.64.74-1.2 1.92-1.05 3.06 1.1.08 2.23-.56 2.92-1.42z"/></svg>
+        <div>
+          <div class="as-l">Download on the</div>
+          <div class="as-b">App Store</div>
+        </div>
+      </a>
+      <button class="app-store-btn play-store-btn" type="button" onclick="document.getElementById('waitlistVeil').classList.add('open')">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.5.7-.5 1.3v17c0 .6.2 1 .5 1.3l9.6-9.5L3.6 2.3z" fill="#00d2ff"/><path d="M16.8 8.7l-3.6 3.7 3.6 3.6 4.3-2.4c1.1-.6 1.1-1.9 0-2.5l-4.3-2.4z" fill="#ffc107"/><path d="M13.2 12.4L3.6 21.9c.4.4 1 .4 1.7 0l11.5-6.4-3.6-3.1z" fill="#ff3a44"/><path d="M16.8 8.7L5.3 2.3c-.7-.4-1.3-.4-1.7 0l9.6 9.5 3.6-3.1z" fill="#00f076"/></svg>
+        <div>
+          <div class="as-l">Coming soon to</div>
+          <div class="as-b">Google Play</div>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
 
-      // First-visit banner.
-      const BANNER_DISMISSED = 'sba-lang-banner-dismissed';
-      const browserLang = (navigator.language || '').toLowerCase();
-      const wantsGerman = browserLang.startsWith('de');
-      const wantsEnglish = browserLang.startsWith('en');
+</main>
 
-      let offerLang = null;
-      if (!localStorage.getItem(BANNER_DISMISSED)) {
-        if (!isOnGerman && wantsGerman) offerLang = 'de';
-        else if (isOnGerman && wantsEnglish) offerLang = 'en';
-      }
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-name">Storybook Adventures</div>
+    </div>
+    <div class="foot-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="support.html">Support</a>
+    </div>
+    <div class="foot-copy"><span>© 2026 Storybook Adventures.</span><span>All rights reserved.</span></div>
+  </div>
+</footer>
 
-      if (offerLang) {
-        const banner = document.createElement('div');
-        banner.className = 'lang-banner';
-        banner.innerHTML = offerLang === 'de'
-          ? '<span>Diese Seite gibt es auch auf Deutsch.</span><a href="' + deHref + '" class="lang-banner__btn">Wechseln</a><button class="lang-banner__close" aria-label="Close">&times;</button>'
-          : '<span>This page is also available in English.</span><a href="' + enHref + '" class="lang-banner__btn">Switch</a><button class="lang-banner__close" aria-label="Close">&times;</button>';
-        document.body.appendChild(banner);
-        banner.querySelector('.lang-banner__close').addEventListener('click', function() {
-          localStorage.setItem(BANNER_DISMISSED, '1');
-          banner.remove();
-        });
-      }
-    })();
-  </script>
+<!-- ============== WAITLIST MODAL ============== -->
+<div class="modal-veil" id="waitlistVeil" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="waitlistTitle">
+    <button class="close" id="waitlistClose" aria-label="Close">×</button>
+    <h3 id="waitlistTitle">Android is coming.</h3>
+    <p>Be the first to know when Storybook Adventures launches on Android.</p>
+    <form class="news-form" id="form-android" novalidate>
+      <input type="email" placeholder="you@example.com" required autocomplete="email"/>
+      <input type="text" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"/>
+      <button type="submit">Notify me</button>
+    </form>
+    <p class="modal-note">You'll receive a confirmation email.</p>
+  </div>
+</div>
 
-  <script>
-    (function() {
-      const currentLang = (document.documentElement.lang || 'en').toLowerCase().startsWith('de') ? 'de' : 'en';
+<script>
+(function() {
+  const currentLang = (document.documentElement.lang || 'en').toLowerCase().startsWith('de') ? 'de' : 'en';
 
-      /* Scroll-triggered fade-in */
-      const revealTargets = document.querySelectorAll('.how-it-works, .features-section, .safety, .faq, .newsletter, .final-cta');
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
-        revealTargets.forEach(el => observer.observe(el));
+  // ----- Waitlist modal -----
+  const veil = document.getElementById('waitlistVeil');
+  const openers = document.querySelectorAll('#waitlistOpen, #btn-android, #btn-android-2');
+  const closer = document.getElementById('waitlistClose');
+
+  function openModal() {
+    if (!veil) return;
+    veil.classList.add('open');
+    veil.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    if (!veil) return;
+    veil.classList.remove('open');
+    veil.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  openers.forEach(b => b && b.addEventListener('click', openModal));
+  if (closer) closer.addEventListener('click', closeModal);
+  if (veil) veil.addEventListener('click', (e) => {
+    if (e.target.id === 'waitlistVeil') closeModal();
+  });
+
+  // Auto-open via ?android=1
+  if (new URLSearchParams(window.location.search).get('android') === '1') {
+    setTimeout(openModal, 500);
+  }
+
+  // ----- Newsletter API -----
+  const SUPABASE_URL = 'https://ijurbxopaepeoposgkum.supabase.co';
+  const SUBSCRIBE_URL = `${SUPABASE_URL}/functions/v1/subscribe-newsletter`;
+
+  async function submitSubscription(form, source) {
+    const input = form.querySelector('input[type="email"]');
+    const hpInput = form.querySelector('.hp-field');
+    const btn = form.querySelector('button');
+    const email = input.value.trim();
+    if (!email) return;
+
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+
+    try {
+      const res = await fetch(SUBSCRIBE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          source,
+          lang: currentLang,
+          hp_field: hpInput ? hpInput.value : '',
+        }),
+      });
+      const data = await res.json();
+
+      if (data.ok) {
+        form.innerHTML = currentLang === 'de'
+          ? '<p class="form-success">Danke! Bitte prüfe dein Postfach und bestätige deine Anmeldung.</p>'
+          : '<p class="form-success">Thanks! Check your inbox and confirm your signup.</p>';
+        if (source === 'android_waitlist') setTimeout(closeModal, 2500);
+      } else if (data.error === 'invalid_email') {
+        input.style.borderColor = '#c0392b';
+        btn.disabled = false;
+        btn.style.opacity = '';
+      } else if (data.error === 'rate_limited') {
+        form.innerHTML = currentLang === 'de'
+          ? '<p class="form-success" style="color:#c0392b">Zu viele Versuche. Bitte später erneut versuchen.</p>'
+          : '<p class="form-success" style="color:#c0392b">Too many attempts. Please try again later.</p>';
       } else {
-        revealTargets.forEach(el => el.classList.add('is-visible'));
+        form.innerHTML = currentLang === 'de'
+          ? '<p class="form-success" style="color:#c0392b">Etwas ist schiefgelaufen. Bitte versuche es erneut.</p>'
+          : '<p class="form-success" style="color:#c0392b">Something went wrong. Please try again.</p>';
       }
+    } catch {
+      form.innerHTML = currentLang === 'de'
+        ? '<p class="form-success" style="color:#c0392b">Verbindungsfehler. Bitte versuche es erneut.</p>'
+        : '<p class="form-success" style="color:#c0392b">Connection error. Please try again.</p>';
+    }
+  }
 
-      /* Showcase scroll fade hints */
-      const viewport = document.querySelector('.showcase__viewport');
-      if (viewport) {
-        const updateFades = () => {
-          const { scrollLeft, scrollWidth, clientWidth } = viewport;
-          viewport.classList.toggle('at-start', scrollLeft < 10);
-          viewport.classList.toggle('at-end', scrollLeft + clientWidth >= scrollWidth - 10);
-        };
-        viewport.addEventListener('scroll', updateFades, { passive: true });
-        updateFades();
-      }
+  const formAndroid = document.getElementById('form-android');
+  const formNewsletter = document.getElementById('form-newsletter');
+  if (formAndroid) formAndroid.addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitSubscription(this, 'android_waitlist');
+  });
+  if (formNewsletter) formNewsletter.addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitSubscription(this, 'general_newsletter');
+  });
+})();
+</script>
 
-      /* Android modal */
-      const modal = document.getElementById('modal-android');
-      if (modal) {
-        const modalClose = modal.querySelector('.modal__close');
-        const modalBackdrop = modal.querySelector('.modal__backdrop');
+<style>
+  .form-success { color: var(--gold-text); font-family: var(--font-display); font-size: 18px; font-weight: 400; padding: 12px 4px; line-height: 1.4; }
+  .news .form-success { color: #fff; }
+</style>
 
-        function openModal() {
-          modal.classList.add('is-active');
-          modal.setAttribute('aria-hidden', 'false');
-          document.body.style.overflow = 'hidden';
-        }
-        function closeModal() {
-          modal.classList.remove('is-active');
-          modal.setAttribute('aria-hidden', 'true');
-          document.body.style.overflow = '';
-        }
-
-        const btn1 = document.getElementById('btn-android');
-        const btn2 = document.getElementById('btn-android-2');
-        if (btn1) btn1.addEventListener('click', openModal);
-        if (btn2) btn2.addEventListener('click', openModal);
-        modalClose.addEventListener('click', closeModal);
-        modalBackdrop.addEventListener('click', closeModal);
-
-        if (new URLSearchParams(window.location.search).get('android') === '1') {
-          setTimeout(openModal, 500);
-        }
-
-        /* Newsletter API */
-        const SUPABASE_URL = 'https://ijurbxopaepeoposgkum.supabase.co';
-        const SUBSCRIBE_URL = `${SUPABASE_URL}/functions/v1/subscribe-newsletter`;
-
-        async function submitSubscription(form, source) {
-          const input = form.querySelector('input[type="email"]');
-          const hpInput = form.querySelector('.hp-field');
-          const btn = form.querySelector('button');
-          const email = input.value.trim();
-          if (!email) return;
-
-          btn.disabled = true;
-          btn.style.opacity = '0.6';
-
-          try {
-            const res = await fetch(SUBSCRIBE_URL, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                email,
-                source,
-                lang: currentLang,
-                hp_field: hpInput ? hpInput.value : '',
-              }),
-            });
-            const data = await res.json();
-
-            if (data.ok) {
-              form.innerHTML = currentLang === 'de'
-                ? '<p class="form-success">Danke! Bitte prüfe dein Postfach<br>und bestätige deine Anmeldung.</p>'
-                : '<p class="form-success">Thanks! Check your inbox<br>and confirm your signup.</p>';
-              if (source === 'android_waitlist') setTimeout(closeModal, 2500);
-            } else if (data.error === 'invalid_email') {
-              input.style.borderColor = '#c0392b';
-              btn.disabled = false;
-              btn.style.opacity = '';
-            } else if (data.error === 'rate_limited') {
-              form.innerHTML = currentLang === 'de'
-                ? '<p class="form-success" style="color:#c0392b">Zu viele Versuche. Bitte später erneut versuchen.</p>'
-                : '<p class="form-success" style="color:#c0392b">Too many attempts. Please try again later.</p>';
-            } else {
-              form.innerHTML = currentLang === 'de'
-                ? '<p class="form-success" style="color:#c0392b">Etwas ist schiefgelaufen. Bitte versuche es erneut.</p>'
-                : '<p class="form-success" style="color:#c0392b">Something went wrong. Please try again.</p>';
-            }
-          } catch {
-            form.innerHTML = currentLang === 'de'
-              ? '<p class="form-success" style="color:#c0392b">Verbindungsfehler. Bitte versuche es erneut.</p>'
-              : '<p class="form-success" style="color:#c0392b">Connection error. Please try again.</p>';
-          }
-        }
-
-        const formAndroid = document.getElementById('form-android');
-        const formNewsletter = document.getElementById('form-newsletter');
-        if (formAndroid) formAndroid.addEventListener('submit', function(e) {
-          e.preventDefault();
-          submitSubscription(this, 'android_waitlist');
-        });
-        if (formNewsletter) formNewsletter.addEventListener('submit', function(e) {
-          e.preventDefault();
-          submitSubscription(this, 'general_newsletter');
-        });
-      }
-    })();
-  </script>
+<script src="assets/nav-more.js" defer></script>
+<script src="assets/films.js" defer></script>
 </body>
 </html>

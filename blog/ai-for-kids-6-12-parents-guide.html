@@ -36,10 +36,167 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/webp" href="../assets/logo-emblem.webp">
   <link rel="apple-touch-icon" href="../assets/logo-emblem.webp">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../assets/subpage.css">
+  <style id="page-maxw-override">:root { --maxw: 1100px; }</style>
+
+  <style>
+    /* Article-specific styles */
+    .article {
+      max-width: 900px; margin: 0 auto; padding: 0 24px 80px;
+    }
+    .article__header {
+      text-align: center; padding: 60px 0 8px;
+    }
+    .article__meta {
+      display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .article__meta span {
+      background: var(--white-10);
+      border: 1px solid var(--white-20);
+      padding: 6px 14px; border-radius: 999px;
+      font-size: 12px; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.6px;
+      color: var(--white-90);
+    }
+    .article__meta span time { color: inherit; }
+    .article__meta .sep { display: none; }
+    .article__title {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4.4vw, 56px);
+      line-height: 1.08; color: #fff; font-weight: 400;
+      text-shadow: 0 6px 28px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.5);
+      margin-bottom: 16px; letter-spacing: 0.2px;
+    }
+    .article__lede {
+      font-size: 19px; color: #fff; font-weight: 800;
+      max-width: 620px; margin: 0 auto;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.55), 0 1px 2px rgba(0,0,0,0.5);
+      line-height: 1.5;
+    }
+    .article__byline {
+      margin: 16px auto 0; color: var(--white-70);
+      font-size: 14px; font-weight: 700; letter-spacing: 0.2px;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+    }
+    .article__byline a {
+      color: var(--gold); text-decoration: none;
+      border-bottom: 1px solid rgba(255,210,60,0.4);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .article__byline a:hover { color: #fff; border-color: #fff; }
+    .article__byline {
+      font-size: 14px; color: var(--white-70); font-weight: 700;
+    }
+    .article__byline a { color: var(--gold); }
+    .article__hero {
+      margin: 12px auto 24px;
+      max-width: 900px;
+      padding: 0;
+    }
+    @media (max-width: 720px) {
+      .article__hero { padding: 0 16px; }
+    }
+    .article__hero img {
+      width: 100%; height: auto; display: block;
+      border-radius: 18px;
+      box-shadow: 0 30px 70px -20px rgba(0,0,0,0.55);
+    }
+    .article__body {
+      background: rgba(255, 250, 240, 0.97);
+      color: var(--gold-text);
+      border-radius: 22px;
+      padding: 44px clamp(20px, 4vw, 50px);
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.5);
+      border: 1px solid rgba(200, 141, 10, 0.18);
+    }
+    .article__body p, .article__body li {
+      font-size: 16.5px; line-height: 1.7; color: #2d1a00;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+    .article__body strong { font-weight: 800; color: #2d1a00; }
+    .article__body em { font-style: italic; }
+
+    .article__body h2 {
+      font-family: var(--font-display);
+      font-size: 30px; font-weight: 400;
+      color: var(--gold-text);
+      margin: 36px 0 14px;
+      letter-spacing: 0.2px;
+      line-height: 1.15;
+    }
+    .article__body h3 {
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 400;
+      color: var(--gold-text);
+      margin: 24px 0 10px;
+    }
+    .article__body a {
+      color: #1a5fa8; font-weight: 700;
+      text-decoration: underline; text-decoration-color: rgba(26, 95, 168, 0.35);
+      text-underline-offset: 2px;
+    }
+    .article__body a:hover { text-decoration-color: currentColor; }
+    .article__body ul, .article__body ol {
+      padding-left: 22px; margin-bottom: 16px;
+    }
+    .article__body li { margin-bottom: 6px; }
+    .article__figure {
+      margin: 28px 0;
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 20px 50px -16px rgba(0,0,0,0.35);
+    }
+    .article__figure img { width: 100%; height: auto; display: block; }
+    @media (max-width: 720px) {
+      .article__figure { margin: 20px 0; }
+      .article__body { padding: 28px 20px; }
+    }
+    /* Inline newsletter CTA at end of article */
+    .article-cta {
+      max-width: 900px; margin: 32px auto 0; padding: 36px 28px;
+      background: linear-gradient(160deg, rgba(15,26,46,0.88), rgba(26,39,68,0.95));
+      border-radius: 22px; border: 1px solid var(--white-10);
+      text-align: center;
+      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.5);
+    }
+    .article-cta h3 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 32px); font-weight: 400;
+      color: #fff; margin-bottom: 10px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.45);
+    }
+    .article-cta p {
+      color: var(--white-90); font-weight: 600; font-size: 15px;
+      margin: 0 auto 22px; max-width: 540px; line-height: 1.55;
+    }
+    .article-cta-form {
+      display: inline-flex; gap: 6px;
+      background: var(--white-10); border: 1px solid var(--white-20);
+      padding: 6px; border-radius: 999px;
+      width: min(440px, 100%);
+    }
+    .article-cta-form input[type="email"] {
+      flex: 1; background: transparent; border: 0; outline: 0;
+      color: #fff; padding: 10px 16px;
+      font-family: inherit; font-size: 14px; font-weight: 600;
+    }
+    .article-cta-form input::placeholder { color: var(--white-50); }
+    .article-cta-form button {
+      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+      color: var(--gold-text); border: 0; border-radius: 999px;
+      padding: 10px 22px; font-family: inherit; font-weight: 800; font-size: 14px;
+      cursor: pointer; transition: transform 0.15s;
+    }
+    .article-cta-form button:hover { transform: translateY(-1px); }
+    .article-cta .form-success {
+      color: #fff; font-family: var(--font-display); font-size: 18px;
+      padding: 8px; line-height: 1.4; margin: 0;
+    }
+  </style>
 
   <!-- Structured Data: Article -->
   <script type="application/ld+json">
@@ -111,33 +268,45 @@
   }
   </script>
 </head>
-<body class="article-page">
-  <div class="page-bg" role="presentation"></div>
+<body>
 
-  <div class="lang-switch" role="group" aria-label="Language">
-    <a href="" class="lang-btn active" data-lang="en" aria-current="page">EN</a>
-    <a href="" class="lang-btn" data-lang="de">DE</a>
+<div class="page-bg"></div>
+<div class="particles">
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="../index.html" class="brand">
+      <img src="../assets/logo.webp" alt="Storybook Adventures" class="brand-logo" width="867" height="438" fetchpriority="high" />
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#how" class="nav-link">How it works</a>
+      <a href="../index.html#safe" class="nav-link">For parents</a>
+      <a href="../index.html#gallery" class="nav-link">Films</a>
+      <a href="../index.html#faq" class="nav-link">FAQ</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="../about.html" class="nav-link">About</a>
+      <a href="index.html" class="nav-link active">Blog</a>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <a href="ai-for-kids-6-12-parents-guide.html" class="active" aria-current="page">EN</a>
+        <a href="../de/blog/ki-fuer-kinder-6-12-eltern-leitfaden.html">DE</a>
+      </div>
+      <a href="https://apps.apple.com/app/id6761114804" class="btn btn-small">Get the app</a>
+    </nav>
   </div>
+</header>
 
-  <header class="legal-header">
-    <a href="index.html" class="legal-back">&#8592; Blog</a>
-  </header>
+<main class="article">
 
-  <main class="article">
-
-    <header class="article__header">
+        <header class="article__header">
       <div class="article__meta">
-        <span>AI &amp; Childhood</span>
-        <span>&middot;</span>
-        <span><time datetime="2026-05-10">May 10, 2026</time></span>
-        <span>&middot;</span>
-        <span>8 min read</span>
+        <span>AI &amp; Childhood</span><span><time datetime="2026-05-10">May 10, 2026</time></span><span>8 min read</span>
       </div>
       <h1 class="article__title">AI for Kids 6-12: An Age-Appropriate Parent's Guide</h1>
-      <p class="article__lede"><em>What pediatric researchers, child-safety organizations, and EU regulators actually recommend in 2026.</em></p>
-      <div class="article__byline">
-        <span>By <a href="../about.html">Constantin Klöcker, Founder</a></span>
-      </div>
+      <p class="article__lede">What pediatric researchers, child-safety organizations, and EU regulators actually recommend in 2026.</p>
+      <p class="article__byline">By <a href="../about.html">Constantin Klöcker</a>, founder of Storybook Adventures</p>
     </header>
 
     <figure class="article__hero">
@@ -145,6 +314,7 @@
     </figure>
 
     <div class="article__body">
+
 
       <p>For most parents of children between six and twelve, the question of <em>how</em> their child meets AI is no longer hypothetical. By the start of 2026 the average kid in this age range has already run into it several times: a school assignment, a sibling's tablet, a voice assistant on the kitchen counter, a friend's chatbot. The encounters are usually unsupervised. They're almost always unstructured. And the child often takes them for a conversation with a real person rather than the output of a machine.</p>
 
@@ -242,77 +412,79 @@
 
       <p>— Constantin</p>
 
-    </div>
+    </div><!-- /article__body -->
 
-    <!-- Newsletter CTA -->
-    <aside class="article__cta">
+    <aside class="article-cta">
       <h3>Get the next piece in your inbox</h3>
       <p>Articles like this one, written for parents thinking carefully about creativity, screen time, and AI. No spam, occasional emails.</p>
-      <a href="../index.html#newsletter" class="btn-newsletter">Subscribe to the newsletter</a>
+      <form id="form-newsletter" class="article-cta-form" novalidate>
+        <input type="email" placeholder="you@example.com" required autocomplete="email"/>
+        <input type="text" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"/>
+        <button type="submit">Subscribe</button>
+      </form>
     </aside>
 
-    <div class="article__back">
-      <a href="index.html">&larr; Back to all articles</a>
-    </div>
+    <p style="max-width: 900px; margin: 28px auto 0; padding: 0 24px; color: var(--white-70); font-weight: 700; font-size: 14px;">
+      <a href="index.html" style="color: var(--gold);">← Back to all articles</a>
+    </p>
 
   </main>
 
-  <footer class="legal-footer">
-    <nav class="footer-links">
-      <a href="../about.html" class="footer-link">About</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="index.html" class="footer-link">Blog</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="../privacy.html" class="footer-link">Privacy Policy</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="../terms.html" class="footer-link">Terms of Service</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="../impressum.html" class="footer-link">Impressum</a>
-      <span class="footer-sep">&middot;</span>
-      <a href="../support.html" class="footer-link">Support</a>
-    </nav>
-    <p class="footer-copy">&copy; 2026 Storybook Adventures. <span>All rights reserved.</span></p>
+  <footer>
+    <div class="wrap foot-inner">
+      <div class="foot-brand">
+        <div class="foot-brand-name">Storybook Adventures</div>
+      </div>
+      <div class="foot-links">
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms of Service</a>
+        <a href="../impressum.html">Impressum</a>
+        <a href="../support.html">Support</a>
+      </div>
+      <div class="foot-copy"><span>© 2026 Storybook Adventures.</span><span>All rights reserved.</span></div>
+    </div>
   </footer>
 
-    <script>
-    (function() {
-      // Cross-page language switcher (article-specific: slugs differ between EN and DE).
-      const path = window.location.pathname;
-      const isOnGerman = path.startsWith('/de/') || path === '/de';
-
-      const enHref = '/blog/ai-for-kids-6-12-parents-guide.html';
-      const deHref = '/de/blog/ki-fuer-kinder-6-12-eltern-leitfaden.html';
-
-      const enLink = document.querySelector('.lang-btn[data-lang="en"]');
-      const deLink = document.querySelector('.lang-btn[data-lang="de"]');
-      if (enLink) enLink.href = enHref;
-      if (deLink) deLink.href = deHref;
-
-      // First-visit banner.
-      const BANNER_DISMISSED = 'sba-lang-banner-dismissed';
-      const browserLang = (navigator.language || '').toLowerCase();
-      const wantsGerman = browserLang.startsWith('de');
-      const wantsEnglish = browserLang.startsWith('en');
-
-      let offerLang = null;
-      if (!localStorage.getItem(BANNER_DISMISSED)) {
-        if (!isOnGerman && wantsGerman) offerLang = 'de';
-        else if (isOnGerman && wantsEnglish) offerLang = 'en';
+<script>
+(function() {
+  const form = document.getElementById('form-newsletter');
+  if (!form) return;
+  const SUBSCRIBE_URL = 'https://ijurbxopaepeoposgkum.supabase.co/functions/v1/subscribe-newsletter';
+  const lang = (document.documentElement.lang || 'en').toLowerCase().startsWith('de') ? 'de' : 'en';
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const input = form.querySelector('input[type="email"]');
+    const hp = form.querySelector('.hp-field');
+    const btn = form.querySelector('button');
+    const email = input.value.trim();
+    if (!email) return;
+    btn.disabled = true; btn.style.opacity = '0.6';
+    try {
+      const res = await fetch(SUBSCRIBE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'general_newsletter', lang, hp_field: hp ? hp.value : '' }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        form.innerHTML = lang === 'de'
+          ? '<p class="form-success">Danke! Prüfe dein Postfach und bestätige deine Anmeldung.</p>'
+          : '<p class="form-success">Thanks! Check your inbox and confirm your signup.</p>';
+      } else if (data.error === 'invalid_email') {
+        input.style.borderColor = '#c0392b'; btn.disabled = false; btn.style.opacity = '';
+      } else {
+        form.innerHTML = lang === 'de'
+          ? '<p class="form-success" style="color:#ff8a7a">Etwas ist schiefgelaufen. Bitte versuche es erneut.</p>'
+          : '<p class="form-success" style="color:#ff8a7a">Something went wrong. Please try again.</p>';
       }
-
-      if (offerLang) {
-        const banner = document.createElement('div');
-        banner.className = 'lang-banner';
-        banner.innerHTML = offerLang === 'de'
-          ? '<span>Diese Seite gibt es auch auf Deutsch.</span><a href="' + deHref + '" class="lang-banner__btn">Wechseln</a><button class="lang-banner__close" aria-label="Close">&times;</button>'
-          : '<span>This page is also available in English.</span><a href="' + enHref + '" class="lang-banner__btn">Switch</a><button class="lang-banner__close" aria-label="Close">&times;</button>';
-        document.body.appendChild(banner);
-        banner.querySelector('.lang-banner__close').addEventListener('click', function() {
-          localStorage.setItem(BANNER_DISMISSED, '1');
-          banner.remove();
-        });
-      }
-    })();
-  </script>
+    } catch {
+      form.innerHTML = lang === 'de'
+        ? '<p class="form-success" style="color:#ff8a7a">Verbindungsfehler. Bitte versuche es erneut.</p>'
+        : '<p class="form-success" style="color:#ff8a7a">Connection error. Please try again.</p>';
+    }
+  });
+})();
+</script>
+<script src="../assets/nav-more.js" defer></script>
 </body>
 </html>

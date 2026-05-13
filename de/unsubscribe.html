@@ -4,130 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Abgemeldet — Storybook Adventures</title>
-  <meta name="description" content="E-Mail-Anmeldung entfernt.">
+  <meta name="description" content="Bestätigungsseite für die Newsletter-Abmeldung.">
   <meta name="theme-color" content="#1a2744">
-  <link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/unsubscribe.html">
-  <link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/unsubscribe.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/unsubscribe.html">
   <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/webp" href="../assets/logo-emblem.webp">
+  <link rel="apple-touch-icon" href="../assets/logo-emblem.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/webp" href="/assets/logo-emblem.webp">
-  <link rel="apple-touch-icon" href="/assets/logo-emblem.webp">
-  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/subpage.css">
 </head>
 <body>
-  <div class="page-bg" role="presentation"></div>
 
-  <div class="lang-switch" role="group" aria-label="Language">
-    <a href="" class="lang-btn" data-lang="en">EN</a>
-    <a href="" class="lang-btn active" data-lang="de" aria-current="page">DE</a>
+<div class="page-bg"></div>
+<div class="particles">
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="../assets/logo.webp" alt="Storybook Adventures" class="brand-logo" width="867" height="438" fetchpriority="high" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#how" class="nav-link">So funktioniert's</a>
+      <a href="index.html#safe" class="nav-link">Für Eltern</a>
+      <a href="index.html#gallery" class="nav-link">Filme</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+      <a href="https://apps.apple.com/app/id6761114804" class="btn btn-small">App holen</a>
+    </nav>
   </div>
+</header>
 
-  <div class="legal-page">
-    <header class="legal-header">
-      <a href="/de/index.html" class="legal-back">&#8592; Startseite</a>
-    </header>
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <span class="scribble-star s-left">✦</span>
+    <span class="scribble-star s-right">✦</span>
+    <h1 id="status-title">Abmelden…</h1>
+    <p class="lede" id="status-body">Einen Moment bitte.</p>
+  </div>
+</section>
 
-    <div class="legal-content-wrapper">
-      <div class="legal-content">
-        <!-- Status: ok -->
-        <div class="legal-text confirm-msg" id="msg-ok" style="display:none">
-          <div>
-            <h1>Abgemeldet</h1>
-            <p>Du wurdest von unserem Verteiler entfernt. Du erhältst keine weiteren E-Mails von uns.</p>
-            <p>Es dir anders überlegt? Du kannst dich jederzeit auf unserer <a href="/de/index.html">Startseite</a> erneut anmelden.</p>
-          </div>
-        </div>
+<article class="sheet">
+  <p><a href="index.html">← Zur Startseite</a></p>
+</article>
+</main>
 
-        <!-- Status: invalid -->
-        <div class="legal-text confirm-msg" id="msg-invalid" style="display:none">
-          <div>
-            <h1>Ungültiger Link</h1>
-            <p>Dieser Abmelde-Link ist ungültig oder wurde bereits verwendet. Falls du weiterhin E-Mails erhältst, kontaktiere uns unter <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a>.</p>
-          </div>
-        </div>
-
-        <!-- Status: rate limited -->
-        <div class="legal-text confirm-msg" id="msg-rate_limited" style="display:none">
-          <div>
-            <h1>Zu viele Versuche</h1>
-            <p>Bitte warte einen Moment und versuche es erneut.</p>
-          </div>
-        </div>
-
-        <!-- Status: error -->
-        <div class="legal-text confirm-msg" id="msg-error" style="display:none">
-          <div>
-            <h1>Etwas ist schiefgelaufen</h1>
-            <p>Wir konnten deine Anfrage nicht verarbeiten. Bitte versuche es später erneut oder kontaktiere uns unter <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a>.</p>
-          </div>
-        </div>
-      </div>
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-name">Storybook Adventures</div>
     </div>
+    <div class="foot-links">
+      <a href="privacy.html">Datenschutzerklärung</a>
+      <a href="terms.html">Nutzungsbedingungen</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="support.html">Hilfe</a>
+    </div>
+    <div class="foot-copy"><span>© 2026 Storybook Adventures.</span><span>Alle Rechte vorbehalten.</span></div>
   </div>
+</footer>
 
-  <footer class="legal-footer">
-      <nav class="footer-links">
-        <a href="/de/about.html" class="footer-link">Über uns</a>
-        <span class="footer-sep">·</span>
-        <a href="/de/blog/" class="footer-link">Blog</a>
-        <span class="footer-sep">·</span>
-        <a href="/de/privacy.html" class="footer-link">Datenschutz</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="/de/terms.html" class="footer-link">Nutzungsbedingungen</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="/de/impressum.html" class="footer-link">Impressum</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="/de/support.html" class="footer-link">Hilfe</a>
-      </nav>
-      <p class="footer-copy">&copy; 2026 Storybook Adventures.<span>Alle Rechte vorbehalten.</span></p>
-  </footer>
+<script>
+(function() {
+  const status = new URLSearchParams(window.location.search).get('status') || 'ok';
+  const messages = {
+    ok:           { title: "Du bist abgemeldet",       body: "Wir senden dir keine E-Mails mehr. Wenn du es dir anders überlegst, kannst du dich jederzeit über die Startseite neu anmelden." },
+    invalid:      { title: "Ungültiger Link",          body: "Dieser Abmeldelink ist ungültig oder abgelaufen. Schreib uns an contact@storybookadventures.io und wir kümmern uns darum." },
+    rate_limited: { title: "Zu viele Versuche",        body: "Bitte warte einen Moment und versuche es erneut." },
+    error:        { title: "Etwas ist schiefgelaufen", body: "Wir konnten deine Anfrage nicht verarbeiten. Bitte versuche es später erneut oder kontaktiere uns unter contact@storybookadventures.io." },
+  };
+  const m = messages[status] || messages.error;
+  document.getElementById('status-title').textContent = m.title;
+  document.getElementById('status-body').textContent = m.body;
+})();
+</script>
 
-    <script>
-    (function() {
-      // Cross-page language switcher.
-      const path = window.location.pathname;
-      const isOnGerman = path.startsWith('/de/') || path === '/de';
-
-      const enHref = isOnGerman
-        ? (path.replace(/^\/de\/?/, '/') || '/')
-        : path;
-      const deHref = isOnGerman
-        ? path
-        : '/de' + (path.startsWith('/') ? path : '/' + path);
-
-      const enLink = document.querySelector('.lang-btn[data-lang="en"]');
-      const deLink = document.querySelector('.lang-btn[data-lang="de"]');
-      if (enLink) enLink.href = enHref;
-      if (deLink) deLink.href = deHref;
-
-      // First-visit banner.
-      const BANNER_DISMISSED = 'sba-lang-banner-dismissed';
-      const browserLang = (navigator.language || '').toLowerCase();
-      const wantsGerman = browserLang.startsWith('de');
-      const wantsEnglish = browserLang.startsWith('en');
-
-      let offerLang = null;
-      if (!localStorage.getItem(BANNER_DISMISSED)) {
-        if (!isOnGerman && wantsGerman) offerLang = 'de';
-        else if (isOnGerman && wantsEnglish) offerLang = 'en';
-      }
-
-      if (offerLang) {
-        const banner = document.createElement('div');
-        banner.className = 'lang-banner';
-        banner.innerHTML = offerLang === 'de'
-          ? '<span>Diese Seite gibt es auch auf Deutsch.</span><a href="' + deHref + '" class="lang-banner__btn">Wechseln</a><button class="lang-banner__close" aria-label="Close">&times;</button>'
-          : '<span>This page is also available in English.</span><a href="' + enHref + '" class="lang-banner__btn">Switch</a><button class="lang-banner__close" aria-label="Close">&times;</button>';
-        document.body.appendChild(banner);
-        banner.querySelector('.lang-banner__close').addEventListener('click', function() {
-          localStorage.setItem(BANNER_DISMISSED, '1');
-          banner.remove();
-        });
-      }
-    })();
-  </script>
+<script src="../assets/nav-more.js" defer></script>
 </body>
 </html>

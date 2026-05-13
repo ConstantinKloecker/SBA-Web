@@ -4,86 +4,207 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Nutzungsbedingungen — Storybook Adventures</title>
-  <meta name="description" content="Nutzungsbedingungen für Storybook Adventures. Regeln und Bedingungen für die Nutzung unserer App und Website.">
+  <meta name="description" content="Nutzungsbedingungen für Storybook Adventures.">
   <meta name="theme-color" content="#1a2744">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.storybookadventures.io/de/terms.html">
   <link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/terms.html">
   <link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/terms.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/terms.html">
 
-  <!-- Open Graph -->
   <meta property="og:site_name" content="Storybook Adventures">
   <meta property="og:title" content="Nutzungsbedingungen — Storybook Adventures">
-  <meta property="og:description" content="Regeln und Bedingungen für die Nutzung unserer App und Website.">
+  <meta property="og:description" content="Nutzungsbedingungen für Storybook Adventures.">
   <meta property="og:image" content="https://www.storybookadventures.io/assets/logo.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.storybookadventures.io/de/terms.html">
 
-  <!-- Twitter / X Cards -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Nutzungsbedingungen — Storybook Adventures">
-  <meta name="twitter:description" content="Nutzungsbedingungen für Storybook Adventures. Regeln und Bedingungen für die Nutzung unserer App und Website.">
-  <meta name="twitter:image" content="https://www.storybookadventures.io/assets/logo.webp">
-
+  <link rel="icon" type="image/webp" href="../assets/logo-emblem.webp">
+  <link rel="apple-touch-icon" href="../assets/logo-emblem.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/webp" href="/assets/logo-emblem.webp">
-  <link rel="apple-touch-icon" href="/assets/logo-emblem.webp">
-  <link rel="stylesheet" href="/style.css">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Terms of Service — Storybook Adventures",
-    "url": "https://www.storybookadventures.io/terms.html",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Storybook Adventures",
-      "url": "https://www.storybookadventures.io"
-    },
-    "about": {
-      "@type": "Organization",
-      "name": "Storybook Adventures",
-      "url": "https://www.storybookadventures.io"
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/subpage.css">
+<style>
+  /* ============ TOC + Doc layout ============ */
+  .doc-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    align-items: flex-start;
   }
-  </script>
+  .doc-layout > article.sheet {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    min-width: 0;
+  }
+  .doc-layout > article.sheet a { word-wrap: break-word; overflow-wrap: break-word; }
+  aside.toc {
+    position: sticky;
+    top: 96px;
+    align-self: flex-start;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding: 18px 16px;
+    background: rgba(15, 26, 46, 0.55);
+    border: 1px solid var(--white-10);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+  }
+  aside.toc h4 {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    margin-bottom: 12px;
+    padding-left: 6px;
+  }
+  aside.toc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: toc-counter;
+  }
+  aside.toc li {
+    counter-increment: toc-counter;
+    margin: 0;
+  }
+  aside.toc a {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 8px 8px;
+    border-radius: 8px;
+    color: var(--white-70);
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  aside.toc a::before {
+    content: counter(toc-counter, decimal-leading-zero);
+    flex: 0 0 auto;
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    opacity: 0.7;
+  }
+  aside.toc a:hover {
+    background: var(--white-10);
+    color: #fff;
+  }
+  aside.toc a.active {
+    background: var(--white-10);
+    color: #fff;
+  }
+  aside.toc a.active::before { opacity: 1; }
+  /* Smooth scroll with offset so anchors land below sticky nav */
+  html { scroll-padding-top: 80px; }
+  /* Hide TOC on mobile/tablet */
+  @media (max-width: 1024px) {
+    .doc-layout {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+    aside.toc { display: none; }
+  }
+</style>
 </head>
 <body>
-  <div class="page-bg" role="presentation"></div>
 
-  <div class="lang-switch" role="group" aria-label="Language">
-    <a href="" class="lang-btn" data-lang="en">EN</a>
-    <a href="" class="lang-btn active" data-lang="de" aria-current="page">DE</a>
+<div class="page-bg"></div>
+<div class="particles">
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="../assets/logo.webp" alt="Storybook Adventures" class="brand-logo" width="867" height="438" fetchpriority="high" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#how" class="nav-link">So funktioniert's</a>
+      <a href="index.html#safe" class="nav-link">Für Eltern</a>
+      <a href="index.html#gallery" class="nav-link">Filme</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="about.html" class="nav-link">Über uns</a>
+      <a href="blog/index.html" class="nav-link">Blog</a>
+      <div class="lang-toggle" role="group" aria-label="Sprache">
+        <a href="../terms.html">EN</a>
+        <a href="terms.html" class="active" aria-current="page">DE</a>
+      </div>
+      <a href="https://apps.apple.com/app/id6761114804" class="btn btn-small">App holen</a>
+    </nav>
   </div>
+</header>
 
-  <div class="legal-page">
-    <header class="legal-header">
-      <a href="/de/index.html" class="legal-back">&#8592; Startseite</a>
-    </header>
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <span class="scribble-star s-left">✦</span>
+    <span class="scribble-star s-right">✦</span>
+    <h1>
+      <span>Nutzungsbedingungen</span>
+    </h1>
+    <p class="lede">Regeln und Bedingungen für die Nutzung unserer App und Website.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Version 1.0</span>
+      <span class="meta-pill">Aktualisiert · 13. Apr 2026</span>
+      <span class="meta-pill">Gültig ab · 13. Apr 2026</span>
+    </div>
+  </div>
+</section>
 
-    <div class="legal-content-wrapper">
-      <div class="legal-content">
-        <div class="legal-text">
+<div class="doc-layout">
+  <aside class="toc">
+  <h4>Inhalt</h4>
+  <ol>
+    <li><a href="#s1">Einleitung</a></li>
+    <li><a href="#s2">Was die App macht</a></li>
+    <li><a href="#s3">Altersanforderungen und elterliche Verantwortung</a></li>
+    <li><a href="#s4">Anonyme Konten</a></li>
+    <li><a href="#s5">Token und K&auml;ufe</a></li>
+    <li><a href="#s6">Nutzerinhalte</a></li>
+    <li><a href="#s7">Verbotene Nutzung</a></li>
+    <li><a href="#s8">Gutscheincodes</a></li>
+    <li><a href="#s9">Geistiges Eigentum</a></li>
+    <li><a href="#s10">KI-generierte Inhalte</a></li>
+    <li><a href="#s11">Dienstverf&uuml;gbarkeit</a></li>
+    <li><a href="#s12">Haftungsbeschr&auml;nkung</a></li>
+    <li><a href="#s13">Daten und Datenschutz</a></li>
+    <li><a href="#s14">Datenl&ouml;schung</a></li>
+    <li><a href="#s15">K&uuml;ndigung</a></li>
+    <li><a href="#s16">&Auml;nderungen dieser Bedingungen</a></li>
+    <li><a href="#s17">Anwendbares Recht und Streitbeilegung</a></li>
+    <li><a href="#s18">Widerrufsbelehrung</a></li>
+    <li><a href="#s19">Impressum (§ 5 DDG)</a></li>
+    <li><a href="#s20">Salvatorische Klausel</a></li>
+    <li><a href="#s21">Kontakt</a></li>
+  </ol>
+</aside>
+  <article class="sheet">
 
-          <!-- ===== ENGLISH ===== -->
-
-          <!-- ===== DEUTSCH ===== -->
-          <div>
-            <h1>Nutzungsbedingungen</h1>
-            <p class="version-info">Version 1.0 · Zuletzt aktualisiert: 13. April 2026 · G&uuml;ltig ab: 13. April 2026</p>
-
-            <h2>1. Einleitung</h2>
+<h2 id="s1">1. Einleitung</h2>
             <p>Diese Nutzungsbedingungen („Bedingungen") regeln die Nutzung von Storybook Adventures („die App"), betrieben von:</p>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Deutschland</p>
-            <p>E-Mail: contact@storybookadventures.io<br>Website: <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a></p>
+            <div class="addr-card">
+              <p><strong>Constantin Kl&ouml;cker</strong></p>
+              <p>Friedrichstr. 155</p>
+              <p>10117 Berlin, Deutschland</p>
+              <p>E-Mail: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+              <p>Website: <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">storybookadventures.io</a></p>
+            </div>
             <p>Durch das Herunterladen, Installieren oder Verwenden der App stimmen Sie diesen Bedingungen zu. Wenn Sie als Elternteil oder Erziehungsberechtigter im Namen eines Kindes zustimmen, akzeptieren Sie diese Bedingungen in dessen Namen.</p>
 
-            <h2>2. Was die App macht</h2>
+            <h2 id="s2">2. Was die App macht</h2>
             <p>Storybook Adventures ist eine kreative App, die handgezeichnete Bilder von Kindern in KI-gest&uuml;tzte Animationen verwandelt:</p>
             <ol>
               <li><strong>Geschichte ausw&auml;hlen:</strong> W&auml;hlen Sie aus gef&uuml;hrten Geschichtenthemen, jedes mit drei Szenen und Zeichenanleitungen</li>
@@ -93,7 +214,7 @@
             </ol>
             <p>Jede Animation verbraucht einen Token, der &uuml;ber Apple In-App-Kauf erworben oder &uuml;ber einen Aktionsgutscheincode eingel&ouml;st werden kann. Die App bietet au&szlig;erdem einen Eigene-Geschichte-Modus, in dem Nutzer eigene Szenen mit individuellen Textbeschreibungen erstellen k&ouml;nnen.</p>
 
-            <h2>3. Altersanforderungen und elterliche Verantwortung</h2>
+            <h2 id="s3">3. Altersanforderungen und elterliche Verantwortung</h2>
             <p>Storybook Adventures ist f&uuml;r Kinder im Alter von 6–12 Jahren konzipiert, mit Unterst&uuml;tzung f&uuml;r j&uuml;ngere Kinder (4–5 Jahre) begleitet von einem Elternteil sowie f&uuml;r &auml;ltere Nutzer (13+).</p>
             <p>Bei der ersten Nutzung fragt die App das Alter des Nutzers ab. Nutzer unterhalb der anwendbaren Altersschwelle f&uuml;r ihre Region (z. B. unter 13 Jahren in den USA, unter 16 Jahren in Deutschland) m&uuml;ssen den elterlichen Einwilligungsprozess abschlie&szlig;en, bevor sie die App nutzen k&ouml;nnen.</p>
             <p><strong>Eltern und Erziehungsberechtigte sind verantwortlich f&uuml;r:</strong></p>
@@ -105,7 +226,7 @@
               <li>Das Lesen und Verstehen dieser Vereinbarung sowie unserer Datenschutzerkl&auml;rung</li>
             </ul>
 
-            <h2>4. Anonyme Konten</h2>
+            <h2 id="s4">4. Anonyme Konten</h2>
             <h3>4.1 Funktionsweise der Konten</h3>
             <p>Die App erfordert keine Registrierung. Bei der ersten Nutzung wird eine zuf&auml;llige anonyme Kennung (UUID) generiert und sicher im Keychain des Ger&auml;ts gespeichert. Diese verkn&uuml;pft das Ger&auml;t mit einem serverseitigen Profil, das Ihr Token-Guthaben, Zeichnungen, Animationen, individuelle Beschreibungen und Szenenfortschritt speichert.</p>
             <p>Diese Kennung ist nicht mit einem Namen, einer E-Mail-Adresse, einer Apple-ID oder personenbezogenen Daten verkn&uuml;pft. F&uuml;r Datenanfragen steht Ihnen unter Einstellungen → Meine Daten → Datenanfrage ein Support-Referenzcode zur Verf&uuml;gung, der von Ihrer Kennung abgeleitet ist.</p>
@@ -123,7 +244,7 @@
             <h3>4.3 Automatische Token-Wiederherstellung</h3>
             <p>Die Wiederherstellung des Token-Guthabens erfolgt vollst&auml;ndig automatisch und erfordert keine Aktion durch den Nutzer. Nach einer Neuinstallation der App auf demselben Ger&auml;t (oder bei Wiederherstellung &uuml;ber iCloud-Keychain) wird Ihr Konto anhand der in §4.2 beschriebenen anonymen Kennung wiederhergestellt, und Ihr Token-Guthaben wird von unseren Servern wiederhergestellt. Auch laufende K&auml;ufe, die von Apple bereits abgerechnet, aber noch nicht Ihrem Guthaben gutgeschrieben wurden, werden beim n&auml;chsten Start der App &uuml;ber den StoreKit-Transaktionslistener von Apple automatisch wiederhergestellt. Sollte Ihr Guthaben nach der Wiederherstellung dennoch fehlerhaft sein, siehe §5.5.</p>
 
-            <h2>5. Token und K&auml;ufe</h2>
+            <h2 id="s5">5. Token und K&auml;ufe</h2>
             <h3>5.1 Token-System</h3>
             <ul>
               <li>Jede Animation verbraucht <strong>einen Token</strong></li>
@@ -147,7 +268,7 @@
             <h3>5.5 Wiederherstellung des Token-Guthabens</h3>
             <p>Wenn Ihr Token-Guthaben verloren gegangen ist, weil die Keychain-Kennung verloren gegangen ist (z. B. neue Apple-ID, iCloud-Keychain deaktiviert), k&ouml;nnen wir versuchen, Ihr Guthaben anhand von Kauftransaktionsnachweisen wiederherzustellen. Kontaktieren Sie uns unter contact@storybookadventures.io. Da wir keine personenbezogenen Daten erheben, h&auml;ngt die Wiederherstellung vollst&auml;ndig davon ab, ob wir Kaufnachweise Ihrem Konto zuordnen k&ouml;nnen. Wir k&ouml;nnen eine Wiederherstellung nicht in allen F&auml;llen garantieren.</p>
 
-            <h2>6. Nutzerinhalte</h2>
+            <h2 id="s6">6. Nutzerinhalte</h2>
             <h3>6.1 Zeichnungen und Animationen</h3>
             <p>Wenn Sie eine Zeichnung hochladen, erteilen Sie uns eine eingeschr&auml;nkte, nicht-exklusive Lizenz zur:</p>
             <ul>
@@ -193,7 +314,7 @@
             <h3>6.5 Animationen speichern</h3>
             <p>Fertige Animationen k&ouml;nnen in der Fotogalerie des Ger&auml;ts gespeichert werden. Nach dem Speichern existieren diese Dateien unabh&auml;ngig von der App. Wir empfehlen, wichtige Animationen als zus&auml;tzliche Sicherung in der Galerie zu speichern, da serverseitige Kopien gel&ouml;scht werden k&ouml;nnen, wenn Sie Ihre Kontodaten l&ouml;schen.</p>
 
-            <h2>7. Verbotene Nutzung</h2>
+            <h2 id="s7">7. Verbotene Nutzung</h2>
             <p>Sie verpflichten sich, Folgendes zu unterlassen:</p>
             <ul>
               <li>Versuche, den elterlichen Einwilligungsprozess, die Altersverifikation oder Kaufsperren zu umgehen</li>
@@ -206,7 +327,7 @@
               <li>Nutzung der App in einer Weise, die gegen geltende Gesetze oder Vorschriften verst&ouml;&szlig;t</li>
             </ul>
 
-            <h2>8. Gutscheincodes</h2>
+            <h2 id="s8">8. Gutscheincodes</h2>
             <p>Die App kann Aktionsgutscheincodes anbieten, die &uuml;ber Marketingpartner oder Kampagnen verteilt werden. Jeder Gutscheincode legt seine eigenen Einl&ouml;sebedingungen fest, einschlie&szlig;lich etwaiger Nutzungslimits, Ablaufdaten und Berechtigungseinschr&auml;nkungen. Allgemeine Regeln:</p>
             <ul>
               <li>Jeder Gutscheincode kann <strong>einmal pro Ger&auml;t</strong> eingel&ouml;st werden</li>
@@ -216,14 +337,14 @@
             </ul>
             <p>Gutschein-Einl&ouml;sungen werden mit Ihrer anonymen Profil-ID und dem Kampagnencode f&uuml;r Missbrauchspr&auml;vention und Zuordnungszwecke erfasst. Es werden keine personenbezogenen Daten erhoben.</p>
 
-            <h2>9. Geistiges Eigentum</h2>
+            <h2 id="s9">9. Geistiges Eigentum</h2>
             <h3>9.1 Unsere Inhalte</h3>
             <p>Die App einschlie&szlig;lich ihres Designs, der Geschichten, Szenenbeschreibungen, Animationen, Icons, Sounds und des Codes geh&ouml;rt uns oder unseren Lizenzgebern und ist durch Urheberrechts- und Schutzrechtsgesetze gesch&uuml;tzt. Sie d&uuml;rfen unsere Inhalte ohne Genehmigung nicht kopieren, modifizieren, verbreiten oder davon abgeleitete Werke erstellen.</p>
 
             <h3>9.2 Ihre Inhalte</h3>
             <p>Sie behalten das Eigentum an Ihren handgezeichneten Originalwerken. Aus Ihren Zeichnungen generierte Animationen werden Ihnen zur pers&ouml;nlichen, nicht-kommerziellen Nutzung bereitgestellt. Sie d&uuml;rfen Ihre Animationen f&uuml;r nicht-kommerzielle Zwecke frei speichern, teilen und anzeigen.</p>
 
-            <h2>10. KI-generierte Inhalte</h2>
+            <h2 id="s10">10. KI-generierte Inhalte</h2>
             <p>Die App verwendet KI-Dienste von Drittanbietern, um Animationen aus Zeichnungen zu erstellen. Durch die Nutzung der App erkennen Sie an, dass:</p>
             <ul>
               <li>KI-generierte Animationen algorithmisch erstellt werden und die hochgeladene Zeichnung m&ouml;glicherweise nicht perfekt wiedergeben</li>
@@ -232,7 +353,7 @@
               <li>Das KI-Moderationssystem Zeichnungen ablehnen kann, die scheinbar gegen Inhaltsrichtlinien versto&szlig;en, auch wenn kein Versto&szlig; beabsichtigt war — in solchen F&auml;llen wird der Token automatisch erstattet</li>
             </ul>
 
-            <h2>11. Dienstverf&uuml;gbarkeit</h2>
+            <h2 id="s11">11. Dienstverf&uuml;gbarkeit</h2>
             <h3>11.1 Wartung und Ausfallzeiten</h3>
             <p>Wir k&ouml;nnen den Animationsdienst vor&uuml;bergehend f&uuml;r Wartungsarbeiten, Updates oder technische Probleme unterbrechen. Im Wartungsmodus zeigt die App einen Hinweis an. W&auml;hrend Wartungsperioden werden keine Token abgezogen.</p>
 
@@ -242,7 +363,7 @@
             <h3>11.3 &Auml;nderungen am Dienst und Diensteinstellung</h3>
             <p>Wir k&ouml;nnen Funktionen der App aktualisieren, modifizieren oder einstellen. Bei wesentlichen &Auml;nderungen, die erworbene Token betreffen, werden wir mindestens 30 Tage im Voraus in der App dar&uuml;ber informieren. Im Falle einer dauerhaften Einstellung der App oder des Animationsdienstes werden wir mindestens 30 Tage im Voraus in der App dar&uuml;ber informieren; nicht verbrauchte, gekaufte Token-Guthaben sind in diesem Fall, soweit Apples R&uuml;ckerstattungsrichtlinien dies erlauben, r&uuml;ckerstattungsf&auml;hig. Wir werden angemessene Unterst&uuml;tzung leisten, um entsprechende R&uuml;ckerstattungsanfragen zu erleichtern.</p>
 
-            <h2>12. Haftungsbeschr&auml;nkung</h2>
+            <h2 id="s12">12. Haftungsbeschr&auml;nkung</h2>
             <h3>12.1 Dienst „wie besehen"</h3>
             <p>Die App wird „wie besehen" und „nach Verf&uuml;gbarkeit" bereitgestellt. Im gesetzlich zul&auml;ssigen Umfang schlie&szlig;en wir alle ausdr&uuml;cklichen oder stillschweigenden Garantien aus, einschlie&szlig;lich Garantien der Marktg&auml;ngigkeit, Eignung f&uuml;r einen bestimmten Zweck und Nichtverletzung von Rechten.</p>
 
@@ -262,7 +383,7 @@
             <h3>12.4 EU-Verbraucherrechte</h3>
             <p>Nichts in diesen Bedingungen beschr&auml;nkt oder schlie&szlig;t Haftung aus, die nach anwendbarem EU-Verbraucherschutzrecht nicht beschr&auml;nkt oder ausgeschlossen werden kann, einschlie&szlig;lich Haftung f&uuml;r Vorsatz oder grobe Fahrl&auml;ssigkeit nach deutschem Recht.</p>
 
-            <h2>13. Daten und Datenschutz</h2>
+            <h2 id="s13">13. Daten und Datenschutz</h2>
             <p>Der Umgang mit Daten ist in unserer <strong><a href="/de/privacy.html">Datenschutzerkl&auml;rung</a></strong> beschrieben, die in der App und unter <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a> verf&uuml;gbar ist. Wichtige Punkte:</p>
             <ul>
               <li>Wir erheben keine personenbezogenen Daten</li>
@@ -273,7 +394,7 @@
               <li>Wenn Sie den Newsletter auf unserer Website abonnieren, wird Ihre E-Mail-Adresse wie in der Datenschutzerkl&auml;rung beschrieben erhoben und verarbeitet — dies ist unabh&auml;ngig von Ihrem App-Konto und steht damit in keinem Zusammenhang</li>
             </ul>
 
-            <h2>14. Datenl&ouml;schung</h2>
+            <h2 id="s14">14. Datenl&ouml;schung</h2>
             <h3>14.1 In-App-L&ouml;schung</h3>
             <p>Sie k&ouml;nnen serverseitige Inhalte, die Ihrem anonymen Profil zugeordnet sind, jederzeit l&ouml;schen:</p>
             <ul>
@@ -285,7 +406,7 @@
             <h3>14.2 L&ouml;schung per Kontakt</h3>
             <p>Sie k&ouml;nnen die Datenl&ouml;schung auch per E-Mail an contact@storybookadventures.io mit Ihrem Support-Referenzcode (Einstellungen → Meine Daten → Datenanfrage) beantragen. Wir werden die Anfrage innerhalb von 30 Tagen bearbeiten.</p>
 
-            <h2>15. K&uuml;ndigung</h2>
+            <h2 id="s15">15. K&uuml;ndigung</h2>
             <h3>15.1 Durch Sie</h3>
             <p>Sie k&ouml;nnen die Nutzung der App jederzeit durch L&ouml;schen vom Ger&auml;t einstellen. Um auch serverseitige Daten zu entfernen, verwenden Sie die Funktion „Alle Daten l&ouml;schen" vor der Deinstallation oder kontaktieren Sie uns mit Ihrem Support-Referenzcode.</p>
 
@@ -299,18 +420,23 @@
             </ul>
             <p>Wird der Zugang aufgrund eines Versto&szlig;es gegen diese Bedingungen eingeschr&auml;nkt oder gek&uuml;ndigt, wird die R&uuml;ckerstattungsberechtigung f&uuml;r nicht verbrauchte, gekaufte Token im Einzelfall anhand der Art und Schwere des Versto&szlig;es bewertet. Wir werden R&uuml;ckerstattungen f&uuml;r Token, die gutgl&auml;ubig erworben wurden und noch nicht verbraucht sind, nicht unbillig verweigern.</p>
 
-            <h2>16. &Auml;nderungen dieser Bedingungen</h2>
+            <h2 id="s16">16. &Auml;nderungen dieser Bedingungen</h2>
             <p>Wir k&ouml;nnen diese Bedingungen von Zeit zu Zeit aktualisieren. Wir werden Sie &uuml;ber &Auml;nderungen durch einen Hinweis in der App informieren. Bei wesentlichen &Auml;nderungen — insbesondere solchen, die den Umgang mit Kinderdaten betreffen — werden wir eine ausdr&uuml;ckliche erneute Zustimmung vor der weiteren Nutzung verlangen. Bei geringf&uuml;gigen &Auml;nderungen gilt Ihre fortgesetzte Nutzung der App nach dem Inkrafttreten als Zustimmung. Wenn Sie mit &Auml;nderungen nicht einverstanden sind, k&ouml;nnen Sie die Nutzung der App einstellen und die L&ouml;schung Ihrer Daten beantragen.</p>
 
-            <h2>17. Anwendbares Recht und Streitbeilegung</h2>
+            <h2 id="s17">17. Anwendbares Recht und Streitbeilegung</h2>
             <p>Diese Bedingungen unterliegen dem Recht der Bundesrepublik Deutschland. F&uuml;r Verbraucher mit Wohnsitz in der EU gelten die zwingenden Verbraucherschutzbestimmungen ihres jeweiligen Wohnsitzlandes, sofern diese einen weitergehenden Schutz bieten.</p>
             <p>Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen, k&ouml;nnen dies jedoch im Einzelfall tun.</p>
 
-            <h2>18. Widerrufsbelehrung</h2>
+            <h2 id="s18">18. Widerrufsbelehrung</h2>
             <h3>Widerrufsrecht f&uuml;r EU-Verbraucher</h3>
             <p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gr&uuml;nden von einem Kauf zur&uuml;ckzutreten. Die Widerrufsfrist beginnt mit dem Tag des Kaufabschlusses.</p>
             <p>Um das Widerrufsrecht auszu&uuml;ben, m&uuml;ssen Sie uns mittels einer eindeutigen Erkl&auml;rung &uuml;ber Ihren Entschluss, diesen Vertrag zu widerrufen, informieren:</p>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Deutschland<br>E-Mail: contact@storybookadventures.io</p>
+            <div class="addr-card">
+              <p><strong>Constantin Kl&ouml;cker</strong></p>
+              <p>Friedrichstr. 155</p>
+              <p>10117 Berlin, Deutschland</p>
+              <p>E-Mail: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+            </div>
             <p>Wir best&auml;tigen den Eingang Ihrer Widerrufserkl&auml;rung unverz&uuml;glich. Da alle Zahlungen ausschlie&szlig;lich &uuml;ber Apple abgewickelt werden, erfolgt die tats&auml;chliche R&uuml;ckerstattung &uuml;ber Apples Zahlungssystem — f&uuml;r eine m&ouml;glichst schnelle Bearbeitung empfehlen wir, gleichzeitig einen R&uuml;ckerstattungsantrag direkt bei Apple unter <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> zu stellen. Wir sind nicht in der Lage, Zahlungen selbst zu verarbeiten oder R&uuml;ckerstattungen direkt durchzuf&uuml;hren, und werden alle zahlungsbezogenen Anfragen an Apple weiterleiten.</p>
             <p>Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung &uuml;ber die Aus&uuml;bung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden. Sie k&ouml;nnen daf&uuml;r das folgende Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist:</p>
             <blockquote>
@@ -331,86 +457,108 @@
             <p><strong>Bei verbrauchten Token</strong> (zur Erstellung von Animationen verwendet): Das Widerrufsrecht erlischt mit dem Verbrauch.</p>
             <p><strong>Bei nicht verbrauchten Token</strong> innerhalb der 14-t&auml;gigen Frist: Sie k&ouml;nnen eine R&uuml;ckerstattung direkt bei Apple unter <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> beantragen. Alle R&uuml;ckerstattungsanfragen werden von Apple bearbeitet. Wir f&uuml;hren keine direkten R&uuml;ckerstattungen durch.</p>
 
-            <h2>19. Impressum (§ 5 DDG)</h2>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Deutschland</p>
-            <p>E-Mail: contact@storybookadventures.io<br>Telefon: +49 (0175) 9910551</p>
+            <h2 id="s19">19. Impressum (§ 5 DDG)</h2>
+            <div class="addr-card">
+              <p><strong>Constantin Kl&ouml;cker</strong></p>
+              <p>Friedrichstr. 155</p>
+              <p>10117 Berlin, Deutschland</p>
+              <p>E-Mail: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+              <p>Telefon: +49 (0175) 9910551</p>
+            </div>
             <p>Verantwortlich f&uuml;r den Inhalt gem&auml;&szlig; § 18 Abs. 2 MStV:<br>Constantin Kl&ouml;cker, Anschrift wie oben.</p>
 
-            <h2>20. Salvatorische Klausel</h2>
+            <h2 id="s20">20. Salvatorische Klausel</h2>
             <p>Sollte eine Bestimmung dieser Bedingungen als nicht durchsetzbar befunden werden, bleiben die &uuml;brigen Bestimmungen in vollem Umfang in Kraft. Die nicht durchsetzbare Bestimmung wird durch eine durchsetzbare Bestimmung ersetzt, die dem Sinn der urspr&uuml;nglichen Bestimmung am n&auml;chsten kommt.</p>
 
-            <h2>21. Kontakt</h2>
+            <h2 id="s21">21. Kontakt</h2>
             <p>Bei Fragen zu diesen Bedingungen wenden Sie sich an:</p>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Deutschland</p>
-            <p>E-Mail: contact@storybookadventures.io</p>
-            <p><em>Diese Nutzungsbedingungen sind auf Englisch und Deutsch in der App sowie unter https://www.storybookadventures.io verf&uuml;gbar.</em></p>
-          </div>
+            <div class="addr-card">
+              <p><strong>Constantin Kl&ouml;cker</strong></p>
+              <p>Friedrichstr. 155</p>
+              <p>10117 Berlin, Deutschland</p>
+              <p>E-Mail: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+            </div>
+            <p><em>Diese Nutzungsbedingungen sind auf Englisch und Deutsch in der App sowie unter <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a> verf&uuml;gbar.</em></p>
 
-        </div>
-      </div>
+  <div class="contact-box">
+    <div class="cb-text">
+      <h3>Kontakt aufnehmen</h3>
+      <p>Fragen, Feedback, Presse — oder einfach Hallo sagen?</p>
     </div>
+    <a href="mailto:contact@storybookadventures.io" class="btn">contact@storybookadventures.io</a>
   </div>
+</article>
+</div>
+</main>
 
-  <footer class="legal-footer">
-      <nav class="footer-links">
-        <a href="/de/about.html" class="footer-link">Über uns</a>
-        <span class="footer-sep">·</span>
-        <a href="/de/blog/" class="footer-link">Blog</a>
-        <span class="footer-sep">·</span>
-        <a href="/de/privacy.html" class="footer-link">Datenschutz</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="/de/terms.html" class="footer-link">Nutzungsbedingungen</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="/de/impressum.html" class="footer-link">Impressum</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="/de/support.html" class="footer-link">Hilfe</a>
-      </nav>
-    <p class="footer-copy">&copy; 2026 Storybook Adventures.<span>Alle Rechte vorbehalten.</span></p>
-  </footer>
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-name">Storybook Adventures</div>
+    </div>
+    <div class="foot-links">
+      <a href="privacy.html">Datenschutzerklärung</a>
+      <a href="terms.html" class="active">Nutzungsbedingungen</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="support.html">Hilfe</a>
+    </div>
+    <div class="foot-copy"><span>© 2026 Storybook Adventures.</span><span>Alle Rechte vorbehalten.</span></div>
+  </div>
+</footer>
 
-    <script>
-    (function() {
-      // Cross-page language switcher.
-      const path = window.location.pathname;
-      const isOnGerman = path.startsWith('/de/') || path === '/de';
 
-      const enHref = isOnGerman
-        ? (path.replace(/^\/de\/?/, '/') || '/')
-        : path;
-      const deHref = isOnGerman
-        ? path
-        : '/de' + (path.startsWith('/') ? path : '/' + path);
+<script>
+(function() {
+  const toc = document.querySelector('aside.toc');
+  if (!toc) return;
+  const headings = document.querySelectorAll('article.sheet h2[id]');
+  const links = toc.querySelectorAll('a');
+  if (!headings.length || !links.length) return;
 
-      const enLink = document.querySelector('.lang-btn[data-lang="en"]');
-      const deLink = document.querySelector('.lang-btn[data-lang="de"]');
-      if (enLink) enLink.href = enHref;
-      if (deLink) deLink.href = deHref;
+  const linkById = new Map();
+  links.forEach(a => {
+    const id = a.getAttribute('href').replace(/^#/, '');
+    linkById.set(id, a);
+  });
 
-      // First-visit banner.
-      const BANNER_DISMISSED = 'sba-lang-banner-dismissed';
-      const browserLang = (navigator.language || '').toLowerCase();
-      const wantsGerman = browserLang.startsWith('de');
-      const wantsEnglish = browserLang.startsWith('en');
-
-      let offerLang = null;
-      if (!localStorage.getItem(BANNER_DISMISSED)) {
-        if (!isOnGerman && wantsGerman) offerLang = 'de';
-        else if (isOnGerman && wantsEnglish) offerLang = 'en';
+  let activeId = null;
+  function setActive(id) {
+    if (id === activeId) return;
+    activeId = id;
+    links.forEach(a => a.classList.remove('active'));
+    const a = linkById.get(id);
+    if (a) {
+      a.classList.add('active');
+      // Keep active item visible inside the scrollable TOC
+      const r = a.getBoundingClientRect();
+      const tocR = toc.getBoundingClientRect();
+      if (r.top < tocR.top || r.bottom > tocR.bottom) {
+        a.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       }
+    }
+  }
 
-      if (offerLang) {
-        const banner = document.createElement('div');
-        banner.className = 'lang-banner';
-        banner.innerHTML = offerLang === 'de'
-          ? '<span>Diese Seite gibt es auch auf Deutsch.</span><a href="' + deHref + '" class="lang-banner__btn">Wechseln</a><button class="lang-banner__close" aria-label="Close">&times;</button>'
-          : '<span>This page is also available in English.</span><a href="' + enHref + '" class="lang-banner__btn">Switch</a><button class="lang-banner__close" aria-label="Close">&times;</button>';
-        document.body.appendChild(banner);
-        banner.querySelector('.lang-banner__close').addEventListener('click', function() {
-          localStorage.setItem(BANNER_DISMISSED, '1');
-          banner.remove();
-        });
-      }
-    })();
-  </script>
+  const observer = new IntersectionObserver(entries => {
+    // Pick the heading nearest the top of the active band
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length) {
+      // Sort by distance from top of viewport
+      visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      setActive(visible[0].target.id);
+    }
+  }, {
+    // Active band: ~from top 15% down to 65% of viewport
+    rootMargin: '-15% 0px -65% 0px',
+    threshold: 0,
+  });
+
+  headings.forEach(h => observer.observe(h));
+
+  // Default: first heading active
+  if (headings.length) setActive(headings[0].id);
+})();
+</script>
+
+<script src="../assets/nav-more.js" defer></script>
 </body>
 </html>

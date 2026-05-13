@@ -12,7 +12,6 @@
   <link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/terms.html">
   <link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/terms.html">
 
-  <!-- Open Graph -->
   <meta property="og:site_name" content="Storybook Adventures">
   <meta property="og:title" content="Terms of Service — Storybook Adventures">
   <meta property="og:description" content="Rules and conditions for using our app and website.">
@@ -20,20 +19,18 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.storybookadventures.io/terms.html">
 
-  <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Terms of Service — Storybook Adventures">
   <meta name="twitter:description" content="Rules and conditions for using our app and website.">
   <meta name="twitter:image" content="https://www.storybookadventures.io/assets/logo.webp">
 
+  <link rel="icon" type="image/webp" href="assets/logo-emblem.webp">
+  <link rel="apple-touch-icon" href="assets/logo-emblem.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/webp" href="/assets/logo-emblem.webp">
-  <link rel="apple-touch-icon" href="/assets/logo-emblem.webp">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/subpage.css">
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,373 +41,545 @@
       "@type": "WebSite",
       "name": "Storybook Adventures",
       "url": "https://www.storybookadventures.io"
-    },
-    "about": {
-      "@type": "Organization",
-      "name": "Storybook Adventures",
-      "url": "https://www.storybookadventures.io"
     }
   }
   </script>
+<style>
+  /* ============ TOC + Doc layout ============ */
+  .doc-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    align-items: flex-start;
+  }
+  .doc-layout > article.sheet {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    min-width: 0;
+  }
+  .doc-layout > article.sheet a { word-wrap: break-word; overflow-wrap: break-word; }
+  aside.toc {
+    position: sticky;
+    top: 96px;
+    align-self: flex-start;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding: 18px 16px;
+    background: rgba(15, 26, 46, 0.55);
+    border: 1px solid var(--white-10);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+  }
+  aside.toc h4 {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    margin-bottom: 12px;
+    padding-left: 6px;
+  }
+  aside.toc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: toc-counter;
+  }
+  aside.toc li {
+    counter-increment: toc-counter;
+    margin: 0;
+  }
+  aside.toc a {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 8px 8px;
+    border-radius: 8px;
+    color: var(--white-70);
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  aside.toc a::before {
+    content: counter(toc-counter, decimal-leading-zero);
+    flex: 0 0 auto;
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    opacity: 0.7;
+  }
+  aside.toc a:hover {
+    background: var(--white-10);
+    color: #fff;
+  }
+  aside.toc a.active {
+    background: var(--white-10);
+    color: #fff;
+  }
+  aside.toc a.active::before { opacity: 1; }
+  /* Smooth scroll with offset so anchors land below sticky nav */
+  html { scroll-padding-top: 80px; }
+  /* Hide TOC on mobile/tablet */
+  @media (max-width: 1024px) {
+    .doc-layout {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+    aside.toc { display: none; }
+  }
+</style>
 </head>
 <body>
-  <div class="page-bg" role="presentation"></div>
 
-  <div class="lang-switch" role="group" aria-label="Language">
-    <a href="" class="lang-btn active" data-lang="en" aria-current="page">EN</a>
-    <a href="" class="lang-btn" data-lang="de">DE</a>
-  </div>
+<div class="page-bg"></div>
+<div class="particles">
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+</div>
 
-  <div class="legal-page">
-    <header class="legal-header">
-      <a href="index.html" class="legal-back">&#8592; Home</a>
-    </header>
-
-    <div class="legal-content-wrapper">
-      <div class="legal-content">
-        <div class="legal-text">
-
-          <!-- ===== ENGLISH ===== -->
-          <div>
-            <h1>Terms of Service</h1>
-            <p class="version-info">Version 1.0 · Last updated: April 13, 2026 · Effective: April 13, 2026</p>
-
-            <h2>1. Introduction</h2>
-            <p>These Terms of Service ("Terms") govern your use of Storybook Adventures ("the App"), operated by:</p>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Germany</p>
-            <p>Email: contact@storybookadventures.io<br>Website: <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a></p>
-            <p>By downloading, installing, or using the App, you agree to these Terms. If you are a parent or guardian consenting on behalf of a child, you agree to these Terms on their behalf.</p>
-
-            <h2>2. What the App Does</h2>
-            <p>Storybook Adventures is a creative app that transforms children's hand-drawn pictures into AI-powered animations:</p>
-            <ol>
-              <li><strong>Choose a storyline:</strong> Select from guided story themes, each with three scenes and drawing prompts</li>
-              <li><strong>Draw on paper:</strong> Follow the scene description and draw on real paper</li>
-              <li><strong>Photograph and upload:</strong> Take a photo of the drawing through the App</li>
-              <li><strong>Watch the animation:</strong> AI processes the drawing and returns a short animated video</li>
-            </ol>
-            <p>Each animation uses one token, purchased through Apple In-App Purchase or redeemed via a promotional voucher code. The App also offers a Custom Story mode where users create their own scenes with custom text prompts.</p>
-
-            <h2>3. Age Requirements and Parental Responsibility</h2>
-            <p>Storybook Adventures is designed for children ages 6–12, with support for younger children (4–5) with a parent, and older users (13+).</p>
-            <p>On first use, the App asks the user's age. Users under the applicable threshold for their region (e.g., under 13 in the United States, under 16 in Germany) must have a parent or guardian complete the parental consent process before using the App.</p>
-            <p><strong>Parents and guardians are responsible for:</strong></p>
-            <ul>
-              <li>Supervising their child's use of the App</li>
-              <li>Ensuring their child does not include personal information (names, addresses, phone numbers) in drawings</li>
-              <li>Ensuring their child does not upload drawings that reproduce copyrighted characters or artwork belonging to others</li>
-              <li>Managing token purchases and parental control settings</li>
-              <li>Reviewing and understanding this agreement and our Privacy Policy</li>
-            </ul>
-
-            <h2>4. Anonymous Accounts</h2>
-            <h3>4.1 How Accounts Work</h3>
-            <p>The App does not require registration. On first use, a random anonymous identifier (UUID) is generated and stored in the device's secure Keychain. This links the device to a server-side profile storing your token balance, drawings, animations, custom prompts, and scene progress.</p>
-            <p>This identifier is not connected to any name, email address, Apple ID, or personal information. For data requests, a support reference code derived from your identifier is available under Settings → My Data → Data Request.</p>
-
-            <h3>4.2 Account Persistence and Recovery</h3>
-            <p>Your account is tied to the anonymous identifier stored in the device Keychain:</p>
-            <ul>
-              <li><strong>App reinstall on the same device:</strong> Account, token balance, drawings, animations, and scene progress are restored automatically from our servers.</li>
-              <li><strong>Factory reset with iCloud Keychain enabled:</strong> If iCloud Keychain is active and you restore from an iCloud backup or sign into the same iCloud account on a new device, the identifier is preserved and your account recovers automatically.</li>
-              <li><strong>Factory reset without iCloud Keychain, or new Apple ID:</strong> The Keychain identifier is lost and cannot be recovered by us. Your server-side content (drawings, animations, scene progress) can no longer be accessed, as we have no way to identify your anonymous profile without the identifier. Token balance restoration may be possible via purchase records — see §5.5.</li>
-              <li><strong>Multiple devices:</strong> Each device has its own independent account. Tokens and progress do not sync across devices unless the same iCloud Keychain identifier is present.</li>
-            </ul>
-            <p>We are not liable for loss of account access resulting from factory resets, iCloud Keychain changes, new Apple IDs, or disabled iCloud Keychain.</p>
-
-            <h3>4.3 Automatic Token Recovery</h3>
-            <p>Token balance recovery is fully automatic and requires no user action. After reinstalling the App on the same device (or restoring via iCloud Keychain), your account is recovered using the anonymous identifier described in §4.2, and your token balance is restored from our servers. Any in-flight purchase that was charged by Apple but not yet credited to your balance is also recovered automatically the next time the App launches via Apple's StoreKit transaction listener. If your balance still appears incorrect after recovery, see §5.5.</p>
-
-            <h2>5. Tokens and Purchases</h2>
-            <h3>5.1 Token System</h3>
-            <ul>
-              <li>Each animation uses <strong>one token</strong></li>
-              <li>Tokens are <strong>consumable</strong> — once used, they cannot be reused</li>
-              <li>Tokens are <strong>non-transferable</strong> — they cannot be moved between devices or accounts</li>
-              <li>Token balance is stored on our servers and synced to the device</li>
-              <li>If the animation pipeline fails (technical error or content rejection), the token is <strong>automatically refunded to your balance</strong></li>
-            </ul>
-
-            <h3>5.2 Purchasing Tokens</h3>
-            <p>Tokens are purchased exclusively through Apple In-App Purchase. All purchases are processed by Apple and subject to Apple's terms and pricing. We do not collect or store any payment information.</p>
-            <p>Available token packs and their prices are displayed in the App's Token Shop in your local currency as determined by Apple.</p>
-
-            <h3>5.3 Parental Purchase Gate</h3>
-            <p>For accounts identified as under the applicable age threshold, all token purchases require passing a parental gate (PIN entry or math challenge) before Apple's purchase flow is initiated. Parents can additionally lock the Token Shop entirely via Parental Controls.</p>
-            <p>Where a token is obtained via Apple In-App Purchase, the account holder's authentication (Face ID, Touch ID, or Apple ID password) and the resulting receipt notification to the account holder constitute payment-system verification with account-holder notification — an FTC-recognised method of verifiable parental consent under COPPA. Where a first token is obtained via a promotional voucher code without a prior purchase, parental consent is established through the in-app consent flow completed during onboarding, which includes an adult verification step, a parental declaration, and six explicit consent acknowledgements.</p>
-
-            <h3>5.4 Refunds</h3>
-            <p>Tokens are consumable digital goods. All refund requests are handled by Apple in accordance with Apple's refund policy. We do not process refunds directly. To request a refund, contact Apple via <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
-
-            <h3>5.5 Token Balance Restoration</h3>
-            <p>If your token balance is lost because the Keychain identifier was lost (e.g., new Apple ID, iCloud Keychain disabled), we may be able to restore your balance using purchase transaction records. Contact us at contact@storybookadventures.io. Because we do not collect personal information, restoration depends entirely on our ability to match purchase records to your account. We cannot guarantee restoration in all cases.</p>
-
-            <h2>6. User Content</h2>
-            <h3>6.1 Drawings and Animations</h3>
-            <p>When you upload a drawing, you grant us a limited, non-exclusive licence to:</p>
-            <ul>
-              <li>Process the drawing through our AI moderation and animation pipeline</li>
-              <li>Store the drawing and resulting animation on our servers for delivery and reinstall recovery</li>
-              <li>Transmit the drawing to OpenAI (content moderation) and Replicate via Fly.io (animation processing) — both providers delete content after processing</li>
-            </ul>
-            <p>This licence terminates when you request deletion of your data in accordance with §14.</p>
-            <p>You retain all rights to your original drawings. We claim no ownership over user-created content.</p>
-            <p>Animations generated by the AI are derived works produced by our service and delivered to you for <strong>personal, non-commercial use only</strong>. Because animations are created by AI based on your drawing, we cannot guarantee any specific artistic outcome, style, or accuracy of representation. The quality and appearance of animations may vary.</p>
-
-            <h3>6.2 Custom Scene Prompts</h3>
-            <p>Users may enter custom text descriptions to guide animations. These prompts are stored on our servers and subject to the same retention and deletion policies as drawings and animations.</p>
-
-            <h3>6.3 Content Guidelines</h3>
-            <p><strong>Acceptable content:</strong></p>
-            <ul>
-              <li>Hand-drawn artwork on paper (pencil, crayon, marker, paint, etc.)</li>
-              <li>Creative scenes, characters, landscapes, objects, and stories</li>
-              <li>Any drawing style appropriate for the intended age group</li>
-            </ul>
-            <p><strong>Prohibited content — drawings and custom prompts must NOT contain:</strong></p>
-            <ul>
-              <li>Violence, weapons, or graphic imagery</li>
-              <li>Nudity or sexually suggestive content</li>
-              <li>Drug or alcohol references</li>
-              <li>Horror or disturbing imagery inappropriate for children</li>
-              <li>Personal information (names, addresses, phone numbers, school names)</li>
-              <li>Hate symbols, slurs, or discriminatory content</li>
-              <li>Real photographs, screenshots, or digitally generated images (these are not drawings and will be rejected)</li>
-              <li>Copyrighted characters, logos, or artwork belonging to others, uploaded without authorisation</li>
-            </ul>
-
-            <h3>6.4 Content Moderation</h3>
-            <p>All uploaded drawings are automatically screened by OpenAI's content moderation system before animation. Drawings that violate our content guidelines are rejected. When a drawing is rejected:</p>
-            <ul>
-              <li>The token is automatically refunded to your balance</li>
-              <li>For safety violations (violence, nudity, etc.): the image is immediately deleted from our servers</li>
-              <li>A digital fingerprint of the rejected image and an AI-generated description are stored for abuse monitoring — the image itself is not retained for safety violations</li>
-              <li>Repeat violations may result in service restrictions</li>
-            </ul>
-
-            <h3>6.5 Saving Animations</h3>
-            <p>Completed animations can be saved to the device's photo gallery. Once saved, those files exist independently of the App. We recommend saving important animations to the gallery as an additional backup, as server-side copies may be removed if you delete your account data.</p>
-
-            <h2>7. Prohibited Uses</h2>
-            <p>You agree not to:</p>
-            <ul>
-              <li>Attempt to circumvent the parental consent flow, age verification, or purchase gates</li>
-              <li>Use automated tools, bots, or scripts to interact with the App</li>
-              <li>Upload content that violates our content guidelines</li>
-              <li>Attempt to reverse-engineer, decompile, or extract source code from the App</li>
-              <li>Use the service to generate content for commercial purposes without our written permission</li>
-              <li>Exploit technical vulnerabilities or attempt to access other users' data</li>
-              <li>Resell, redistribute, or transfer tokens or account access</li>
-              <li>Use the App in any way that violates applicable laws or regulations</li>
-            </ul>
-
-            <h2>8. Voucher Codes</h2>
-            <p>The App may offer promotional voucher codes distributed through marketing partners or campaigns. Each voucher code specifies its own redemption terms, including any usage limits, expiry dates, and eligibility restrictions. General rules:</p>
-            <ul>
-              <li>Each voucher code can be redeemed <strong>once per device</strong></li>
-              <li>Some voucher codes may be part of an exclusive group — where specified, only one code from that group can be redeemed per account</li>
-              <li>Tokens received from vouchers are subject to the same terms as purchased tokens</li>
-              <li>Misuse of voucher codes (including automated or bulk redemption) may result in code deactivation</li>
-            </ul>
-            <p>Voucher redemptions are recorded with your anonymous profile ID and the campaign code for anti-abuse and attribution purposes. No personal information is collected.</p>
-
-            <h2>9. Intellectual Property</h2>
-            <h3>9.1 Our Content</h3>
-            <p>The App, including its design, storylines, scene descriptions, animations, icons, sounds, and code, is owned by us or our licensors and protected by copyright and intellectual property laws. You may not copy, modify, distribute, or create derivative works from our content without permission.</p>
-
-            <h3>9.2 Your Content</h3>
-            <p>You retain ownership of your original hand-drawn artwork. Animations generated from your drawings are delivered to you for personal, non-commercial use. You may save, share, and display your animations freely for non-commercial purposes.</p>
-
-            <h2>10. AI-Generated Content</h2>
-            <p>The App uses third-party AI services to generate animations from drawings. By using the App, you acknowledge that:</p>
-            <ul>
-              <li>AI-generated animations are produced algorithmically and may not perfectly represent the uploaded drawing</li>
-              <li>Animation quality, style, and content may vary between submissions</li>
-              <li>We do not warrant that any specific artistic result will be achieved</li>
-              <li>The AI moderation system may reject drawings that appear to violate content guidelines even if no violation was intended — in such cases, the token is automatically refunded</li>
-            </ul>
-
-            <h2>11. Service Availability</h2>
-            <h3>11.1 Maintenance and Downtime</h3>
-            <p>We may temporarily suspend the animation service for maintenance, updates, or technical issues. When in maintenance mode, the App will display a notice. No tokens are deducted during maintenance periods.</p>
-
-            <h3>11.2 No Uptime Guarantee</h3>
-            <p>We strive to keep the service available but do not guarantee uninterrupted access. The App's animation features depend on third-party AI services and internet connectivity.</p>
-
-            <h3>11.3 Changes to and Discontinuation of the Service</h3>
-            <p>We may update, modify, or discontinue features of the App. If we make material changes that affect purchased tokens, we will provide at least 30 days' notice within the App. In the event of permanent discontinuation of the App or its animation service, we will provide at least 30 days' advance notice within the App, and unconsumed purchased token balances will be eligible for a refund via Apple where Apple's refund policies permit. We will provide reasonable assistance to facilitate such refund requests.</p>
-
-            <h2>12. Limitation of Liability</h2>
-            <h3>12.1 Service Provided "As Is"</h3>
-            <p>The App is provided on an "as is" and "as available" basis. To the maximum extent permitted by law, we disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
-
-            <h3>12.2 Liability Cap</h3>
-            <p>To the maximum extent permitted by applicable law, our total liability for any claims arising from or related to the App is limited to the amount you have spent on token purchases within the 12 months preceding the claim.</p>
-
-            <h3>12.3 Exclusions</h3>
-            <p>To the maximum extent permitted by applicable law, we are not liable for:</p>
-            <ul>
-              <li>Loss of animations, drawings, or tokens due to device loss, factory reset, new Apple ID, disabled iCloud Keychain, or other circumstances beyond our control</li>
-              <li>Temporary unavailability of the animation service</li>
-              <li>AI-generated content that does not meet expectations or accurately represent a drawing</li>
-              <li>Actions taken by Apple regarding purchases, refunds, or account restrictions</li>
-              <li>Loss of account access due to changes in iCloud Keychain status or Apple ID</li>
-            </ul>
-
-            <h3>12.4 EU Consumer Rights</h3>
-            <p>Nothing in these Terms limits or excludes liability that cannot be limited or excluded under applicable EU consumer protection law, including liability for intentional misconduct (Vorsatz) or gross negligence (grobe Fahrl&auml;ssigkeit) under German law.</p>
-
-            <h2>13. Data and Privacy</h2>
-            <p>Our handling of data is described in our <strong><a href="privacy.html">Privacy Policy</a></strong>, available within the App and at <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a>. Key points:</p>
-            <ul>
-              <li>We collect no personally identifiable information</li>
-              <li>Drawings, animations, prompts, and scene progress are stored on EU servers until you request deletion</li>
-              <li>All uploads pass through AI content moderation</li>
-              <li>You can view or delete your data via Settings → My Data</li>
-              <li>Some records (anonymous UUID, consent records, purchase records, voucher records) are retained after deletion for legal and operational reasons — see the Privacy Policy for full details</li>
-              <li>If you subscribe to our newsletter on the website, your email address is collected and processed as described in the Privacy Policy — this is separate from and independent of your App account</li>
-            </ul>
-
-            <h2>14. Data Deletion</h2>
-            <h3>14.1 In-App Deletion</h3>
-            <p>You can delete server-side content associated with your anonymous profile at any time:</p>
-            <ul>
-              <li><strong>Underage accounts:</strong> Settings → Parental Controls → Delete All Data</li>
-              <li><strong>Adult accounts:</strong> Settings → My Data → Delete All Data</li>
-            </ul>
-            <p>This permanently removes your drawings, animations, custom prompts, and scene progress from our servers. Some records are retained — your anonymous profile stub (UUID and token balance) is kept for account recovery, and voucher redemption, purchase, and consent records are retained for legal and anti-abuse purposes. See the Privacy Policy §8 for the full breakdown.</p>
-
-            <h3>14.2 Contact Deletion</h3>
-            <p>You may also request data deletion by emailing contact@storybookadventures.io with your support reference code (found in Settings → My Data → Data Request). We will process the request within 30 days.</p>
-
-            <h2>15. Termination</h2>
-            <h3>15.1 By You</h3>
-            <p>You may stop using the App at any time by deleting it from your device. To also remove server-side data, use the Delete All Data feature before uninstalling, or contact us with your support reference code.</p>
-
-            <h3>15.2 By Us</h3>
-            <p>We may restrict or terminate access to the App if:</p>
-            <ul>
-              <li>Repeated content guideline violations are detected</li>
-              <li>Voucher code abuse or fraud is identified</li>
-              <li>Technical abuse or automated access is detected</li>
-              <li>Required by law or legal process</li>
-            </ul>
-            <p>Where access is restricted or terminated due to a violation of these Terms, refund eligibility for any unconsumed purchased tokens will be assessed individually based on the nature and severity of the violation. We will not unreasonably withhold refunds for tokens that were purchased in good faith and remain unconsumed.</p>
-
-            <h2>16. Changes to These Terms</h2>
-            <p>We may update these Terms from time to time. We will notify you of changes through a notice in the App. For material changes — particularly those affecting how children's data is handled — we will require affirmative re-acceptance before continued use. For minor changes, your continued use of the App after the effective date constitutes acceptance. If you do not agree with any changes, you may stop using the App and request deletion of your data.</p>
-
-            <h2>17. Governing Law and Dispute Resolution</h2>
-            <p>These Terms are governed by the laws of the Federal Republic of Germany. For consumers resident in the EU, mandatory consumer protection provisions of your country of residence apply where they provide greater protection.</p>
-            <p>The European Commission provides an online dispute resolution platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. We are not obligated to participate in dispute resolution proceedings before a consumer arbitration board, but may choose to do so on a case-by-case basis.</p>
-
-            <h2>18. Right of Withdrawal (Widerrufsbelehrung)</h2>
-            <h3>Right of Withdrawal for EU Consumers</h3>
-            <p>You have the right to withdraw from a purchase within 14 days without giving any reason. The withdrawal period begins on the date of purchase.</p>
-            <p>To exercise your right of withdrawal, you must notify us of your decision by sending an unambiguous declaration to:</p>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Germany<br>Email: contact@storybookadventures.io</p>
-            <p>We will confirm receipt of your withdrawal declaration promptly. Because all payments are processed exclusively by Apple, the actual refund is executed through Apple's payment system — to ensure the fastest possible processing, please also submit your refund request directly to Apple at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> at the same time. We are unable to process payments or issue refunds directly and will refer all payment-related matters to Apple.</p>
-            <p>You may use the following model withdrawal form, but it is not obligatory:</p>
-            <blockquote>
-              <p><em>To Constantin Kl&ouml;cker, contact@storybookadventures.io:</em><br>
-              <em>I hereby give notice that I withdraw from my contract for the purchase of the following digital content: [token pack name, date of purchase].</em><br>
-              <em>Name: ___</em><br>
-              <em>Date: ___</em></p>
-            </blockquote>
-            <p>To help us locate your account, please also include your support reference code, available under Settings → My Data → Data Request. Because we do not collect names or email addresses, we cannot process your withdrawal without this code.</p>
-
-            <h3>Expiry of the Right of Withdrawal</h3>
-            <p>In accordance with § 356 Abs. 5 BGB and EU Directive 2011/83/EU Article 16(m), the right of withdrawal expires before the 14-day period ends if:</p>
-            <ul>
-              <li>You expressly consented to the immediate provision of digital content at the time of purchase, and</li>
-              <li>You acknowledged that your right of withdrawal would thereby be lost</li>
-            </ul>
-            <p>By completing a token purchase through Apple In-App Purchase and proceeding with the transaction, you provide this express consent. Tokens are made available immediately upon purchase.</p>
-            <p><strong>For consumed tokens</strong> (used to generate animations): the right of withdrawal is extinguished at the point of consumption.</p>
-            <p><strong>For unconsumed tokens</strong> within the 14-day period: you may request a refund by contacting Apple directly at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. All refund requests are processed by Apple. We do not process refunds directly.</p>
-
-            <h2>19. Impressum (§ 5 DDG)</h2>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Germany</p>
-            <p>Email: contact@storybookadventures.io<br>Phone: +49 (0175) 9910551</p>
-            <p>Responsible for content in accordance with § 18 Abs. 2 MStV:<br>Constantin Kl&ouml;cker, address as above.</p>
-
-            <h2>20. Severability</h2>
-            <p>If any provision of these Terms is found to be unenforceable, the remaining provisions continue in full force and effect. The unenforceable provision will be replaced by an enforceable provision that comes closest to the intent of the original.</p>
-
-            <h2>21. Contact</h2>
-            <p>For questions about these Terms, contact us:</p>
-            <p><strong>Constantin Kl&ouml;cker</strong><br>Friedrichstr. 155<br>10117 Berlin<br>Germany</p>
-            <p>Email: contact@storybookadventures.io</p>
-            <p><em>These Terms of Service are available in English and German within the App and at https://www.storybookadventures.io.</em></p>
-          </div>
-
-          <!-- ===== DEUTSCH ===== -->
-
-        </div>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.webp" alt="Storybook Adventures" class="brand-logo" width="867" height="438" fetchpriority="high" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#how" class="nav-link">How it works</a>
+      <a href="index.html#safe" class="nav-link">For parents</a>
+      <a href="index.html#gallery" class="nav-link">Films</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="blog/index.html" class="nav-link">Blog</a>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <a href="terms.html" class="active" aria-current="page">EN</a>
+        <a href="de/terms.html">DE</a>
       </div>
+      <a href="https://apps.apple.com/app/id6761114804" class="btn btn-small">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <span class="scribble-star s-left">✦</span>
+    <span class="scribble-star s-right">✦</span>
+    <h1>
+      <span>Terms of </span>
+      <span class="accent">Service.</span>
+    </h1>
+    <p class="lede">Rules and conditions for using our app and website.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Version 1.0</span>
+      <span class="meta-pill">Last updated · Apr 13, 2026</span>
+      <span class="meta-pill">Effective · Apr 13, 2026</span>
     </div>
   </div>
+</section>
 
-  <footer class="legal-footer">
-      <nav class="footer-links">
-        <a href="about.html" class="footer-link">About</a>
-        <span class="footer-sep">·</span>
-        <a href="blog/index.html" class="footer-link">Blog</a>
-        <span class="footer-sep">·</span>
-        <a href="privacy.html" class="footer-link">Privacy Policy</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="terms.html" class="footer-link">Terms of Service</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="impressum.html" class="footer-link">Impressum</a>
-        <span class="footer-sep">&middot;</span>
-        <a href="support.html" class="footer-link">Support</a>
-      </nav>
-    <p class="footer-copy">&copy; 2026 Storybook Adventures. <span>All rights reserved.</span></p>
-  </footer>
+<div class="doc-layout">
+  <aside class="toc">
+  <h4>Contents</h4>
+  <ol>
+    <li><a href="#s1">Introduction</a></li>
+    <li><a href="#s2">What the App Does</a></li>
+    <li><a href="#s3">Age Requirements and Parental Responsibility</a></li>
+    <li><a href="#s4">Anonymous Accounts</a></li>
+    <li><a href="#s5">Tokens and Purchases</a></li>
+    <li><a href="#s6">User Content</a></li>
+    <li><a href="#s7">Prohibited Uses</a></li>
+    <li><a href="#s8">Voucher Codes</a></li>
+    <li><a href="#s9">Intellectual Property</a></li>
+    <li><a href="#s10">AI-Generated Content</a></li>
+    <li><a href="#s11">Service Availability</a></li>
+    <li><a href="#s12">Limitation of Liability</a></li>
+    <li><a href="#s13">Data and Privacy</a></li>
+    <li><a href="#s14">Data Deletion</a></li>
+    <li><a href="#s15">Termination</a></li>
+    <li><a href="#s16">Changes to These Terms</a></li>
+    <li><a href="#s17">Governing Law and Dispute Resolution</a></li>
+    <li><a href="#s18">Right of Withdrawal (Widerrufsbelehrung)</a></li>
+    <li><a href="#s19">Impressum (§ 5 DDG)</a></li>
+    <li><a href="#s20">Severability</a></li>
+    <li><a href="#s21">Contact</a></li>
+  </ol>
+</aside>
+  <article class="sheet">
 
-    <script>
-    (function() {
-      // Cross-page language switcher.
-      const path = window.location.pathname;
-      const isOnGerman = path.startsWith('/de/') || path === '/de';
+  <h2 id="s1">1. Introduction</h2>
+  <p>These Terms of Service ("Terms") govern your use of Storybook Adventures ("the App"), operated by:</p>
+  <div class="addr-card">
+    <p><strong>Constantin Klöcker</strong></p>
+    <p>Friedrichstr. 155</p>
+    <p>10117 Berlin, Germany</p>
+    <p>Email: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+    <p>Website: <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">storybookadventures.io</a></p>
+  </div>
+  <p>By downloading, installing, or using the App, you agree to these Terms. If you are a parent or guardian consenting on behalf of a child, you agree to these Terms on their behalf.</p>
 
-      const enHref = isOnGerman
-        ? (path.replace(/^\/de\/?/, '/') || '/')
-        : path;
-      const deHref = isOnGerman
-        ? path
-        : '/de' + (path.startsWith('/') ? path : '/' + path);
+  <h2 id="s2">2. What the App Does</h2>
+  <p>Storybook Adventures is a creative app that transforms children's hand-drawn pictures into AI-powered animations:</p>
+  <ol>
+    <li><strong>Choose a storyline:</strong> Select from guided story themes, each with three scenes and drawing prompts</li>
+    <li><strong>Draw on paper:</strong> Follow the scene description and draw on real paper</li>
+    <li><strong>Photograph and upload:</strong> Take a photo of the drawing through the App</li>
+    <li><strong>Watch the animation:</strong> AI processes the drawing and returns a short animated video</li>
+  </ol>
+  <p>Each animation uses one token, purchased through Apple In-App Purchase or redeemed via a promotional voucher code. The App also offers a Custom Story mode where users create their own scenes with custom text prompts.</p>
 
-      const enLink = document.querySelector('.lang-btn[data-lang="en"]');
-      const deLink = document.querySelector('.lang-btn[data-lang="de"]');
-      if (enLink) enLink.href = enHref;
-      if (deLink) deLink.href = deHref;
+  <h2 id="s3">3. Age Requirements and Parental Responsibility</h2>
+  <p>Storybook Adventures is designed for children ages 6–12, with support for younger children (4–5) with a parent, and older users (13+).</p>
+  <p>On first use, the App asks the user's age. Users under the applicable threshold for their region (e.g., under 13 in the United States, under 16 in Germany) must have a parent or guardian complete the parental consent process before using the App.</p>
+  <p><strong>Parents and guardians are responsible for:</strong></p>
+  <ul>
+    <li>Supervising their child's use of the App</li>
+    <li>Ensuring their child does not include personal information (names, addresses, phone numbers) in drawings</li>
+    <li>Ensuring their child does not upload drawings that reproduce copyrighted characters or artwork belonging to others</li>
+    <li>Managing token purchases and parental control settings</li>
+    <li>Reviewing and understanding this agreement and our Privacy Policy</li>
+  </ul>
 
-      // First-visit banner.
-      const BANNER_DISMISSED = 'sba-lang-banner-dismissed';
-      const browserLang = (navigator.language || '').toLowerCase();
-      const wantsGerman = browserLang.startsWith('de');
-      const wantsEnglish = browserLang.startsWith('en');
+  <h2 id="s4">4. Anonymous Accounts</h2>
+  <h3>4.1 How Accounts Work</h3>
+  <p>The App does not require registration. On first use, a random anonymous identifier (UUID) is generated and stored in the device's secure Keychain. This links the device to a server-side profile storing your token balance, drawings, animations, custom prompts, and scene progress.</p>
+  <p>This identifier is not connected to any name, email address, Apple ID, or personal information. For data requests, a support reference code derived from your identifier is available under Settings → My Data → Data Request.</p>
 
-      let offerLang = null;
-      if (!localStorage.getItem(BANNER_DISMISSED)) {
-        if (!isOnGerman && wantsGerman) offerLang = 'de';
-        else if (isOnGerman && wantsEnglish) offerLang = 'en';
+  <h3>4.2 Account Persistence and Recovery</h3>
+  <p>Your account is tied to the anonymous identifier stored in the device Keychain:</p>
+  <ul>
+    <li><strong>App reinstall on the same device:</strong> Account, token balance, drawings, animations, and scene progress are restored automatically from our servers.</li>
+    <li><strong>Factory reset with iCloud Keychain enabled:</strong> If iCloud Keychain is active and you restore from an iCloud backup or sign into the same iCloud account on a new device, the identifier is preserved and your account recovers automatically.</li>
+    <li><strong>Factory reset without iCloud Keychain, or new Apple ID:</strong> The Keychain identifier is lost and cannot be recovered by us. Your server-side content (drawings, animations, scene progress) can no longer be accessed, as we have no way to identify your anonymous profile without the identifier. Token balance restoration may be possible via purchase records — see §5.5.</li>
+    <li><strong>Multiple devices:</strong> Each device has its own independent account. Tokens and progress do not sync across devices unless the same iCloud Keychain identifier is present.</li>
+  </ul>
+  <p>We are not liable for loss of account access resulting from factory resets, iCloud Keychain changes, new Apple IDs, or disabled iCloud Keychain.</p>
+
+  <h3>4.3 Automatic Token Recovery</h3>
+  <p>Token balance recovery is fully automatic and requires no user action. After reinstalling the App on the same device (or restoring via iCloud Keychain), your account is recovered using the anonymous identifier described in §4.2, and your token balance is restored from our servers. Any in-flight purchase that was charged by Apple but not yet credited to your balance is also recovered automatically the next time the App launches via Apple's StoreKit transaction listener. If your balance still appears incorrect after recovery, see §5.5.</p>
+
+  <h2 id="s5">5. Tokens and Purchases</h2>
+  <h3>5.1 Token System</h3>
+  <ul>
+    <li>Each animation uses <strong>one token</strong></li>
+    <li>Tokens are <strong>consumable</strong> — once used, they cannot be reused</li>
+    <li>Tokens are <strong>non-transferable</strong> — they cannot be moved between devices or accounts</li>
+    <li>Token balance is stored on our servers and synced to the device</li>
+    <li>If the animation pipeline fails (technical error or content rejection), the token is <strong>automatically refunded to your balance</strong></li>
+  </ul>
+
+  <h3>5.2 Purchasing Tokens</h3>
+  <p>Tokens are purchased exclusively through Apple In-App Purchase. All purchases are processed by Apple and subject to Apple's terms and pricing. We do not collect or store any payment information.</p>
+  <p>Available token packs and their prices are displayed in the App's Token Shop in your local currency as determined by Apple.</p>
+
+  <h3>5.3 Parental Purchase Gate</h3>
+  <p>For accounts identified as under the applicable age threshold, all token purchases require passing a parental gate (PIN entry or math challenge) before Apple's purchase flow is initiated. Parents can additionally lock the Token Shop entirely via Parental Controls.</p>
+  <p>Where a token is obtained via Apple In-App Purchase, the account holder's authentication (Face ID, Touch ID, or Apple ID password) and the resulting receipt notification to the account holder constitute payment-system verification with account-holder notification — an FTC-recognised method of verifiable parental consent under COPPA. Where a first token is obtained via a promotional voucher code without a prior purchase, parental consent is established through the in-app consent flow completed during onboarding, which includes an adult verification step, a parental declaration, and six explicit consent acknowledgements.</p>
+
+  <h3>5.4 Refunds</h3>
+  <p>Tokens are consumable digital goods. All refund requests are handled by Apple in accordance with Apple's refund policy. We do not process refunds directly. To request a refund, contact Apple via <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+
+  <h3>5.5 Token Balance Restoration</h3>
+  <p>If your token balance is lost because the Keychain identifier was lost (e.g., new Apple ID, iCloud Keychain disabled), we may be able to restore your balance using purchase transaction records. Contact us at contact@storybookadventures.io. Because we do not collect personal information, restoration depends entirely on our ability to match purchase records to your account. We cannot guarantee restoration in all cases.</p>
+
+  <h2 id="s6">6. User Content</h2>
+  <h3>6.1 Drawings and Animations</h3>
+  <p>When you upload a drawing, you grant us a limited, non-exclusive licence to:</p>
+  <ul>
+    <li>Process the drawing through our AI moderation and animation pipeline</li>
+    <li>Store the drawing and resulting animation on our servers for delivery and reinstall recovery</li>
+    <li>Transmit the drawing to OpenAI (content moderation) and Replicate via Fly.io (animation processing) — both providers delete content after processing</li>
+  </ul>
+  <p>This licence terminates when you request deletion of your data in accordance with §14.</p>
+  <p>You retain all rights to your original drawings. We claim no ownership over user-created content.</p>
+  <p>Animations generated by the AI are derived works produced by our service and delivered to you for <strong>personal, non-commercial use only</strong>. Because animations are created by AI based on your drawing, we cannot guarantee any specific artistic outcome, style, or accuracy of representation. The quality and appearance of animations may vary.</p>
+
+  <h3>6.2 Custom Scene Prompts</h3>
+  <p>Users may enter custom text descriptions to guide animations. These prompts are stored on our servers and subject to the same retention and deletion policies as drawings and animations.</p>
+
+  <h3>6.3 Content Guidelines</h3>
+  <p><strong>Acceptable content:</strong></p>
+  <ul>
+    <li>Hand-drawn artwork on paper (pencil, crayon, marker, paint, etc.)</li>
+    <li>Creative scenes, characters, landscapes, objects, and stories</li>
+    <li>Any drawing style appropriate for the intended age group</li>
+  </ul>
+  <p><strong>Prohibited content — drawings and custom prompts must NOT contain:</strong></p>
+  <ul>
+    <li>Violence, weapons, or graphic imagery</li>
+    <li>Nudity or sexually suggestive content</li>
+    <li>Drug or alcohol references</li>
+    <li>Horror or disturbing imagery inappropriate for children</li>
+    <li>Personal information (names, addresses, phone numbers, school names)</li>
+    <li>Hate symbols, slurs, or discriminatory content</li>
+    <li>Real photographs, screenshots, or digitally generated images (these are not drawings and will be rejected)</li>
+    <li>Copyrighted characters, logos, or artwork belonging to others, uploaded without authorisation</li>
+  </ul>
+
+  <h3>6.4 Content Moderation</h3>
+  <p>All uploaded drawings are automatically screened by OpenAI's content moderation system before animation. Drawings that violate our content guidelines are rejected. When a drawing is rejected:</p>
+  <ul>
+    <li>The token is automatically refunded to your balance</li>
+    <li>For safety violations (violence, nudity, etc.): the image is immediately deleted from our servers</li>
+    <li>A digital fingerprint of the rejected image and an AI-generated description are stored for abuse monitoring — the image itself is not retained for safety violations</li>
+    <li>Repeat violations may result in service restrictions</li>
+  </ul>
+
+  <h3>6.5 Saving Animations</h3>
+  <p>Completed animations can be saved to the device's photo gallery. Once saved, those files exist independently of the App. We recommend saving important animations to the gallery as an additional backup, as server-side copies may be removed if you delete your account data.</p>
+
+  <h2 id="s7">7. Prohibited Uses</h2>
+  <p>You agree not to:</p>
+  <ul>
+    <li>Attempt to circumvent the parental consent flow, age verification, or purchase gates</li>
+    <li>Use automated tools, bots, or scripts to interact with the App</li>
+    <li>Upload content that violates our content guidelines</li>
+    <li>Attempt to reverse-engineer, decompile, or extract source code from the App</li>
+    <li>Use the service to generate content for commercial purposes without our written permission</li>
+    <li>Exploit technical vulnerabilities or attempt to access other users' data</li>
+    <li>Resell, redistribute, or transfer tokens or account access</li>
+    <li>Use the App in any way that violates applicable laws or regulations</li>
+  </ul>
+
+  <h2 id="s8">8. Voucher Codes</h2>
+  <p>The App may offer promotional voucher codes distributed through marketing partners or campaigns. Each voucher code specifies its own redemption terms, including any usage limits, expiry dates, and eligibility restrictions. General rules:</p>
+  <ul>
+    <li>Each voucher code can be redeemed <strong>once per device</strong></li>
+    <li>Some voucher codes may be part of an exclusive group — where specified, only one code from that group can be redeemed per account</li>
+    <li>Tokens received from vouchers are subject to the same terms as purchased tokens</li>
+    <li>Misuse of voucher codes (including automated or bulk redemption) may result in code deactivation</li>
+  </ul>
+  <p>Voucher redemptions are recorded with your anonymous profile ID and the campaign code for anti-abuse and attribution purposes. No personal information is collected.</p>
+
+  <h2 id="s9">9. Intellectual Property</h2>
+  <h3>9.1 Our Content</h3>
+  <p>The App, including its design, storylines, scene descriptions, animations, icons, sounds, and code, is owned by us or our licensors and protected by copyright and intellectual property laws. You may not copy, modify, distribute, or create derivative works from our content without permission.</p>
+
+  <h3>9.2 Your Content</h3>
+  <p>You retain ownership of your original hand-drawn artwork. Animations generated from your drawings are delivered to you for personal, non-commercial use. You may save, share, and display your animations freely for non-commercial purposes.</p>
+
+  <h2 id="s10">10. AI-Generated Content</h2>
+  <p>The App uses third-party AI services to generate animations from drawings. By using the App, you acknowledge that:</p>
+  <ul>
+    <li>AI-generated animations are produced algorithmically and may not perfectly represent the uploaded drawing</li>
+    <li>Animation quality, style, and content may vary between submissions</li>
+    <li>We do not warrant that any specific artistic result will be achieved</li>
+    <li>The AI moderation system may reject drawings that appear to violate content guidelines even if no violation was intended — in such cases, the token is automatically refunded</li>
+  </ul>
+
+  <h2 id="s11">11. Service Availability</h2>
+  <h3>11.1 Maintenance and Downtime</h3>
+  <p>We may temporarily suspend the animation service for maintenance, updates, or technical issues. When in maintenance mode, the App will display a notice. No tokens are deducted during maintenance periods.</p>
+
+  <h3>11.2 No Uptime Guarantee</h3>
+  <p>We strive to keep the service available but do not guarantee uninterrupted access. The App's animation features depend on third-party AI services and internet connectivity.</p>
+
+  <h3>11.3 Changes to and Discontinuation of the Service</h3>
+  <p>We may update, modify, or discontinue features of the App. If we make material changes that affect purchased tokens, we will provide at least 30 days' notice within the App. In the event of permanent discontinuation of the App or its animation service, we will provide at least 30 days' advance notice within the App, and unconsumed purchased token balances will be eligible for a refund via Apple where Apple's refund policies permit. We will provide reasonable assistance to facilitate such refund requests.</p>
+
+  <h2 id="s12">12. Limitation of Liability</h2>
+  <h3>12.1 Service Provided "As Is"</h3>
+  <p>The App is provided on an "as is" and "as available" basis. To the maximum extent permitted by law, we disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+
+  <h3>12.2 Liability Cap</h3>
+  <p>To the maximum extent permitted by applicable law, our total liability for any claims arising from or related to the App is limited to the amount you have spent on token purchases within the 12 months preceding the claim.</p>
+
+  <h3>12.3 Exclusions</h3>
+  <p>To the maximum extent permitted by applicable law, we are not liable for:</p>
+  <ul>
+    <li>Loss of animations, drawings, or tokens due to device loss, factory reset, new Apple ID, disabled iCloud Keychain, or other circumstances beyond our control</li>
+    <li>Temporary unavailability of the animation service</li>
+    <li>AI-generated content that does not meet expectations or accurately represent a drawing</li>
+    <li>Actions taken by Apple regarding purchases, refunds, or account restrictions</li>
+    <li>Loss of account access due to changes in iCloud Keychain status or Apple ID</li>
+  </ul>
+
+  <h3>12.4 EU Consumer Rights</h3>
+  <p>Nothing in these Terms limits or excludes liability that cannot be limited or excluded under applicable EU consumer protection law, including liability for intentional misconduct (Vorsatz) or gross negligence (grobe Fahrlässigkeit) under German law.</p>
+
+  <h2 id="s13">13. Data and Privacy</h2>
+  <p>Our handling of data is described in our <strong><a href="privacy.html">Privacy Policy</a></strong>, available within the App and at <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a>. Key points:</p>
+  <ul>
+    <li>We collect no personally identifiable information</li>
+    <li>Drawings, animations, prompts, and scene progress are stored on EU servers until you request deletion</li>
+    <li>All uploads pass through AI content moderation</li>
+    <li>You can view or delete your data via Settings → My Data</li>
+    <li>Some records (anonymous UUID, consent records, purchase records, voucher records) are retained after deletion for legal and operational reasons — see the Privacy Policy for full details</li>
+    <li>If you subscribe to our newsletter on the website, your email address is collected and processed as described in the Privacy Policy — this is separate from and independent of your App account</li>
+  </ul>
+
+  <h2 id="s14">14. Data Deletion</h2>
+  <h3>14.1 In-App Deletion</h3>
+  <p>You can delete server-side content associated with your anonymous profile at any time:</p>
+  <ul>
+    <li><strong>Underage accounts:</strong> Settings → Parental Controls → Delete All Data</li>
+    <li><strong>Adult accounts:</strong> Settings → My Data → Delete All Data</li>
+  </ul>
+  <p>This permanently removes your drawings, animations, custom prompts, and scene progress from our servers. Some records are retained — your anonymous profile stub (UUID and token balance) is kept for account recovery, and voucher redemption, purchase, and consent records are retained for legal and anti-abuse purposes. See the Privacy Policy §8 for the full breakdown.</p>
+
+  <h3>14.2 Contact Deletion</h3>
+  <p>You may also request data deletion by emailing contact@storybookadventures.io with your support reference code (found in Settings → My Data → Data Request). We will process the request within 30 days.</p>
+
+  <h2 id="s15">15. Termination</h2>
+  <h3>15.1 By You</h3>
+  <p>You may stop using the App at any time by deleting it from your device. To also remove server-side data, use the Delete All Data feature before uninstalling, or contact us with your support reference code.</p>
+
+  <h3>15.2 By Us</h3>
+  <p>We may restrict or terminate access to the App if:</p>
+  <ul>
+    <li>Repeated content guideline violations are detected</li>
+    <li>Voucher code abuse or fraud is identified</li>
+    <li>Technical abuse or automated access is detected</li>
+    <li>Required by law or legal process</li>
+  </ul>
+  <p>Where access is restricted or terminated due to a violation of these Terms, refund eligibility for any unconsumed purchased tokens will be assessed individually based on the nature and severity of the violation. We will not unreasonably withhold refunds for tokens that were purchased in good faith and remain unconsumed.</p>
+
+  <h2 id="s16">16. Changes to These Terms</h2>
+  <p>We may update these Terms from time to time. We will notify you of changes through a notice in the App. For material changes — particularly those affecting how children's data is handled — we will require affirmative re-acceptance before continued use. For minor changes, your continued use of the App after the effective date constitutes acceptance. If you do not agree with any changes, you may stop using the App and request deletion of your data.</p>
+
+  <h2 id="s17">17. Governing Law and Dispute Resolution</h2>
+  <p>These Terms are governed by the laws of the Federal Republic of Germany. For consumers resident in the EU, mandatory consumer protection provisions of your country of residence apply where they provide greater protection.</p>
+  <p>The European Commission provides an online dispute resolution platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. We are not obligated to participate in dispute resolution proceedings before a consumer arbitration board, but may choose to do so on a case-by-case basis.</p>
+
+  <h2 id="s18">18. Right of Withdrawal (Widerrufsbelehrung)</h2>
+  <h3>Right of Withdrawal for EU Consumers</h3>
+  <p>You have the right to withdraw from a purchase within 14 days without giving any reason. The withdrawal period begins on the date of purchase.</p>
+  <p>To exercise your right of withdrawal, you must notify us of your decision by sending an unambiguous declaration to:</p>
+  <div class="addr-card">
+    <p><strong>Constantin Klöcker</strong></p>
+    <p>Friedrichstr. 155</p>
+    <p>10117 Berlin, Germany</p>
+    <p>Email: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+  </div>
+  <p>We will confirm receipt of your withdrawal declaration promptly. Because all payments are processed exclusively by Apple, the actual refund is executed through Apple's payment system — to ensure the fastest possible processing, please also submit your refund request directly to Apple at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> at the same time. We are unable to process payments or issue refunds directly and will refer all payment-related matters to Apple.</p>
+  <p>You may use the following model withdrawal form, but it is not obligatory:</p>
+  <blockquote>
+    <p><em>To Constantin Klöcker, contact@storybookadventures.io:</em><br>
+    <em>I hereby give notice that I withdraw from my contract for the purchase of the following digital content: [token pack name, date of purchase].</em><br>
+    <em>Name: ___</em><br>
+    <em>Date: ___</em></p>
+  </blockquote>
+  <p>To help us locate your account, please also include your support reference code, available under Settings → My Data → Data Request. Because we do not collect names or email addresses, we cannot process your withdrawal without this code.</p>
+
+  <h3>Expiry of the Right of Withdrawal</h3>
+  <p>In accordance with § 356 Abs. 5 BGB and EU Directive 2011/83/EU Article 16(m), the right of withdrawal expires before the 14-day period ends if:</p>
+  <ul>
+    <li>You expressly consented to the immediate provision of digital content at the time of purchase, and</li>
+    <li>You acknowledged that your right of withdrawal would thereby be lost</li>
+  </ul>
+  <p>By completing a token purchase through Apple In-App Purchase and proceeding with the transaction, you provide this express consent. Tokens are made available immediately upon purchase.</p>
+  <p><strong>For consumed tokens</strong> (used to generate animations): the right of withdrawal is extinguished at the point of consumption.</p>
+  <p><strong>For unconsumed tokens</strong> within the 14-day period: you may request a refund by contacting Apple directly at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. All refund requests are processed by Apple. We do not process refunds directly.</p>
+
+  <h2 id="s19">19. Impressum (§ 5 DDG)</h2>
+  <div class="addr-card">
+    <p><strong>Constantin Klöcker</strong></p>
+    <p>Friedrichstr. 155</p>
+    <p>10117 Berlin, Germany</p>
+    <p>Email: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+    <p>Phone: +49 (0175) 9910551</p>
+  </div>
+  <p>Responsible for content in accordance with § 18 Abs. 2 MStV:<br>Constantin Klöcker, address as above.</p>
+
+  <h2 id="s20">20. Severability</h2>
+  <p>If any provision of these Terms is found to be unenforceable, the remaining provisions continue in full force and effect. The unenforceable provision will be replaced by an enforceable provision that comes closest to the intent of the original.</p>
+
+  <h2 id="s21">21. Contact</h2>
+  <p>For questions about these Terms, contact us:</p>
+  <div class="addr-card">
+    <p><strong>Constantin Klöcker</strong></p>
+    <p>Friedrichstr. 155</p>
+    <p>10117 Berlin, Germany</p>
+    <p>Email: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+  </div>
+  <p><em>These Terms of Service are available in English and German within the App and at <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a>.</em></p>
+
+  <div class="contact-box">
+    <div class="cb-text">
+      <h3>Get in touch</h3>
+      <p>Questions, feedback, press, or just want to say hi?</p>
+    </div>
+    <a href="mailto:contact@storybookadventures.io" class="btn">contact@storybookadventures.io</a>
+  </div>
+</article>
+</div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-name">Storybook Adventures</div>
+    </div>
+    <div class="foot-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html" class="active">Terms of Service</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="support.html">Support</a>
+    </div>
+    <div class="foot-copy"><span>© 2026 Storybook Adventures.</span><span>All rights reserved.</span></div>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+  const toc = document.querySelector('aside.toc');
+  if (!toc) return;
+  const headings = document.querySelectorAll('article.sheet h2[id]');
+  const links = toc.querySelectorAll('a');
+  if (!headings.length || !links.length) return;
+
+  const linkById = new Map();
+  links.forEach(a => {
+    const id = a.getAttribute('href').replace(/^#/, '');
+    linkById.set(id, a);
+  });
+
+  let activeId = null;
+  function setActive(id) {
+    if (id === activeId) return;
+    activeId = id;
+    links.forEach(a => a.classList.remove('active'));
+    const a = linkById.get(id);
+    if (a) {
+      a.classList.add('active');
+      // Keep active item visible inside the scrollable TOC
+      const r = a.getBoundingClientRect();
+      const tocR = toc.getBoundingClientRect();
+      if (r.top < tocR.top || r.bottom > tocR.bottom) {
+        a.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       }
+    }
+  }
 
-      if (offerLang) {
-        const banner = document.createElement('div');
-        banner.className = 'lang-banner';
-        banner.innerHTML = offerLang === 'de'
-          ? '<span>Diese Seite gibt es auch auf Deutsch.</span><a href="' + deHref + '" class="lang-banner__btn">Wechseln</a><button class="lang-banner__close" aria-label="Close">&times;</button>'
-          : '<span>This page is also available in English.</span><a href="' + enHref + '" class="lang-banner__btn">Switch</a><button class="lang-banner__close" aria-label="Close">&times;</button>';
-        document.body.appendChild(banner);
-        banner.querySelector('.lang-banner__close').addEventListener('click', function() {
-          localStorage.setItem(BANNER_DISMISSED, '1');
-          banner.remove();
-        });
-      }
-    })();
-  </script>
+  const observer = new IntersectionObserver(entries => {
+    // Pick the heading nearest the top of the active band
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length) {
+      // Sort by distance from top of viewport
+      visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      setActive(visible[0].target.id);
+    }
+  }, {
+    // Active band: ~from top 15% down to 65% of viewport
+    rootMargin: '-15% 0px -65% 0px',
+    threshold: 0,
+  });
+
+  headings.forEach(h => observer.observe(h));
+
+  // Default: first heading active
+  if (headings.length) setActive(headings[0].id);
+})();
+</script>
+
+<script src="assets/nav-more.js" defer></script>
 </body>
 </html>
