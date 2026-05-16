@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /confirm.html
+Disallow: /unsubscribe.html
+Disallow: /app/
+
+Sitemap: https://www.storybookadventures.io/sitemap.xml

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Newsletter-Bestätigung — Storybook Adventures</title>
+  <meta name="description" content="Bestätigungsseite für das Newsletter-Abonnement.">
+  <meta name="theme-color" content="#1a2744">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/webp" href="../assets/logo-emblem.webp">
+  <link rel="apple-touch-icon" href="../assets/logo-emblem.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/subpage.css">
+</head>
+<body>
+
+<div class="page-bg"></div>
+<div class="particles">
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="../assets/logo.webp" alt="Storybook Adventures" class="brand-logo" width="867" height="438" fetchpriority="high" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#how" class="nav-link">So funktioniert's</a>
+      <a href="index.html#safe" class="nav-link">Für Eltern</a>
+      <a href="index.html#gallery" class="nav-link">Filme</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+      <a href="https://apps.apple.com/app/id6761114804" class="btn btn-small">App holen</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <span class="scribble-star s-left">✦</span>
+    <span class="scribble-star s-right">✦</span>
+    <h1 id="status-title">Bestätige…</h1>
+    <p class="lede" id="status-body">Einen Moment bitte.</p>
+  </div>
+</section>
+
+<article class="sheet">
+  <p><a href="index.html">← Zur Startseite</a></p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-name">Storybook Adventures</div>
+    </div>
+    <div class="foot-links">
+      <a href="privacy.html">Datenschutzerklärung</a>
+      <a href="terms.html">Nutzungsbedingungen</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="support.html">Hilfe</a>
+    </div>
+    <div class="foot-copy"><span>© 2026 Storybook Adventures.</span><span>Alle Rechte vorbehalten.</span></div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const status = new URLSearchParams(window.location.search).get('status') || 'ok';
+  const messages = {
+    ok:           { title: "Du bist dabei!",          body: "Deine E-Mail wurde bestätigt. Wir halten dich auf dem Laufenden zu neuen Geschichtenwelten, Features und Updates." },
+    already:      { title: "Bereits bestätigt",       body: "Deine E-Mail ist schon bestätigt — du bist startklar!" },
+    invalid:      { title: "Ungültiger Link",         body: "Dieser Bestätigungslink ist ungültig oder abgelaufen. Bitte melde dich erneut an." },
+    rate_limited: { title: "Zu viele Versuche",       body: "Bitte warte einen Moment und versuche es erneut." },
+    error:        { title: "Etwas ist schiefgelaufen", body: "Wir konnten deine E-Mail nicht bestätigen. Bitte versuche es später erneut oder kontaktiere uns unter contact@storybookadventures.io." },
+  };
+  const m = messages[status] || messages.error;
+  document.getElementById('status-title').textContent = m.title;
+  document.getElementById('status-body').textContent = m.body;
+})();
+</script>
+
+<script src="../assets/nav-more.js" defer></script>
+</body>
+</html>

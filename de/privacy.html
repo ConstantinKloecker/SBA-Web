@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Datenschutzerklärung — Storybook Adventures</title>
+  <meta name="description" content="Datenschutzerklärung für Storybook Adventures.">
+  <meta name="theme-color" content="#1a2744">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.storybookadventures.io/de/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/privacy.html">
+
+  <meta property="og:site_name" content="Storybook Adventures">
+  <meta property="og:title" content="Datenschutzerklärung — Storybook Adventures">
+  <meta property="og:description" content="Datenschutzerklärung für Storybook Adventures.">
+  <meta property="og:image" content="https://www.storybookadventures.io/assets/og-image.jpg?v=2">
+  <meta property="og:image" content="https://www.storybookadventures.io/assets/og-image-square.jpg?v=2">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.storybookadventures.io/de/privacy.html">
+
+  <link rel="icon" type="image/webp" href="../assets/logo-emblem.webp">
+  <link rel="apple-touch-icon" href="../assets/logo-emblem.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/subpage.css">
+<style>
+  /* ============ TOC + Doc layout ============ */
+  .doc-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    align-items: flex-start;
+  }
+  .doc-layout > article.sheet {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    min-width: 0;
+  }
+  .doc-layout > article.sheet a { word-wrap: break-word; overflow-wrap: break-word; }
+  aside.toc {
+    position: sticky;
+    top: 96px;
+    align-self: flex-start;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding: 18px 16px;
+    background: rgba(15, 26, 46, 0.55);
+    border: 1px solid var(--white-10);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+  }
+  aside.toc h4 {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    margin-bottom: 12px;
+    padding-left: 6px;
+  }
+  aside.toc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: toc-counter;
+  }
+  aside.toc li {
+    counter-increment: toc-counter;
+    margin: 0;
+  }
+  aside.toc a {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 8px 8px;
+    border-radius: 8px;
+    color: var(--white-70);
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  aside.toc a::before {
+    content: counter(toc-counter, decimal-leading-zero);
+    flex: 0 0 auto;
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    opacity: 0.7;
+  }
+  aside.toc a:hover {
+    background: var(--white-10);
+    color: #fff;
+  }
+  aside.toc a.active {
+    background: var(--white-10);
+    color: #fff;
+  }
+  aside.toc a.active::before { opacity: 1; }
+  /* Smooth scroll with offset so anchors land below sticky nav */
+  html { scroll-padding-top: 80px; }
+  /* Hide TOC on mobile/tablet */
+  @media (max-width: 1024px) {
+    .doc-layout {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+    aside.toc { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-bg"></div>
+<div class="particles">
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="../assets/logo.webp" alt="Storybook Adventures" class="brand-logo" width="867" height="438" fetchpriority="high" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#how" class="nav-link">So funktioniert's</a>
+      <a href="index.html#safe" class="nav-link">Für Eltern</a>
+      <a href="index.html#gallery" class="nav-link">Filme</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="about.html" class="nav-link">Story</a>
+      <a href="blog/index.html" class="nav-link">Blog</a>
+      <div class="lang-toggle" role="group" aria-label="Sprache">
+        <a href="../privacy.html">EN</a>
+        <a href="privacy.html" class="active" aria-current="page">DE</a>
+      </div>
+      <a href="https://apps.apple.com/app/id6761114804" class="btn btn-small">App holen</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <span class="scribble-star s-left">✦</span>
+    <span class="scribble-star s-right">✦</span>
+    <h1>
+      <span>Datenschutzerklärung</span>
+    </h1>
+    <p class="lede">Kein Name, keine E-Mail, keine persönlichen Daten. Storybook Adventures wurde von Grund auf mit Datenschutz als Fundament gebaut. Nicht als nachträgliche Idee.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Version 1.0</span>
+      <span class="meta-pill">Aktualisiert · 13. Apr 2026</span>
+      <span class="meta-pill">Gültig ab · 13. Apr 2026</span>
+    </div>
+  </div>
+</section>
+
+<div class="doc-layout">
+  <aside class="toc">
+  <h4>Inhalt</h4>
+  <ol>
+    <li><a href="#s1">Einleitung</a></li>
+    <li><a href="#s2">Erhobene Informationen</a></li>
+    <li><a href="#s3">Rechtsgrundlage f&uuml;r die Datenverarbeitung</a></li>
+    <li><a href="#s4">Verwendung Ihrer Daten</a></li>
+    <li><a href="#s5">Drittanbieter-Dienste</a></li>
+    <li><a href="#s6">Datenschutz f&uuml;r Kinder</a></li>
+    <li><a href="#s7">Datensicherheit</a></li>
+    <li><a href="#s8">Datenaufbewahrung</a></li>
+    <li><a href="#s9">Internationale Daten&uuml;bertragungen</a></li>
+    <li><a href="#s10">Ihre Rechte nach der DSGVO</a></li>
+    <li><a href="#s11">Ihre Rechte nach COPPA (USA)</a></li>
+    <li><a href="#s12">K&auml;ufe und Aktionen</a></li>
+    <li><a href="#s13">Website-Newsletter</a></li>
+    <li><a href="#s14">Lokale Speicherung</a></li>
+    <li><a href="#s15">&Auml;nderungen dieser Erkl&auml;rung</a></li>
+    <li><a href="#s16">Kontakt</a></li>
+  </ol>
+</aside>
+  <article class="sheet">
+
+<h2 id="s1">1. Einleitung</h2>
+            <p>Storybook Adventures („die App", „wir", „uns" oder „unser") wird betrieben von:</p>
+            <div class="addr-card">
+              <p><strong>Constantin Kl&ouml;cker</strong></p>
+              <p>Friedrichstr. 155</p>
+              <p>10117 Berlin, Deutschland</p>
+              <p>E-Mail: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+            </div>
+            <p>Storybook Adventures ist eine kreative App f&uuml;r Kinder (vorwiegend im Alter von 6–12 Jahren), die handgezeichnete Bilder in KI-gest&uuml;tzte Animationen verwandelt. Kinder zeichnen Szenen auf Papier, fotografieren diese mit der App und sehen ihre Kunstwerke als kurze animierte Videos zum Leben erwachen. Jede Animation verbraucht einen Token, den Eltern &uuml;ber Apple In-App-Kauf erwerben oder &uuml;ber einen Aktionsgutscheincode einl&ouml;sen k&ouml;nnen.</p>
+            <p>Diese Datenschutzerkl&auml;rung erl&auml;utert, welche Informationen wir erheben, warum wir sie erheben und wie wir sie sch&uuml;tzen. Wir haben Storybook Adventures mit Datenschutz als Grundlage entwickelt: Es werden keine Namen, E-Mail-Adressen oder personenbezogenen Daten ben&ouml;tigt. Wir verwenden keine Werbung, kein Verhaltens-Tracking und verkaufen keine Daten — niemals. Nutzer werden ausschlie&szlig;lich durch eine zuf&auml;llige, anonyme Ger&auml;tekennung identifiziert, die nicht mit einer realen Person verkn&uuml;pft werden kann.</p>
+            <p>Wir halten die EU-Datenschutz-Grundverordnung (DSGVO), den US-amerikanischen Children's Online Privacy Protection Act (COPPA), den UK Age Appropriate Design Code (UK AADC) und die Richtlinien des Apple App Store ein.</p>
+
+            <h2 id="s2">2. Erhobene Informationen</h2>
+            <h3>2.1 Daten, die wir erheben und speichern</h3>
+            <div class="table-wrapper">
+              <table>
+                <thead><tr><th>Daten</th><th>Zweck</th><th>Speicherort</th><th>Aufbewahrung</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Anonyme Ger&auml;tekennung (UUID)</strong></td><td>Verkn&uuml;pft Token-Guthaben, Einreichungen und Fortschritt mit einem Ger&auml;t — nicht mit einer Person</td><td>Ger&auml;te-Keychain + unser Server (EU)</td><td>Dauerhaft — auch nach L&ouml;schanfragen aufbewahrt, um Token-Wiederherstellung und Schutz vor Gutscheinmissbrauch zu erm&ouml;glichen. Kann Sie nicht als Person identifizieren.</td></tr>
+                  <tr><td><strong>Einwilligungsnachweise</strong> (Nutzungsbedingungsversion, Datenschutzrichtlinienversion, Altersgruppe, Einwilligungsmethode, Zeitstempel, App-Version)</td><td>Rechtliche Compliance und Nachweisf&uuml;hrung</td><td>Unser Server (EU)</td><td>Dauerhaft</td></tr>
+                  <tr><td><strong>Zeichnungen des Kindes</strong> (fotografiert oder aus der Fotobibliothek ausgew&auml;hlt)</td><td>Werden von KI verarbeitet, um Animationen zu erstellen; f&uuml;r Wiederherstellung bei Neuinstallation gespeichert</td><td>Unser Server (EU); zur Verarbeitung an OpenAI (Moderation) und Replicate (Animation) &uuml;bermittelt — beide l&ouml;schen Inhalte nach der Verarbeitung</td><td>Bis zur L&ouml;schanfrage</td></tr>
+                  <tr><td><strong>Animierte Videos</strong></td><td>Werden an das Ger&auml;t des Kindes geliefert; f&uuml;r Wiederherstellung bei Neuinstallation gespeichert</td><td>Unser Server (EU) + Ger&auml;t</td><td>Bis zur L&ouml;schanfrage</td></tr>
+                  <tr><td><strong>Individuelle Szenenbeschreibungen</strong></td><td>Vom Nutzer eingegebener Text zur Steuerung jeder Animation</td><td>Unser Server (EU); zur Animationsverarbeitung an Replicate &uuml;bermittelt — nach Nutzung gel&ouml;scht</td><td>Bis zur L&ouml;schanfrage</td></tr>
+                  <tr><td><strong>Token-Guthaben</strong></td><td>Verfolgt erworbene Animations-Guthaben</td><td>Unser Server (EU)</td><td>Dauerhaft — aufbewahrt, damit nicht verbrauchte Token bei Neuinstallation wiederhergestellt werden k&ouml;nnen</td></tr>
+                  <tr><td><strong>Kauftransaktionsdaten</strong></td><td>Rechtliche und steuerliche Compliance</td><td>Unser Server (EU)</td><td>Bis zu 10 Jahre (AO §147), auch nach Kontol&ouml;schung</td></tr>
+                  <tr><td><strong>Gutschein-Einl&ouml;sedaten</strong></td><td>Verhindert doppelte Einl&ouml;sungen; Marketing-Zuordnung</td><td>Unser Server (EU)</td><td>Dauerhaft</td></tr>
+                  <tr><td><strong>Onboarding-Status</strong> (Altersgruppe, Einwilligungsstatus, elterliche PIN)</td><td>Alters&uuml;berpr&uuml;fung, Einwilligung, Kindersicherung</td><td>Nur auf dem Ger&auml;t</td><td>Bis zur App-L&ouml;schung</td></tr>
+                  <tr><td><strong>Moderations-Flags</strong> (Fingerabdruck abgelehnter Bilder, Ablehnungsgrund, KI-generierte Beschreibung)</td><td>Sicherheits&uuml;berwachung und Missbrauchspr&auml;vention</td><td>Unser Server (EU)</td><td>Dauerhaft (keine Bilder gespeichert — nur Fingerabdruck und Beschreibung)</td></tr>
+                  <tr><td><strong>Szenenfortschritt</strong></td><td>Verfolgt abgeschlossene Szenen innerhalb jeder Geschichte</td><td>Unser Server (EU) + Ger&auml;t</td><td>Bis zur L&ouml;schanfrage</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>2.2 Was wir NICHT erheben</h3>
+            <ul>
+              <li>Namen, E-Mail-Adressen, Telefonnummern oder sonstige personenbezogene Daten — innerhalb der App. Wenn Sie unseren Newsletter auf der Website abonnieren, siehe §13.</li>
+              <li>Standortdaten oder GPS-Koordinaten</li>
+              <li>Beliebige Fotos aus der Kamerarolle — beim Hochladen einer Zeichnung k&ouml;nnen Nutzer entweder ein neues Foto aufnehmen oder ein vorhandenes Foto aus ihrer Bibliothek ausw&auml;hlen; nur dieses eine ausgew&auml;hlte Bild wird hochgeladen, und alle Standortmetadaten werden auf dem Ger&auml;t entfernt, bevor es das Ger&auml;t verl&auml;sst</li>
+              <li>Browserverlauf, App-Nutzungsmuster oder Verhaltensanalysen</li>
+              <li>Werbekennungen oder app&uuml;bergreifende Tracking-Daten</li>
+              <li>Social-Media-Konten, Kontakte oder Nachrichten</li>
+              <li>Apple-ID oder Apple-Kontoinformationen</li>
+            </ul>
+
+            <h3>2.3 Ihr anonymes Konto</h3>
+            <p>Bei der ersten Nutzung der App generieren wir eine zuf&auml;llige Kennung (UUID) und speichern sie im sicheren Keychain des Ger&auml;ts. Das ist Ihr Konto — keine Registrierung, kein Passwort, keine E-Mail erforderlich. Es verkn&uuml;pft Ihr Token-Guthaben, Zeichnungen und Fortschritt &uuml;ber Sitzungen und Neuinstallationen hinweg, kann jedoch nicht auf eine reale Person zur&uuml;ckgef&uuml;hrt werden.</p>
+            <p>Wenn Sie uns bez&uuml;glich Ihrer Daten kontaktieren m&uuml;ssen, steht Ihnen unter Einstellungen → Meine Daten → Datenanfrage ein Support-Referenzcode zur Verf&uuml;gung, der von dieser Kennung abgeleitet ist. Damit k&ouml;nnen wir Ihr Konto identifizieren, ohne dass Sie die Kennung selbst mitteilen m&uuml;ssen.</p>
+
+            <h2 id="s3">3. Rechtsgrundlage f&uuml;r die Datenverarbeitung</h2>
+            <p>F&uuml;r Nutzer in der EU, dem Vereinigten K&ouml;nigreich und anderen L&auml;ndern mit vergleichbaren Gesetzen verarbeiten wir Daten auf folgenden Rechtsgrundlagen:</p>
+            <ul>
+              <li><strong>Einwilligung (Art. 6 Abs. 1 lit. a DSGVO / Art. 8 DSGVO):</strong> Bei minderj&auml;hrigen Nutzern erteilt ein Elternteil oder Erziehungsberechtigter vor der Verarbeitung von Zeichnungen eine ausdr&uuml;ckliche Einwilligung. Erwachsene willigen &uuml;ber den App-internen Einwilligungsprozess ein.</li>
+              <li><strong>Vertragserf&uuml;llung (Art. 6 Abs. 1 lit. b DSGVO):</strong> Die Verarbeitung von Zeichnungen, die Bereitstellung von Animationen und die Verwaltung von Token-Guthaben sind f&uuml;r die Erbringung des gebuchten Dienstes erforderlich.</li>
+              <li><strong>Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO):</strong> Kauftransaktionsdaten werden gem&auml;&szlig; deutschem Steuerrecht (AO §147) bis zu 10 Jahre aufbewahrt. Einwilligungsnachweise werden dauerhaft aufbewahrt, um die Einhaltung von COPPA und DSGVO nachzuweisen.</li>
+              <li><strong>Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO):</strong> Moderations-Flag-Datens&auml;tze und Gutschein-Einl&ouml;sedaten werden zur Missbrauchspr&auml;vention aufbewahrt. Diese Interessen sind verh&auml;ltnism&auml;&szlig;ig — wir speichern nur einen Fingerabdruck und eine Beschreibung, niemals das Bild oder personenbezogene Daten.</li>
+            </ul>
+
+            <h2 id="s4">4. Verwendung Ihrer Daten</h2>
+            <p>Wir verwenden Daten ausschlie&szlig;lich zum Betrieb und zur Verbesserung der App:</p>
+            <ul>
+              <li><strong>Animationen bereitstellen:</strong> Zeichnungen durch KI-Moderation und -Animation verarbeiten, um das animierte Video zu erzeugen</li>
+              <li><strong>Token verwalten:</strong> Erworbene Guthaben verfolgen und pro Animation einen Token abziehen</li>
+              <li><strong>Wiederherstellung erm&ouml;glichen:</strong> Zeichnungen, Animationen, Beschreibungen und Fortschritt speichern, damit Inhalte bei Neuinstallation der App wiederhergestellt werden</li>
+              <li><strong>Inhalte sichern:</strong> Hochgeladene Zeichnungen vor der Animation auf unangemessene Inhalte pr&uuml;fen</li>
+              <li><strong>Missbrauch verhindern:</strong> Fingerabdr&uuml;cke (keine Bilder) abgelehnter Inhalte aufbewahren, um Wiederholungsverst&ouml;&szlig;e zu erkennen</li>
+              <li><strong>Gesetzliche Vorgaben erf&uuml;llen:</strong> K&auml;ufe validieren und Transaktionsdaten f&uuml;r steuerliche und rechtliche Zwecke aufbewahren</li>
+              <li><strong>Gutscheine fair verfolgen:</strong> Einl&ouml;sungen protokollieren, um Duplikate zu verhindern und Partnerprovisionen zu berechnen</li>
+              <li><strong>Dienst aufrechterhalten:</strong> Systemzustand &uuml;berwachen und technische Probleme beheben</li>
+            </ul>
+            <p>Wir verwenden Daten nicht f&uuml;r Werbung, Profiling oder andere Zwecke als die hier aufgef&uuml;hrten.</p>
+
+            <h2 id="s5">5. Drittanbieter-Dienste</h2>
+            <p>Wir geben Daten an folgende Anbieter weiter, um die App zu betreiben. Keiner von ihnen erh&auml;lt personenbezogene Daten.</p>
+            <div class="table-wrapper">
+              <table>
+                <thead><tr><th>Anbieter</th><th>Zweck</th><th>Erhaltene Daten</th><th>Standort</th><th>Aufbewahrung beim Anbieter</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Cloud-Infrastruktur (Supabase)</strong></td><td>Datenbank, Dateispeicher, Serverfunktionen</td><td>Anonyme UUID, Zeichnungen, Animationen, Beschreibungen, Szenenfortschritt, Gutscheindaten</td><td>EU (Frankfurt am Main)</td><td>Gem&auml;&szlig; unserem Aufbewahrungsplan</td></tr>
+                  <tr><td><strong>OpenAI</strong></td><td>Pr&uuml;ft Zeichnungen auf Kindersicherheit vor der Animation</td><td>Zeichnungsbild (&uuml;ber einen kurzlebigen sicheren Link)</td><td>Vereinigte Staaten</td><td>Gem&auml;&szlig; OpenAIs API-Datenaufbewahrungsrichtlinie bis zu 30 Tage gespeichert, danach gel&ouml;scht</td></tr>
+                  <tr><td><strong>Replicate</strong></td><td>Generiert das animierte Video aus Zeichnung + Textbeschreibung</td><td>Zeichnungsbild + Szenenbeschreibung</td><td>Vereinigte Staaten</td><td>Automatisch innerhalb von ca. 1 Stunde gel&ouml;scht</td></tr>
+                  <tr><td><strong>Fly.io</strong></td><td>F&uuml;hrt die Animations-Pipeline aus — l&auml;dt die Zeichnung herunter, koordiniert Video- und Audiogenerierung &uuml;ber Replicate und assembliert das fertige Video</td><td>Zeichnungsbild, Szenenbeschreibung, generiertes Video, generierter Ton</td><td>EU (Frankfurt am Main)</td><td>W&auml;hrend der Pipeline verarbeitet — nach Abschluss nicht gespeichert</td></tr>
+                  <tr><td><strong>Resend</strong></td><td>Versendet Newsletter-E-Mails an Website-Besucher, die sich angemeldet haben</td><td>E-Mail-Adresse</td><td>Vereinigte Staaten</td><td>Bis zur Abmeldung oder zum Widerruf der Einwilligung, danach innerhalb von 30 Tagen gel&ouml;scht</td></tr>
+                  <tr><td><strong>Apple (In-App-Kauf)</strong></td><td>Verarbeitet Token-K&auml;ufe</td><td>Kaufbeleg (von Apple abgewickelt — wir sehen keine Zahlungsdetails)</td><td>Vereinigte Staaten</td><td>Gem&auml;&szlig; Apples Datenschutzrichtlinie</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Wir verkaufen, vermieten oder teilen Nutzerdaten niemals mit Dritten f&uuml;r deren eigene Zwecke.</p>
+
+            <h2 id="s6">6. Datenschutz f&uuml;r Kinder</h2>
+            <h3>6.1 Altersschwellen</h3>
+            <p>Beim ersten Start fragt die App das Alter des Nutzers ab. Wir wenden die entsprechende gesetzliche Schwelle basierend auf der Region des Ger&auml;ts an:</p>
+            <div class="table-wrapper">
+              <table>
+                <thead><tr><th>Region</th><th>Schwelle</th><th>Gesetz</th></tr></thead>
+                <tbody>
+                  <tr><td>Vereinigte Staaten</td><td>Unter 13</td><td>COPPA</td></tr>
+                  <tr><td>Vereinigtes K&ouml;nigreich</td><td>Unter 13</td><td>UK AADC</td></tr>
+                  <tr><td>Deutschland, Niederlande</td><td>Unter 16</td><td>DSGVO</td></tr>
+                  <tr><td>Frankreich</td><td>Unter 15</td><td>DSGVO</td></tr>
+                  <tr><td>Italien, Spanien</td><td>Unter 14</td><td>DSGVO</td></tr>
+                  <tr><td>Schweden, D&auml;nemark, Finnland</td><td>Unter 13</td><td>DSGVO</td></tr>
+                  <tr><td>Andere EU-L&auml;nder</td><td>Unter 16</td><td>DSGVO (Standard)</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>6.2 Elterliche Einwilligung</h3>
+            <p>Liegt ein Nutzer unterhalb der anwendbaren Schwelle, muss ein Elternteil oder Erziehungsberechtigter einen Einwilligungsprozess abschlie&szlig;en, bevor die App Daten verarbeitet. Der Prozess umfasst einen Informationsdurchlauf, einen Erwachsenennachweis (eine Rechenaufgabe) sowie ausdr&uuml;ckliche Einwilligungs-Kontrollk&auml;stchen zu Zeichnungs-Upload, KI-Verarbeitung, Serverspeicherung, Token-K&auml;ufen und dem Speichern von Animationen in der Fotogalerie.</p>
+            <p>Die Einwilligung wird sowohl auf dem Ger&auml;t als auch auf unseren Servern aufgezeichnet. Der Serverdatensatz enth&auml;lt Altersgruppe, Einwilligungsmethode, akzeptierte Bedingungsversionen und Zeitstempel — keine personenbezogenen Daten. Er wird dauerhaft als rechtlicher Nachweis aufbewahrt. Ger&auml;teseitige Einwilligungsflags werden gel&ouml;scht, wenn die App deinstalliert wird.</p>
+            <p>Die Einwilligung ist einmalig und dauerhaft. Sie muss nur erneuert werden, wenn wir wesentliche &Auml;nderungen am Umgang mit Kinderdaten vornehmen.</p>
+
+            <h3>6.3 Was Eltern tun k&ouml;nnen</h3>
+            <p>Eltern k&ouml;nnen jederzeit:</p>
+            <ul>
+              <li><strong>Einwilligung widerrufen und alle Daten l&ouml;schen</strong> &uuml;ber Einstellungen → Kindersicherung → Alle Daten l&ouml;schen. Damit werden alle Zeichnungen, Animationen, Beschreibungen und der Szenenfortschritt Ihres Kindes dauerhaft von unseren Servern entfernt, die elterliche Einwilligung widerrufen und der Einwilligungsprozess bei der n&auml;chsten Nutzung erneut ausgel&ouml;st. Einige Datens&auml;tze werden aus rechtlichen und Sicherheitsgr&uuml;nden aufbewahrt — siehe §8 f&uuml;r die vollst&auml;ndige &Uuml;bersicht.</li>
+              <li><strong>Einen Support-Referenzcode anfordern</strong> f&uuml;r Datenanfragen &uuml;ber Einstellungen → Meine Daten → Datenanfrage</li>
+              <li><strong>Uns kontaktieren</strong> unter contact@storybookadventures.io bei Fragen</li>
+            </ul>
+
+            <h3>6.4 Inhaltsmoderation</h3>
+            <p>Jede hochgeladene Zeichnung wird vor dem Animationsbeginn automatisch durch das Inhaltsmoderierungssystem von OpenAI gepr&uuml;ft. Zeichnungen mit unangemessenen Inhalten werden abgelehnt, das Bild wird von unseren Servern gel&ouml;scht und der Token wird automatisch erstattet. Wir versuchen au&szlig;erdem, Zeichnungen zu erkennen, die sichtbare personenbezogene Daten (wie Namen oder Adressen) enthalten, und markieren diese zur Ablehnung.</p>
+
+            <h2 id="s7">7. Datensicherheit</h2>
+            <ul>
+              <li><strong>Ger&auml;teverschl&uuml;sselung:</strong> Die anonyme Kennung wird im iOS-Keychain gespeichert, der vom Betriebssystem verschl&uuml;sselt wird</li>
+              <li><strong>Verschl&uuml;sselte Verbindungen:</strong> Alle Daten&uuml;bertragungen verwenden HTTPS/TLS</li>
+              <li><strong>Metadaten-Entfernung:</strong> Standortdaten und andere Foto-Metadaten werden auf dem Ger&auml;t vor dem Upload entfernt</li>
+              <li><strong>Keine personenbezogenen Daten auf Servern:</strong> Unsere Server enthalten keine Namen, E-Mail-Adressen, Telefonnummern oder Informationen, die eine Person identifizieren k&ouml;nnten</li>
+              <li><strong>Ablaufende Dateilinks:</strong> Zeichnungen und Animationen werden &uuml;ber sichere Links geteilt, die automatisch ablaufen — Dateien sind nie dauerhaft &ouml;ffentlich zug&auml;nglich</li>
+              <li><strong>Datenisolierung:</strong> Jedes anonyme Profil kann nur auf seine eigenen Daten zugreifen; Profile k&ouml;nnen die Inhalte der anderen nicht einsehen</li>
+              <li><strong>Minimale Exposition gegen&uuml;ber KI-Anbietern:</strong> KI-Dienste erhalten Bilder &uuml;ber tempor&auml;re Links und l&ouml;schen diese nach der Verarbeitung</li>
+            </ul>
+
+            <h2 id="s8">8. Datenaufbewahrung</h2>
+            <div class="table-wrapper">
+              <table>
+                <thead><tr><th>Daten</th><th>Aufbewahrungsdauer</th></tr></thead>
+                <tbody>
+                  <tr><td>Zeichnungen, Animationen, individuelle Beschreibungen, Szenenfortschritt</td><td>Bis zur L&ouml;schanfrage</td></tr>
+                  <tr><td>Anonyme UUID + Token-Guthaben</td><td>Dauerhaft — aufbewahrt, damit Token nach Neuinstallation wiederhergestellt werden k&ouml;nnen</td></tr>
+                  <tr><td>Einwilligungsnachweise</td><td>Dauerhaft — rechtlicher Nachweis</td></tr>
+                  <tr><td>Kaufdaten</td><td>Bis zu 10 Jahre (deutsches Steuerrecht, AO §147)</td></tr>
+                  <tr><td>Gutschein-Einl&ouml;sedaten</td><td>Dauerhaft — Missbrauchspr&auml;vention und Affiliate-Zuordnung</td></tr>
+                  <tr><td>Moderations-Flag-Datens&auml;tze</td><td>Dauerhaft — Missbrauchspr&auml;vention (keine Bilder gespeichert)</td></tr>
+                  <tr><td>Onboarding-Status (nur Ger&auml;t)</td><td>Wird gel&ouml;scht, wenn die App vom Ger&auml;t entfernt wird</td></tr>
+                  <tr><td>Von Replicate verarbeitete Zeichnungen</td><td>Automatisch von Replicate innerhalb von ca. 1 Stunde gel&ouml;scht</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Was passiert, wenn Sie alle Daten l&ouml;schen</h3>
+            <p>Wenn Sie in der App „Alle Daten l&ouml;schen" verwenden, passiert Folgendes:</p>
+            <ul>
+              <li>✅ <strong>Sofort gel&ouml;scht:</strong> Alle Zeichnungen, Animationen, individuellen Beschreibungen und Szenenfortschritt werden dauerhaft von unseren Servern entfernt</li>
+              <li>🔒 <strong>F&uuml;r Kontowiederherstellung aufbewahrt:</strong> Ihr anonymes Profil und Token-Guthaben bleiben erhalten, damit nicht verbrauchte Token bei Neuinstallation auf demselben Ger&auml;t wiederhergestellt werden k&ouml;nnen. Dieser Datensatz enth&auml;lt keine personenbezogenen Daten.</li>
+              <li>🔒 <strong>Zur Missbrauchspr&auml;vention aufbewahrt:</strong> Ein Fingerabdruck zuvor abgelehnter Bilder (nicht die Bilder selbst) wird aufbewahrt, um Wiederholungsverst&ouml;&szlig;e zu erkennen</li>
+              <li>🔒 <strong>Zur Verhinderung von Gutscheinbetrug aufbewahrt:</strong> Gutschein-Einl&ouml;sedaten (anonyme ID + Kampagnencode) werden aufbewahrt, um zu verhindern, dass dasselbe Ger&auml;t mehrere kostenlose Token beansprucht</li>
+              <li>🔒 <strong>F&uuml;r die gesetzliche Compliance aufbewahrt:</strong> Kaufdaten werden in anonymisierter Form bis zu 10 Jahre gem&auml;&szlig; deutschem Steuerrecht aufbewahrt</li>
+              <li>🔒 <strong>Als rechtlicher Einwilligungsnachweis aufbewahrt:</strong> Einwilligungsnachweise (Altersgruppe, Bedingungsversionen, Zeitstempel) werden dauerhaft als Beleg f&uuml;r eine rechtm&auml;&szlig;ige Datenverarbeitung aufbewahrt</li>
+              <li>📱 <strong>Auf Ihrem Ger&auml;t:</strong> Die anonyme Kennung verbleibt im Ger&auml;te-Keychain f&uuml;r die Kontowiederherstellung. Ein vollst&auml;ndiges Zur&uuml;cksetzen auf Werkseinstellungen entfernt sie vom Ger&auml;t; ist jedoch der iCloud-Keychain aktiviert, kann die Kennung &uuml;ber eine Backup-Wiederherstellung oder die Anmeldung mit demselben iCloud-Konto auf einem neuen Ger&auml;t erhalten bleiben.</li>
+              <li>🖼 <strong>In Ihrer Fotogalerie:</strong> Bereits gespeicherte Animationen sind nicht betroffen.</li>
+            </ul>
+
+            <h2 id="s9">9. Internationale Daten&uuml;bertragungen</h2>
+            <p>Der Gro&szlig;teil der Datenverarbeitung findet innerhalb der EU statt. Unsere Server (Supabase), die Animations-Pipeline (Fly.io) und der prim&auml;re Speicher befinden sich in Frankfurt am Main.</p>
+            <p>Zwei Anbieter haben ihren Sitz in den Vereinigten Staaten: OpenAI (Inhaltsmoderation) und Replicate (Video- und Audiogenerierung). Wenn eine Zeichnung eingereicht wird, werden das Bild und der Szenenbeschreibungstext &uuml;ber Fly.io zur Verarbeitung unter kurzlebigen sicheren Links an diese Anbieter gesendet. Diese &Uuml;bertragungen erfolgen gem&auml;&szlig; Art. 46 DSGVO auf Basis von EU-Standardvertragsklauseln (SCC).</p>
+            <p>Entscheidend ist, dass diese &Uuml;bertragungen keine personenbezogenen Daten enthalten: Zeichnungen enthalten keine identifizierenden Informationen (Metadaten werden vor dem Upload entfernt), und Szenenbeschreibungen sind kreative Texte ohne pers&ouml;nliche Inhalte. Weder die Zeichnung noch die Beschreibung kann einer Person zugeordnet werden.</p>
+
+            <h2 id="s10">10. Ihre Rechte nach der DSGVO</h2>
+            <p>Wenn Sie sich in der EU, dem EWR, dem Vereinigten K&ouml;nigreich oder der Schweiz befinden, haben Sie folgende Rechte bez&uuml;glich der mit Ihrem anonymen Profil verkn&uuml;pften Daten:</p>
+            <ul>
+              <li><strong>Auskunft (Art. 15):</strong> Kopie Ihrer Daten anfordern</li>
+              <li><strong>L&ouml;schung (Art. 17):</strong> L&ouml;schung Ihrer Daten beantragen</li>
+              <li><strong>Einschr&auml;nkung (Art. 18):</strong> Uns bitten, die Verarbeitung Ihrer Daten einzuschr&auml;nken</li>
+              <li><strong>Daten&uuml;bertragbarkeit (Art. 20):</strong> Ihre Daten in einem maschinenlesbaren Format anfordern</li>
+              <li><strong>Widerspruch (Art. 21):</strong> Der Verarbeitung Ihrer Daten widersprechen</li>
+              <li><strong>Beschwerde:</strong> Eine Beschwerde bei Ihrer zust&auml;ndigen Datenschutzbeh&ouml;rde einreichen</li>
+            </ul>
+            <p><strong>Einfachster Weg:</strong> Nutzen Sie die App-internen Tools unter Einstellungen → Meine Daten — die meisten Anfragen k&ouml;nnen sofort ohne Kontaktaufnahme bearbeitet werden.</p>
+            <p><strong>Per E-Mail:</strong> Schreiben Sie an contact@storybookadventures.io und geben Sie Ihren Support-Referenzcode an (Einstellungen → Meine Daten → Datenanfrage). Da wir keine Namen oder E-Mail-Adressen erheben, k&ouml;nnen wir Konten nur &uuml;ber diesen Code lokalisieren.</p>
+            <p><strong>Hinweis zur anonymen Verarbeitung:</strong> Da unser Dienst vollst&auml;ndig auf anonymen Kennungen basiert (DSGVO Art. 11), sind wir nicht verpflichtet, zus&auml;tzliche personenbezogene Daten zu erheben, nur um Betroffenenrechte zu bearbeiten. Wenn Sie uns ohne Ihren Support-Referenzcode kontaktieren, k&ouml;nnen wir Ihr Konto nicht finden — wir werden Sie dann dar&uuml;ber informieren, wo Sie ihn finden.</p>
+            <p><strong>Zust&auml;ndige Datenschutzbeh&ouml;rde:</strong><br>Der Bundesbeauftragte f&uuml;r den Datenschutz und die Informationsfreiheit (BfDI)<br>Graurheindorfer Str. 153, 53117 Bonn<br><a href="https://www.bfdi.bund.de" target="_blank" rel="noopener">https://www.bfdi.bund.de</a></p>
+
+            <h2 id="s11">11. Ihre Rechte nach COPPA (USA)</h2>
+            <p>Wenn Sie Elternteil oder Erziehungsberechtigter eines Kindes unter 13 Jahren in den USA sind:</p>
+            <ul>
+              <li><strong>Einsehen</strong> der von der App Ihres Kindes erhobenen Daten (Einstellungen → Meine Daten)</li>
+              <li><strong>Einwilligung widerrufen und Daten l&ouml;schen</strong> &uuml;ber Einstellungen → Kindersicherung → Alle Daten l&ouml;schen. Damit werden Zeichnungen, Animationen, Beschreibungen und Szenenfortschritt entfernt und die Einwilligung in einem einzigen Schritt widerrufen. Einige Datens&auml;tze werden aus rechtlichen und Sicherheitsgr&uuml;nden aufbewahrt — siehe §8.</li>
+              <li><strong>Weitere Erhebung ablehnen</strong> — ohne Einwilligung k&ouml;nnen die Animationsfunktionen nicht genutzt werden</li>
+            </ul>
+            <p>Kontaktieren Sie uns unter contact@storybookadventures.io mit Ihrem Support-Referenzcode (Einstellungen → Meine Daten → Datenanfrage).</p>
+
+            <h2 id="s12">12. K&auml;ufe und Aktionen</h2>
+            <p><strong>Token-K&auml;ufe</strong> werden vollst&auml;ndig &uuml;ber Apple In-App-Kauf abgewickelt. Wir sehen oder speichern keine Zahlungsdetails (Kartennummern, Rechnungsadressen, Apple-ID-Zugangsdaten). Nach dem Kauf sendet Apple uns einen Beleg, den wir serverseitig validieren, um Token dem anonymen Profil gutzuschreiben.</p>
+            <p>Wir f&uuml;hren einen Transaktionsdatensatz (anonyme Profil-ID, Token-Menge, Zeitstempel, Belegvalidierungsergebnis) f&uuml;r bis zu 10 Jahre gem&auml;&szlig; deutschem Steuerrecht. Diese Datens&auml;tze enthalten keine personenbezogenen Daten. Informationen zum Umgang von Apple mit Zahlungsdaten finden Sie in <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apples Datenschutzrichtlinie</a>.</p>
+            <p><strong>Gutscheincodes</strong> k&ouml;nnen &uuml;ber Marketingpartner oder Kampagnen verteilt werden. Bei der Einl&ouml;sung wird der Code mit Ihrem anonymen Profil verkn&uuml;pft, um Doppelnutzung zu verhindern. Wir erfassen die anonyme Profil-ID, den Kampagnencode und einen Zeitstempel. Es werden keine personenbezogenen Daten erhoben. Wir verwenden diese Daten zur Missbrauchspr&auml;vention, Messung der Kampagnenleistung und Berechnung von Partnerprovisionen.</p>
+
+            <h2 id="s13">13. Website-Newsletter</h2>
+            <p>Auf unserer Website (<a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a>) k&ouml;nnen Sie optional unseren Newsletter abonnieren, um Produktneuigkeiten wie neue Funktionen und Plattformverf&uuml;gbarkeit zu erhalten.</p>
+            <ul>
+              <li><strong>Was wir erheben:</strong> Ausschlie&szlig;lich Ihre E-Mail-Adresse</li>
+              <li><strong>Rechtsgrundlage:</strong> Ihre ausdr&uuml;ckliche Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die zum Zeitpunkt der Anmeldung erteilt wird</li>
+              <li><strong>Wer verarbeitet die Daten:</strong> Resend (US-amerikanischer E-Mail-Dienstleister). Ihre E-Mail-Adresse wird auf Basis von EU-Standardvertragsklauseln (Art. 46 DSGVO) in die Vereinigten Staaten &uuml;bermittelt</li>
+              <li><strong>Wie lange wir die Daten aufbewahren:</strong> Bis zur Abmeldung oder zum Widerruf der Einwilligung. Ihre E-Mail-Adresse wird innerhalb von 30 Tagen nach der Abmeldung gel&ouml;scht.</li>
+              <li><strong>So melden Sie sich ab:</strong> Nutzen Sie den Ein-Klick-Abmeldelink in jeder Newsletter-E-Mail oder kontaktieren Sie uns unter contact@storybookadventures.io</li>
+            </ul>
+            <p>Das Newsletter-Abonnement ist vollst&auml;ndig unabh&auml;ngig von der App-Nutzung. Ein Abonnement erstellt kein App-Konto, und die App-Nutzung f&uuml;hrt nicht zu einem Newsletter-Abonnement. App-Nutzer, die die Website nie besuchen, werden niemals nach ihrer E-Mail-Adresse gefragt.</p>
+
+            <h2 id="s14">14. Lokale Speicherung</h2>
+            <p>Die App speichert einige Daten direkt auf Ihrem Ger&auml;t: Animationen, Szenenfortschritt, elterliche Einstellungen und Onboarding-Status. Diese Daten werden entfernt, wenn Sie die App l&ouml;schen. Da wir Zeichnungen, Animationen, Beschreibungen und Fortschritt jedoch auch auf unseren Servern speichern, werden Ihre Inhalte bei Neuinstallation der App auf demselben Ger&auml;t (mit demselben Keychain) wiederhergestellt.</p>
+            <p>Wir empfehlen, fertige Animationen als zus&auml;tzliche Sicherung in Ihrer Fotogalerie zu speichern.</p>
+
+            <h2 id="s15">15. &Auml;nderungen dieser Erkl&auml;rung</h2>
+            <p>Wir k&ouml;nnen diese Datenschutzerkl&auml;rung von Zeit zu Zeit aktualisieren. Bei wesentlichen &Auml;nderungen im Umgang mit Kinderdaten werden wir Sie in der App deutlich benachrichtigen und, wo gesetzlich vorgeschrieben, eine erneute elterliche Einwilligung einholen. Versionsnummer und Datum „Zuletzt aktualisiert" oben in diesem Dokument entsprechen stets der aktuellen Version.</p>
+
+            <h2 id="s16">16. Kontakt</h2>
+            <p>Fragen zu dieser Datenschutzerkl&auml;rung, Ihren Daten oder dem Datenschutz Ihres Kindes? Wir helfen gerne.</p>
+            <div class="addr-card">
+              <p><strong>Constantin Kl&ouml;cker</strong></p>
+              <p>Friedrichstr. 155</p>
+              <p>10117 Berlin, Deutschland</p>
+              <p>E-Mail: <a href="mailto:contact@storybookadventures.io">contact@storybookadventures.io</a></p>
+            </div>
+            <p>Wenn Sie uns zu einem bestimmten Konto kontaktieren, geben Sie bitte Ihren Support-Referenzcode an (Einstellungen → Meine Daten → Datenanfrage), damit wir Ihre Daten finden k&ouml;nnen.</p>
+            <p><em>Diese Datenschutzerkl&auml;rung ist auf Englisch und Deutsch in der App sowie unter <a href="https://www.storybookadventures.io" target="_blank" rel="noopener">https://www.storybookadventures.io</a> verf&uuml;gbar.</em></p>
+
+  <div class="contact-box">
+    <div class="cb-text">
+      <h3>Kontakt aufnehmen</h3>
+      <p>Fragen, Feedback, Presse, oder einfach Hallo sagen?</p>
+    </div>
+    <a href="mailto:contact@storybookadventures.io" class="btn">contact@storybookadventures.io</a>
+  </div>
+</article>
+</div>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-name">Storybook Adventures</div>
+    </div>
+    <div class="foot-links">
+      <a href="privacy.html" class="active">Datenschutzerklärung</a>
+      <a href="terms.html">Nutzungsbedingungen</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="support.html">Hilfe</a>
+    </div>
+    <div class="foot-copy"><span>© 2026 Storybook Adventures.</span><span>Alle Rechte vorbehalten.</span></div>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+  const toc = document.querySelector('aside.toc');
+  if (!toc) return;
+  const headings = document.querySelectorAll('article.sheet h2[id]');
+  const links = toc.querySelectorAll('a');
+  if (!headings.length || !links.length) return;
+
+  const linkById = new Map();
+  links.forEach(a => {
+    const id = a.getAttribute('href').replace(/^#/, '');
+    linkById.set(id, a);
+  });
+
+  let activeId = null;
+  function setActive(id) {
+    if (id === activeId) return;
+    activeId = id;
+    links.forEach(a => a.classList.remove('active'));
+    const a = linkById.get(id);
+    if (a) {
+      a.classList.add('active');
+      // Keep active item visible inside the scrollable TOC
+      const r = a.getBoundingClientRect();
+      const tocR = toc.getBoundingClientRect();
+      if (r.top < tocR.top || r.bottom > tocR.bottom) {
+        a.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    }
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    // Pick the heading nearest the top of the active band
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length) {
+      // Sort by distance from top of viewport
+      visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      setActive(visible[0].target.id);
+    }
+  }, {
+    // Active band: ~from top 15% down to 65% of viewport
+    rootMargin: '-15% 0px -65% 0px',
+    threshold: 0,
+  });
+
+  headings.forEach(h => observer.observe(h));
+
+  // Default: first heading active
+  if (headings.length) setActive(headings[0].id);
+})();
+</script>
+
+<script src="../assets/nav-more.js" defer></script>
+</body>
+</html>

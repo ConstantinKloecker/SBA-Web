@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>About — Storybook Adventures</title>
+  <meta name="description" content="The story behind Storybook Adventures. Built in Berlin to give children a creative, screen-light way to play with their drawings — and to safely explore AI.">
+  <meta name="theme-color" content="#1a2744">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.storybookadventures.io/about.html">
+  <link rel="alternate" hreflang="en" href="https://www.storybookadventures.io/about.html">
+  <link rel="alternate" hreflang="de" href="https://www.storybookadventures.io/de/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.storybookadventures.io/about.html">
+
+  <meta name="apple-itunes-app" content="app-id=6761114804">
+
+  <meta property="og:site_name" content="Storybook Adventures">
+  <meta property="og:title" content="About — Storybook Adventures">
+  <meta property="og:description" content="The story behind Storybook Adventures. Built in Berlin to give children a creative, screen-light way to play with their drawings — and to safely explore AI.">
+  <meta property="og:image" content="https://www.storybookadventures.io/assets/og-image.jpg?v=2">
+  <meta property="og:image" content="https://www.storybookadventures.io/assets/og-image-square.jpg?v=2">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.storybookadventures.io/about.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About — Storybook Adventures">
+  <meta name="twitter:description" content="The story behind Storybook Adventures.">
+  <meta name="twitter:image" content="https://www.storybookadventures.io/assets/og-image.jpg?v=2">
+
+  <link rel="icon" type="image/webp" href="assets/logo-emblem.webp">
+  <link rel="apple-touch-icon" href="assets/logo-emblem.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/subpage.css">
+  <style id="page-maxw-override">:root { --maxw: 1000px; }</style>
+  <style>
+    .modal-veil {
+      position: fixed; inset: 0;
+      background: rgba(15, 26, 46, 0.7);
+      display: none; align-items: center; justify-content: center;
+      z-index: 100; padding: 20px;
+      backdrop-filter: blur(8px);
+    }
+    .modal-veil.open { display: flex; }
+    .modal {
+      background: var(--gold-bg);
+      border-radius: 24px;
+      padding: 38px 32px;
+      max-width: 440px; width: 100%;
+      text-align: center;
+      position: relative;
+      border: 2px solid var(--gold-border);
+      box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5);
+    }
+    .modal .close {
+      position: absolute; top: 12px; right: 12px;
+      width: 34px; height: 34px; border-radius: 50%; border: 0;
+      background: rgba(0,0,0,0.1); color: var(--gold-text);
+      font-size: 20px; font-weight: 800; cursor: pointer;
+    }
+    .modal h3 {
+      font-family: var(--font-display); font-size: 30px;
+      font-weight: 400; color: var(--gold-text); margin: 0 0 10px;
+    }
+    .modal p {
+      color: var(--gold-muted); font-weight: 700;
+      margin: 0 0 22px; font-size: 15px;
+    }
+    .modal-note { margin-top: 14px; margin-bottom: 0; font-size: 13px; color: var(--gold-muted); opacity: 0.75; font-weight: 600; }
+    .modal-form {
+      display: inline-flex; gap: 6px;
+      background: rgba(0,0,0,0.08); border: 1px solid rgba(200, 141, 10, 0.4);
+      padding: 6px; border-radius: 999px; width: 100%;
+    }
+    .modal-form input[type="email"] {
+      flex: 1; background: transparent; border: 0; outline: 0;
+      color: var(--gold-text); padding: 10px 16px;
+      font-family: inherit; font-size: 14px; font-weight: 600;
+    }
+    .modal-form input::placeholder { color: rgba(122, 90, 42, 0.5); }
+    .modal-form button {
+      background: var(--night); color: var(--gold); border: 1px solid var(--night);
+      border-radius: 999px; padding: 10px 22px;
+      font-family: inherit; font-weight: 800; font-size: 14px; cursor: pointer;
+    }
+    .modal .hp-field { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .modal .form-success { color: var(--gold-text); font-family: var(--font-display); font-size: 18px; padding: 8px; line-height: 1.4; margin: 0; }
+    @media (max-width: 540px) {
+      .modal-form { flex-direction: column; padding: 8px; border-radius: 16px; }
+      .modal-form input { text-align: center; }
+      .modal-form button { width: 100%; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About — Storybook Adventures",
+    "url": "https://www.storybookadventures.io/about.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Storybook Adventures",
+      "url": "https://www.storybookadventures.io"
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "Storybook Adventures",
+      "url": "https://www.storybookadventures.io",
+      "logo": "https://www.storybookadventures.io/assets/logo.webp",
+      "founder": {
+        "@type": "Person",
+        "name": "Constantin Klöcker",
+        "jobTitle": "Founder",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Storybook Adventures"
+        }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Friedrichstr. 155",
+        "postalCode": "10117",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+<div class="page-bg"></div>
+<div class="particles">
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+  <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.webp" alt="Storybook Adventures" class="brand-logo" width="867" height="438" fetchpriority="high" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#how" class="nav-link">How it works</a>
+      <a href="index.html#safe" class="nav-link">For parents</a>
+      <a href="index.html#gallery" class="nav-link">Films</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+      <span class="nav-sep" aria-hidden="true"></span>
+      <a href="about.html" class="nav-link active">Story</a>
+      <a href="blog/index.html" class="nav-link">Blog</a>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <a href="about.html" class="active" aria-current="page">EN</a>
+        <a href="de/about.html">DE</a>
+      </div>
+      <a href="https://apps.apple.com/app/id6761114804" class="btn btn-small">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- PAGE HEAD -->
+<section class="page-head">
+  <div class="wrap">
+    <span class="scribble-star s-left">✦</span>
+    <span class="scribble-star s-right">✦</span>
+    <span class="scribble-star s-bot">✦</span>
+    <h1>
+      <span>The story behind </span>
+      <span class="accent">Storybook Adventures.</span>
+    </h1>
+    <p class="lede">
+      Built around a simple belief: the best way to introduce a child to creativity, technology, and AI is by starting with something every child already knows. A piece of paper and a pencil.
+    </p>
+    <div class="meta-row">
+      <span class="meta-pill">Built in Berlin</span>
+      <span class="meta-pill">For ages 6–12</span>
+      <span class="meta-pill">GDPR &amp; COPPA by design</span>
+    </div>
+  </div>
+</section>
+
+<!-- SHEET -->
+<article class="sheet">
+  <h2>From the founder</h2>
+
+  <div class="founder-card">
+    <div class="founder-photo">
+      <img src="assets/founder.webp" alt="Constantin Klöcker, founder of Storybook Adventures, photographed in Prague" width="720" height="957" loading="lazy" />
+    </div>
+    <div class="founder-quote">
+      <p>Hi, I'm Constantin. I built Storybook Adventures because I was tired of two things at the same time: kids spending hours scrolling through algorithm-curated content, and parents being afraid that AI would take creativity away from their children.</p>
+      <p>Both concerns are real. But I saw a third path. What if AI wasn't the thing that <em>made</em> the art, but the thing that brought the child's art to life? What if a creative app didn't reward endless scrolling, but rewarded sitting at the kitchen table with a pencil?</p>
+      <p>That's what I built. No accounts. No ads. No tracking. Just real drawings, real children, and a little bit of magic at the end.</p>
+      <div class="founder-sig">— Constantin Klöcker, Founder</div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <h2>What I believe</h2>
+  <div class="beliefs">
+    <div class="belief-card">
+      <div class="belief-icon">🔒</div>
+      <h3>Privacy isn't a feature, it's the foundation.</h3>
+      <p>Children never share their name, email, or any personal information. No account to create. An anonymous device identifier, nothing more. GDPR and COPPA by design, not retrofit.</p>
+    </div>
+    <div class="belief-card">
+      <div class="belief-icon">🎨</div>
+      <h3>Real creativity starts on real paper.</h3>
+      <p>Most digital drawing apps replace pencil and paper. I built the opposite: most of the creative time happens off-screen, on real paper, with real tools. The phone is just the camera, the cinema, and a gentle guide.</p>
+    </div>
+    <div class="belief-card">
+      <div class="belief-icon">📝</div>
+      <h3>AI should be a teacher, not a replacement.</h3>
+      <p>Children today will grow up alongside AI. The right introduction isn't through chatbots. It's through play. When a child sees how their drawing shapes the animation, they learn AI responds to <em>their</em> creative input. That's AI literacy.</p>
+    </div>
+    <div class="belief-card">
+      <div class="belief-icon">🇪🇺</div>
+      <h3>Built in Berlin, with European care.</h3>
+      <p>This is a European product, built with European standards. No personal data is collected from your child, and AI processing only ever touches the drawing itself. Strong privacy isn't a feature here. It's the default.</p>
+    </div>
+  </div>
+
+  <hr/>
+
+  <h2>The next chapters</h2>
+  <p>Storybook Adventures launched on the Apple App Store in 2026 with 24 story worlds for children ages 6 to 12. An Android version is in active development. I'm also working on additional story worlds and new features. If you want to follow along, the <a href="#" data-newsletter-trigger>newsletter</a> is the best place to do it.</p>
+
+  <div class="contact-box">
+    <div class="cb-text">
+      <h3>Get in touch</h3>
+      <p>Questions, feedback, press, or just want to say hi?</p>
+    </div>
+    <a href="mailto:contact@storybookadventures.io" class="btn">contact@storybookadventures.io</a>
+  </div>
+</article>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <div class="foot-brand-name">Storybook Adventures</div>
+    </div>
+    <div class="foot-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="support.html">Support</a>
+    </div>
+    <div class="foot-copy"><span>© 2026 Storybook Adventures.</span><span>All rights reserved.</span></div>
+  </div>
+</footer>
+
+<div class="modal-veil" id="newsletterVeil" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="newsletterTitle">
+    <button class="close" id="newsletterClose" aria-label="Close">×</button>
+    <h3 id="newsletterTitle">Stay in the Loop</h3>
+    <p>New story worlds, fresh features, and the occasional read on raising kids in the age of AI. No spam, no noise.</p>
+    <form class="modal-form" id="form-newsletter" novalidate>
+      <input type="email" placeholder="you@example.com" required autocomplete="email"/>
+      <input type="text" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="modal-note">You'll receive a confirmation email.</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  const veil = document.getElementById('newsletterVeil');
+  const closer = document.getElementById('newsletterClose');
+  const triggers = document.querySelectorAll('[data-newsletter-trigger]');
+  function openModal() {
+    if (!veil) return;
+    veil.classList.add('open');
+    veil.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    if (!veil) return;
+    veil.classList.remove('open');
+    veil.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  triggers.forEach(t => t.addEventListener('click', e => { e.preventDefault(); openModal(); }));
+  if (closer) closer.addEventListener('click', closeModal);
+  if (veil) veil.addEventListener('click', e => { if (e.target.id === 'newsletterVeil') closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  const SUBSCRIBE_URL = 'https://ijurbxopaepeoposgkum.supabase.co/functions/v1/subscribe-newsletter';
+  const lang = (document.documentElement.lang || 'en').toLowerCase().startsWith('de') ? 'de' : 'en';
+  const form = document.getElementById('form-newsletter');
+  if (!form) return;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const input = form.querySelector('input[type="email"]');
+    const hp = form.querySelector('.hp-field');
+    const btn = form.querySelector('button');
+    const email = input.value.trim();
+    if (!email) return;
+    btn.disabled = true; btn.style.opacity = '0.6';
+    try {
+      const res = await fetch(SUBSCRIBE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'general_newsletter', lang, hp_field: hp ? hp.value : '' }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        form.innerHTML = '<p class="form-success">Thanks! Check your inbox and confirm your signup.</p>';
+      } else if (data.error === 'invalid_email') {
+        input.style.borderColor = '#c0392b'; btn.disabled = false; btn.style.opacity = '';
+      } else {
+        form.innerHTML = '<p class="form-success" style="color:#c0392b">Something went wrong. Please try again.</p>';
+      }
+    } catch {
+      form.innerHTML = '<p class="form-success" style="color:#c0392b">Connection error. Please try again.</p>';
+    }
+  });
+})();
+</script>
+<script src="assets/nav-more.js" defer></script>
+</body>
+</html>
